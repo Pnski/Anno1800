@@ -37,8 +37,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          # Cache is looking in ./Docs now!
-          cache: npm
       
       - name: Install npm dependencies
         run: npm ci
