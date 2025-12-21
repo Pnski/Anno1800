@@ -1,9 +1,11 @@
 # Fertilities
 Short introduction on how fertilities are determined and a little how they are included into the map generation^[Original by Hier0nimus; Got permission to copy this via discord. Rewritten and modified by me.].
 ## Datamine
-In this section we take first a look at possible (vanilla) datasets^[Dataset: IslandType (Id: 431); IslandDifficulty (Id: 429); ResourceAmount (Id: 433)], as a basis to learn which combinations might be possible. Datasets can be easy looked up at [a1800.net](http://a1800.net/). For further investigation it is given to always have the vanilla version.
+In this section we take first a look at possible (vanilla) datasets, as a basis to learn which combinations might be possible. Datasets can be easy looked up at [a1800.net](http://a1800.net/). For further investigation it is given to always have the vanilla version.
 
-<div align="center">
+<div class="note">[Dataset: IslandType (Id: 431); IslandDifficulty (Id: 429); ResourceAmount (Id: 433)]</div>
+
+<div class="card" align="center">
 
 | Types of islands: | Difficulty of islands: | Resource amount: |
 | :---: | :---: | :---: |
@@ -18,8 +20,8 @@ In this section we take first a look at possible (vanilla) datasets^[Dataset: Is
 ## Fertility Sets
 Taking a look inside the assets.xml or on [a1800.net](http://a1800.net/?itemSearch=FertilitySet&prevSearch=) shows that there are 121 different fertily sets. Every set has its own combinations of the possible datasets, combined with a certain amount of fertilities.
 ### Example
-For this example we use fertility "Set 1" with Guid 141508[^3] with potatoe and grain fertility.
-[^3]: [a1800.net](http://a1800.net/?itemSearch=141508)
+For this example we use fertility "Set 1" with [Guid 141508](http://a1800.net/?itemSearch=141508) with potatoe and grain fertility.
+
 ```xml
 <Asset>
     <Template>FertilitySet</Template>
@@ -53,10 +55,13 @@ For this example we use fertility "Set 1" with Guid 141508[^3] with potatoe and 
 Depending on the seed and difficultysettings at the start of the game are islands and their respective fertilities. Choosing a fixed setup means also fixed fertilities. After entering the new game, the islands and fertilities are predetermined and cannot be changed unless the player is starting a new game.
 Which islands the game chooses depends on the difficulty settings choosen at the setup of the game. Each setup combination has its own map pool to chose from, thus it uses the pool from the <mark style="background:var(--theme-foreground-focus);">fertilitysets</mark>.
 
-?>A starter island for example always has potatoes and oil.
+<div class="tip">A starter island for example always has potatoes and oil.</div>
+
 ### ResourceSetCondition
-Looking at the [Example](#example-3) <mark style="background:var(--theme-foreground-focus);"><ResourceSetCondition></mark>defines the conditions for this set.
+
+Looking at the [Example](#example) <mark style="background:var(--theme-foreground-focus);"><ResourceSetCondition></mark>defines the conditions for this set.
 ### AllowedRegion
+
 <mark style="background:var(--theme-foreground-focus);">\<AllowedRegion\>Moderate\</AllowedRegion\></mark>The region this set is used is in the moderate region, which is Old World and Cape. It is possible to add the New World, Arctic, New World and/or Enbesa here, this would make those fertilities also there available. 
 ### AllowedIslandType
 <mark style="background:var(--theme-foreground-focus);">\<AllowedIslandType\>Normal;Starter\</AllowedIslandType></mark>tells on which island types this set is used.<mark style="background:var(--theme-foreground-focus);">Normal</mark>or<mark style="background:var(--theme-foreground-focus);">Starter</mark>. The starter island is the one a harbor is build when choosing starting conditions "Harbour". Normal are the island which have the same size as the starter island but have some things less because starter islands are given some fixed things like oil and potatoes.

@@ -23,7 +23,7 @@ Mods can be installed manually. This is possible by downloading the mod from you
 When having trouble installing mods, or getting them to work the usual way is at fellows:
 
 1. Update installed mods.
-2. Check mod-loader.log [(ref. path)](/basics/path?id=mod-loaderlog)
+2. Check mod-loader.log [(ref. path)](/basics/path#mod-loaderlog)
 3. Check installed mods for known compatibility problems.
 4. Check Anno 1800 for problems (very files in Ubisoft launcher).
 5. Deactivate all other mods except for the one that is causing trouble and check if that works. If it works it is a compatibility problem, check the mod info or ask in the help forum on the [discord](https://discord.gg/4XQTznE).

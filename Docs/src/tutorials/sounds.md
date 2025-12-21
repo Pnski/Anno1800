@@ -91,8 +91,8 @@ C:\Users\Client\Documents\WwiseProjects\Test1> C:\Users\Client\Downloads\SoundsF
 
 The minimum changes to the asset are:
 
-1. Adding the the new soundbank to the game [ref](/tutorials/sounds?id=soundbank)
-2. Adding the new soundbank to the regions. [ref](/tutorials/sounds?id=soundbank)
+1. Adding the the new soundbank to the game [ref](/tutorials/sounds#soundbank)
+2. Adding the new soundbank to the regions. [ref](/tutorials/sounds#soundbank)
 3. Add the wwise-id of your sound to an asset.
 
 ### Soundbank
@@ -152,7 +152,7 @@ With this you have successfully added your new soundbank to all (current) region
 
 To get the wwiseid of your sound, that you want to play, you have two options.
 
-1. use [SoundsForAnno](/tutorials/sounds?id=SoundsForAnno) and look into the generated audio.xml
+1. use [SoundsForAnno](/tutorials/sounds#SoundsForAnno) and look into the generated audio.xml
 2. look into the generated .json soundbankfile. Therein your Event-ID is your wwiseid
 
 ```json
