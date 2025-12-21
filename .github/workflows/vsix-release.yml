@@ -1,0 +1,31 @@
+name: Release VS Code Extension
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      
+      - name: Build and package
+        working-directory: ./Modding-Translator
+        run: |
+          npm ci
+          npm run vscode:prepublish
+          npx vsce package --no-dependencies
+      
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "Modding-Translator/amt-*.vsix"
+          generateReleaseNotes: true
