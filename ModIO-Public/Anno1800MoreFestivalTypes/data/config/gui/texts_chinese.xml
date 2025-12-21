@@ -1,0 +1,76 @@
+<ModOps>
+  <ModOp Type="add" Path="TextExport/Texts">
+    <Text>
+      <GUID>1600000025</GUID>
+      <Text>男性健康周</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000026</GUID>
+      <Text>男性健康周</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000027</GUID>
+      <Text>男性健康周</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000028</GUID>
+      <Text>认识和预防男性健康问题不仅仅是男性的问题。由于它对妻子、母亲、女儿和姐妹的影响，男性健康确实是一个家庭问题。</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Recognizing and preventing men’s health problems is not just a man’s issue. Because of its impact on wives, mothers, daughters, and sisters, men’s health is truly a family issue.-->
+    </Text>
+    <Text>
+      <GUID>1600000029</GUID>
+      <Text>圣诞节</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000030</GUID>
+      <Text>圣诞节</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000031</GUID>
+      <Text>圣诞节</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000032</GUID>
+      <Text>这个习俗始于 19 世纪，但起源于 16 世纪，最初涉及一个带有 24 支蜡烛的冷杉花环（圣诞节前 24 天，从 12 月 1 日开始），但花圈上有这么多蜡烛的尴尬将数量减少到四支。</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--The custom, which began in the 19th century but had roots in the 16th, originally involved a fir wreath with 24 candles (the 24 days before Christmas, starting December 1), but the awkwardness of having so many candles on the wreath reduced the number to four.-->
+    </Text>
+    <Text>
+      <GUID>1600000033</GUID>
+      <Text>北极光</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000034</GUID>
+      <Text>北极光</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000035</GUID>
+      <Text>北极光</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000036</GUID>
+      <Text>发生在天空中的自然光显示，主要发生在高纬度地区（地球上的北极和南极附近）甚至其他星球上。</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planet.-->
+    </Text>
+  </ModOp>
+</ModOps>

@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "DocklandsCD5",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Docklands Cooldown 5min",
+    "English": "Docklands Cooldown 5min",
+    "French": "Docklands Cooldown 5min",
+    "German": "Docklands Cooldown 5min",
+    "Italian": "Docklands Cooldown 5min",
+    "Japanese": "Docklands Cooldown 5min",
+    "Korean": "Docklands Cooldown 5min",
+    "Polish": "Docklands Cooldown 5min",
+    "Russian": "Docklands Cooldown 5min",
+    "Spanish": "Docklands Cooldown 5min",
+    "Taiwanese": "Docklands Cooldown 5min"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,senfdeckel98",
+  "CreatorContact": null,
+  "Image": null
+}

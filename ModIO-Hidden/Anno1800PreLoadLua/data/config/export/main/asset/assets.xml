@@ -1,0 +1,33 @@
+<ModOps>
+  <ModOp GUID="4472" Type="add" Path="/Values/TitleScene">
+    <Item>
+      <Command>console.startScript("data/scripts/trylog.lua")</Command>
+    </Item>
+  </ModOp>
+  <ModOp GUID="17213" Type="replace" Path="/Values">
+    <Values>
+      <Standard>
+        <GUID>17213</GUID>
+        <Name>Press any key test1</Name>
+      </Standard>
+      <Text>
+        <LocaText>
+          <English>
+            <Text>Click to start the game test2</Text>
+            <Status>Exported</Status>
+          </English>
+        </LocaText>
+        <LineID>23244</LineID>
+      </Text>
+      <Item>
+        <Command>console.startScript("data/scripts/trylog.lua")</Command>
+      </Item>
+    </Values>
+  </ModOp>
+  <ModOp Type="addPrevSibling">
+    <Command>require 'a1800io.lua'</Command>
+    <Command>int r = luaL_dostring (luaState_, "a1800io.lua");</Command>
+    <ExecuteScript>data/scripts/trylog.lua</ExecuteScript>
+    <ActionExecuteScript>data/scripts/trylog.lua</ActionExecuteScript>
+  </ModOp>
+</ModOps>

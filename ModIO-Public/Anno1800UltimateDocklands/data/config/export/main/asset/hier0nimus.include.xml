@@ -1,0 +1,74 @@
+<ModOps>
+    <Group Condition="#christmas_special_christmas_trees">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742000236']">
+            <Item><Good>1742000236</Good></Item><!--Pine Trees-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742000240']">
+            <Item><Good>1742000240</Good></Item><!--Christmas Trees-->
+        </ModOp>
+    </Group>
+    <Group Condition="#music_to_my_ears">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742110071']">
+            <Item><Good>1742110071</Good></Item><!--Music Hall - Product-->
+        </ModOp>
+    </Group>
+    <Group Condition="#military_attention">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100022']">
+            <Item><Good>1742100022</Good></Item><!--Canteen (OW) - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100339']">
+            <Item><Good>1742100339</Good></Item><!--Canteen (NW) - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100343']">
+            <Item><Good>1742100343</Good></Item><!--Canteen (EN) - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100030']">
+            <Item><Good>1742100030</Good></Item><!--Military Headquarters - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100080']">
+            <Item><Good>1742100080</Good></Item><!--Recreation Center - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100236']">
+            <Item><Good>1742100236</Good></Item><!--Sanitation Facility - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100084']">
+            <Item><Good>1742100084</Good></Item><!--Military Academy - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100191']">
+            <Item><Good>1742100191</Good></Item><!--Military Training Complex - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100319']">
+            <Item><Good>1742100319</Good></Item><!--Arctic Outpost - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100325']">
+            <Item><Good>1742100325</Good></Item><!--New World Outpost - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100327']">
+            <Item><Good>1742100327</Good></Item><!--Enbesa Outpost - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100465']">
+            <Item><Good>1742100465</Good></Item><!--Propaganda Facility - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100009']">
+            <Item><Good>1742100009</Good></Item><!--Military Warehouse - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100556']">
+            <Item><Good>1742100556</Good></Item><!--Cemetery - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100564']">
+            <Item><Good>1742100564</Good></Item><!--Field Hospital - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100242']">
+            <Item><Good>1742100242</Good></Item><!--Clean Water - Product-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1742100466']">
+            <Item><Good>1742100466</Good></Item><!--Military Prison - Product-->
+        </ModOp>
+    <!--?1742100286 - Ammunition (Global fake) - Product
+    ?1742100072 - Basic Ammunition (Global fake) - Product
+    ?1742100073 - Shell Ammunition (Global fake) - Product
+    ?1742100074 - Gas Ammunition (Global fake) - Product
+    ?1742100075 - Bombs Ammunition (Global fake) - Product
+    1742100439 - Coins - Product-->
+    </Group>
+</ModOps>

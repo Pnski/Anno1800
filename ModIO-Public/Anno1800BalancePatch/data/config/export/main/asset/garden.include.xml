@@ -1,0 +1,51 @@
+<ModOps>
+    <!-- Amazonas -->
+    <ModOp Type="merge" GUID='193652,193764' Path="/Values">
+      <ModuleOwnerUpgrade>
+        <ModuleLimitPercent>-10</ModuleLimitPercent>
+      </ModuleOwnerUpgrade>
+    </ModOp>
+    <ModOp Type="remove" GUID='193652,193764' Path="/Values/FactoryUpgrade/ProductivityUpgrade" />
+    <!-- Andean -->
+    <ModOp Type="merge" GUID='193664,193767' Path="/Values">
+      <ModuleOwnerUpgrade>
+        <ModuleLimitPercent>-10</ModuleLimitPercent>
+      </ModuleOwnerUpgrade>
+    </ModOp>
+    <ModOp Type="remove" GUID='193664,193767' Path="/Values/FactoryUpgrade/ProductivityUpgrade" />
+    <!-- Enchanted -->
+    <ModOp Type="merge" GUID='193671,193768' Path="/Values">
+      <ModuleOwnerUpgrade>
+        <ModuleLimitPercent>-10</ModuleLimitPercent>
+      </ModuleOwnerUpgrade>
+    </ModOp>
+    <ModOp Type="remove" GUID='193671,193768' Path="/Values/FactoryUpgrade/ProductivityUpgrade" />
+    <!-- Marshland -->
+    <ModOp Type="replace" GUID='193656' Path="/Values/ResidenceUpgrade/AdditionalHappiness">
+      <AdditionalHappiness>5</AdditionalHappiness>
+    </ModOp>
+    <!-- Near East -->
+    <ModOp Type="merge" GUID='193659,193765' Path="/Values">
+      <ModuleOwnerUpgrade>
+        <ModuleLimitPercent>-10</ModuleLimitPercent>
+      </ModuleOwnerUpgrade>
+    </ModOp>
+    <ModOp Type="remove" GUID='193659,193765' Path="/Values/FactoryUpgrade/ProductivityUpgrade" />
+    <!-- Sacred -->
+    <Include File="sacred.garden.include.xml" />
+    <ModOp Type="replace" GUID='193660' Path="/Values/ItemSocketSet/SetBuff">
+      <SetBuff>1600000006</SetBuff>
+    </ModOp>
+    <!-- Subalpine -->
+    <ModOp Type="merge" GUID='193663' Path="/Values">
+      <ModuleOwnerUpgrade>
+        <ModuleLimitPercent>-10</ModuleLimitPercent>
+      </ModuleOwnerUpgrade>
+    </ModOp>
+    <ModOp Type="merge" GUID='193766' Path="/Values/FactoryUpgrade">
+      <NeededAreaPercentUpgrade>
+        <Value>-10</Value>
+      </NeededAreaPercentUpgrade>
+    </ModOp>
+    <ModOp Type="remove" GUID='193663,193766' Path="/Values/FactoryUpgrade/ProductivityUpgrade" />
+</ModOps>

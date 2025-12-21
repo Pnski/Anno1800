@@ -1,0 +1,7 @@
+<ModOps>
+    <Group Condition="#shared-products-jakob">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1500010825']">
+            <Item><Good>1500010825</Good></Item><!-- Ropes-->
+        </ModOp>
+    </Group>
+</ModOps>

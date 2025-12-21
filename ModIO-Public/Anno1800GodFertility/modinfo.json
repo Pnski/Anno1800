@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.2",
+  "ModID": "GetGodlikePowers",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "GetGodlikePowers",
+    "English": "GetGodlikePowers",
+    "French": "GetGodlikePowers",
+    "German": "GetGodlikePowers",
+    "Italian": "GetGodlikePowers",
+    "Japanese": "GetGodlikePowers",
+    "Korean": "GetGodlikePowers",
+    "Polish": "GetGodlikePowers",
+    "Russian": "GetGodlikePowers",
+    "Spanish": "GetGodlikePowers",
+    "Taiwanese": "GetGodlikePowers"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,Serp",
+  "CreatorContact": null,
+  "Image": null
+}

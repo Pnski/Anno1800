@@ -1,0 +1,76 @@
+<ModOps>
+  <ModOp Type="add" Path="TextExport/Texts">
+    <Text>
+      <GUID>1600000025</GUID>
+      <Text>Semaine de la santé des hommes</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000026</GUID>
+      <Text>Semaine de la santé des hommes</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000027</GUID>
+      <Text>Semaine de la santé des hommes</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000028</GUID>
+      <Text>Reconnaître et prévenir les problèmes de santé des hommes n’est pas seulement un problème d’homme. En raison de son impact sur les épouses, les mères, les filles et les sœurs, la santé des hommes est vraiment une question familiale.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Recognizing and preventing men’s health problems is not just a man’s issue. Because of its impact on wives, mothers, daughters, and sisters, men’s health is truly a family issue.-->
+    </Text>
+    <Text>
+      <GUID>1600000029</GUID>
+      <Text>Jour de Noël</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000030</GUID>
+      <Text>Jour de Noël</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000031</GUID>
+      <Text>Jour de Noël</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000032</GUID>
+      <Text>La coutume, qui a commencé au XIXe siècle mais avait des racines au XVIe, impliquait à l’origine une couronne de sapin avec 24 bougies (les 24 jours avant Noël, à partir du 1er décembre), mais la maladresse d’avoir autant de bougies sur la couronne a réduit le nombre à quatre.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--The custom, which began in the 19th century but had roots in the 16th, originally involved a fir wreath with 24 candles (the 24 days before Christmas, starting December 1), but the awkwardness of having so many candles on the wreath reduced the number to four.-->
+    </Text>
+    <Text>
+      <GUID>1600000033</GUID>
+      <Text>Aurore boréale</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000034</GUID>
+      <Text>Aurore boréale</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000035</GUID>
+      <Text>Aurore boréale</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000036</GUID>
+      <Text>Spectacle de lumière naturelle qui se produit dans le ciel, principalement à des latitudes élevées (près de l’Arctique et de l’Antarctique sur Terre) ou même sur d’autres planètes.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planet.-->
+    </Text>
+  </ModOp>
+</ModOps>

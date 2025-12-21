@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "NormalPierUpgrade",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Loadingspeed 2 to 200",
+    "English": "Loadingspeed 2 to 200",
+    "French": "Loadingspeed 2 to 200",
+    "German": "Loadingspeed 2 to 200",
+    "Italian": "Loadingspeed 2 to 200",
+    "Japanese": "Loadingspeed 2 to 200",
+    "Korean": "Loadingspeed 2 to 200",
+    "Polish": "Loadingspeed 2 to 200",
+    "Russian": "Loadingspeed 2 to 200",
+    "Spanish": "Loadingspeed 2 to 200",
+    "Taiwanese": "Loadingspeed 2 to 200"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

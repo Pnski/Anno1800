@@ -1,0 +1,204 @@
+<ModOps>
+	<!--<ModOp Type="merge" GUID='131764' Path="/Values/TradeContractFeature/TradeUpgrades/*[not(MaximumAllowedGoods='-1')]">
+		<MaximumAllowedGoods>4</MaximumAllowedGoods>
+	</ModOp>-->
+	<ModOp Type="merge" GUID='131764' Path="/Values/TradeContractFeature/TradeUpgrades">
+		<TradeUpgrades>
+			<Uncommon>
+				<MaximumAllowedGoods>4</MaximumAllowedGoods>
+			</Uncommon>
+			<Rare>
+				<MaximumAllowedGoods>4</MaximumAllowedGoods>
+			</Rare>
+			<Epic>
+				<MaximumAllowedGoods>4</MaximumAllowedGoods>
+			</Epic>
+			<Legendary>
+				<MaximumAllowedGoods>4</MaximumAllowedGoods>
+			</Legendary>
+		</TradeUpgrades>
+	</ModOp>
+	<!-- Docklands OW -->
+	<ModOp Type="replace" GUID="601470" Path="/Values/ModuleOwner/ModuleLimits"><!-- Number of Starting Modules -->
+		<ModuleLimits>
+			<DocklandModuleStorage><!-- depot -->
+				<Limit>5</Limit>
+			</DocklandModuleStorage>
+			<DocklandModuleItem><!-- harbourmaster office -->
+				<Limit>1</Limit>
+			</DocklandModuleItem>
+			<DocklandModulePier><!-- piers -->
+				<Limit>2</Limit>
+			</DocklandModulePier>
+			<DocklandModuleExport><!-- export office -->
+				<Limit>1</Limit>
+			</DocklandModuleExport>
+			<DocklandModuleRepair><!-- repair crane -->
+				<Limit>2</Limit>
+			</DocklandModuleRepair>
+			<DocklandModuleSpeed><!-- loading wharf -->
+				<Limit>3</Limit>
+			</DocklandModuleSpeed>
+		</ModuleLimits>
+	</ModOp>
+	<ModOp Type="replace" GUID="601470" Path="/Values/Dockland/AdditionalModuleLimitsPerExportLevel"><!-- modules gained per trade lvlup -->
+		<AdditionalModuleLimitsPerExportLevel>
+			<Uncommon>
+				<ModuleType>
+					<DocklandModuleItem>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleItem>
+					<DocklandModulePier>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModulePier>
+					<DocklandModuleExport>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleExport>
+					<DocklandModuleSpeed>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleSpeed>
+				</ModuleType>
+			</Uncommon>
+			<Rare>
+				<ModuleType>
+					<DocklandModuleStorage>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleStorage>
+					<DocklandModulePier>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModulePier>
+					<DocklandModuleRepair>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleRepair>
+				</ModuleType>
+			</Rare>
+			<Epic>
+				<ModuleType>
+					<DocklandModuleStorage>
+						<AdditionalAmount>2</AdditionalAmount>
+					</DocklandModuleStorage>
+					<DocklandModulePier>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModulePier>
+					<DocklandModuleExport>
+						<AdditionalAmount>2</AdditionalAmount>
+					</DocklandModuleExport>
+				</ModuleType>
+			</Epic>
+			<Legendary>
+				<ModuleType>
+					<DocklandModuleStorage>
+						<AdditionalAmount>2</AdditionalAmount>
+					</DocklandModuleStorage>
+					<DocklandModuleItem>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleItem>
+					<DocklandModuleRepair>
+						<AdditionalAmount>1</AdditionalAmount>
+					</DocklandModuleRepair>
+					<DocklandModuleSpeed>
+						<AdditionalAmount>2</AdditionalAmount>
+					</DocklandModuleSpeed>
+				</ModuleType>
+			</Legendary>
+		</AdditionalModuleLimitsPerExportLevel>
+	</ModOp>
+
+	<!-- Docklands NW -->
+	<Group Condition="#NewWorldDocklands">
+		<ModOp Type="replace" GUID="1404422070" Path="/Values/ModuleOwner/ModuleLimits"><!-- Number of Starting Modules -->
+			<ModuleLimits>
+				<DocklandModuleStorage><!-- depot -->
+					<Limit>5</Limit>
+				</DocklandModuleStorage>
+				<DocklandModuleItem><!-- harbourmaster office -->
+					<Limit>1</Limit>
+				</DocklandModuleItem>
+				<DocklandModulePier><!-- piers -->
+					<Limit>2</Limit>
+				</DocklandModulePier>
+				<DocklandModuleExport><!-- export office -->
+					<Limit>1</Limit>
+				</DocklandModuleExport>
+				<DocklandModuleRepair><!-- repair crane -->
+					<Limit>2</Limit>
+				</DocklandModuleRepair>
+				<DocklandModuleSpeed><!-- loading wharf -->
+					<Limit>3</Limit>
+				</DocklandModuleSpeed>
+			</ModuleLimits>
+		</ModOp>
+		<ModOp Type="replace" GUID="1404422070" Path="/Values/Dockland/AdditionalModuleLimitsPerExportLevel"><!-- modules gained per trade lvlup -->
+			<AdditionalModuleLimitsPerExportLevel>
+				<Uncommon>
+					<ModuleType>
+						<DocklandModuleItem>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleItem>
+						<DocklandModulePier>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModulePier>
+						<DocklandModuleExport>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleExport>
+						<DocklandModuleSpeed>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleSpeed>
+					</ModuleType>
+				</Uncommon>
+				<Rare>
+					<ModuleType>
+						<DocklandModuleStorage>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleStorage>
+						<DocklandModulePier>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModulePier>
+						<DocklandModuleRepair>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleRepair>
+					</ModuleType>
+				</Rare>
+				<Epic>
+					<ModuleType>
+						<DocklandModuleStorage>
+							<AdditionalAmount>2</AdditionalAmount>
+						</DocklandModuleStorage>
+						<DocklandModulePier>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModulePier>
+						<DocklandModuleExport>
+							<AdditionalAmount>2</AdditionalAmount>
+						</DocklandModuleExport>
+					</ModuleType>
+				</Epic>
+				<Legendary>
+					<ModuleType>
+						<DocklandModuleStorage>
+							<AdditionalAmount>2</AdditionalAmount>
+						</DocklandModuleStorage>
+						<DocklandModuleItem>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleItem>
+						<DocklandModuleRepair>
+							<AdditionalAmount>1</AdditionalAmount>
+						</DocklandModuleRepair>
+						<DocklandModuleSpeed>
+							<AdditionalAmount>2</AdditionalAmount>
+						</DocklandModuleSpeed>
+					</ModuleType>
+				</Legendary>
+			</AdditionalModuleLimitsPerExportLevel>
+		</ModOp>
+	<!-- Docklands Enbesa -->
+		<ModOp Type="replace" GUID="1404422099" Path="/Values/ModuleOwner/ModuleLimits"
+		Content="//Values[Standard/GUID='1404422070']/ModuleOwner/ModuleLimits" />
+		<ModOp Type="replace" GUID="1404422099" Path="/Values/Dockland/AdditionalModuleLimitsPerExportLevel"
+		Content="//Values[Standard/GUID='1404422070']/Dockland/AdditionalModuleLimitsPerExportLevel" />
+	<!-- Docklands Arctic -->
+		<ModOp Type="replace" GUID="1337500801" Path="/Values/ModuleOwner/ModuleLimits"
+		Content="//Values[Standard/GUID='1404422070']/ModuleOwner/ModuleLimits" />
+		<ModOp Type="replace" GUID="1337500801" Path="/Values/Dockland/AdditionalModuleLimitsPerExportLevel"
+		Content="//Values[Standard/GUID='1404422070']/Dockland/AdditionalModuleLimitsPerExportLevel" />
+	</Group>
+</ModOps>

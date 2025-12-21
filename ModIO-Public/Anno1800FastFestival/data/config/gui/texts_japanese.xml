@@ -1,0 +1,5 @@
+<ModOps>
+  <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '145007']/Text">
+      <Text>キルゲーム</Text>
+  </ModOp>
+</ModOps>

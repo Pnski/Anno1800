@@ -1,0 +1,12 @@
+<ModOps>
+    <ModOp Type="add" GUID='192450' Path="/Values/FactoryUpgrade">
+        <AdditionalOutput>
+            <Item>
+                <Product>11163</Product>
+                <!--Golden Ticket-->
+                <AdditionalOutputCycle>1</AdditionalOutputCycle>
+                <Amount>50000</Amount>
+            </Item>
+        </AdditionalOutput>
+    </ModOp>
+</ModOps>

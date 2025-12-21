@@ -1,0 +1,19 @@
+<ModOps>
+    <!-- paragon 11 - 25 -->
+    <!-- Department of Administration (Town Hall) -->
+    <ModOp Type="replace" GUID='269652,269653,269654,269655,269656,269657,269658,269659,269660,269661,269662,269663,269664,269665,269666' Path="/Values/DistributionUpgrade/AddDeltas/Item/Amount">
+        <Amount>150</Amount>
+    </ModOp>
+    <!-- Department of Labour (Trade Union) -->
+    <ModOp Type="replace" GUID='269686,269687,269688,269689,269690,269691,269692,269693,269694,269695,269696,269697,269698,269699,269700' Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value">
+        <Value>30</Value>
+    </ModOp>
+    <!-- Department of Culture -->
+    <ModOp Type="replace" GUID='269671,269672,269673,269674,269675,269676,269677,269678,269679,269680,269681,269682,269683,269684,269685' Path="/Values/VisitorHarborUpgrade/SpawnProbabilityFactor/Value">
+        <Value>60</Value>
+    </ModOp>
+    <!-- Department of Trade (Harbour) -->
+    <ModOp Type="replace" GUID='269732,269733,269734,269735,269736,269737,269738,269739,269740,269741,269742,269743,269744,269745,269746' Path="/Values/WarehouseUpgrade/StorageCapacityModifier">
+        <StorageCapacityModifier>600</StorageCapacityModifier>
+    </ModOp>
+</ModOps>

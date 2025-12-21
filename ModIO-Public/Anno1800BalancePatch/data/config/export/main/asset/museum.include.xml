@@ -1,0 +1,196 @@
+<ModOps>
+    <!-- Aegean Cultures -->
+    <ModOp Type="merge" GUID='191142' Path="/Values/BuildingUpgrade">
+        <BuildingUpgrade>
+            <PublicServiceFullSatisfactionDistance>
+                <Value>10</Value>
+            </PublicServiceFullSatisfactionDistance>
+            <PublicServiceNoSatisfactionDistance>
+                <Value>10</Value>
+            </PublicServiceNoSatisfactionDistance>
+        </BuildingUpgrade>
+    </ModOp>
+    <ModOp Type="add" GUID='191142' Path="/Values/ItemEffect/EffectTargets">
+        <Item>
+            <GUID>1010358</GUID>
+        </Item>
+    </ModOp>
+    <!-- Atlantean -->
+    <Include File="atlantean.museum.include.xml" />
+    <ModOp Type="replace" GUID='193405' Path="/Values/ItemSocketSet/SetBuff">
+        <SetBuff>1600000002</SetBuff>
+    </ModOp>
+    <!-- Battle of Trelawney -->
+    <ModOp Type="remove" GUID='193407' Path="/Values/AttackerUpgrade" />
+    <ModOp Type="replace" GUID='193407' Path="/Values/VehicleUpgrade">
+        <VehicleUpgrade>
+            <ForwardSpeedUpgrade>
+                <Value>20</Value>
+                <Percental>1</Percental>
+            </ForwardSpeedUpgrade>
+        </VehicleUpgrade>
+    </ModOp>
+    <ModOp Type="replace" GUID='193407' Path="/Values/ItemEffect/EffectTargets/Item/GUID">
+        <GUID>191454</GUID>
+    </ModOp>
+    <!-- Bronze Age -->
+    <ModOp Type="replace" GUID='191141' Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value">
+        <Value>20</Value>
+    </ModOp>
+    <!-- Empire of the Eagle -->
+    <ModOp Type="replace" GUID='191148' Path="/Values/ResidenceUpgrade/TaxModifierInPercent">
+        <TaxModifierInPercent>10</TaxModifierInPercent>
+    </ModOp>
+    <!-- Gods of Delta -->
+    <!-- 3 Item Set for Attractiveness -->
+    <ModOp Type="replace" GUID='124913' Path="/Values/InfluenceSourceUpgrade/InfluenceAmounUpgrade" />
+    <!-- Heirlooms of the Gold-Realm -->
+    <Include File="heirloom.museum.include.xml" />
+    <ModOp Type="replace" GUID='124908' Path="/Values/ItemSocketSet/SetBuff">
+        <SetBuff>1600000001</SetBuff>
+    </ModOp>
+    <!-- Icebound -->
+    <ModOp Type="merge" GUID='193777' Path="/Values">
+        <FactoryUpgrade>
+            <ProductivityUpgrade>
+                <Value>20</Value>
+                <Percentual>1</Percentual>
+            </ProductivityUpgrade>
+        </FactoryUpgrade>
+        <BuildingUpgrade>
+            <WorkforceAmountUpgrade>
+                <Value>-10</Value>
+                <Percentual>1</Percentual>
+            </WorkforceAmountUpgrade>
+		</BuildingUpgrade>
+    </ModOp>
+    <!-- Lost Cities -->
+    <ModOp Type="remove" GUID='191144' Path="/Values/PassiveTradeGoodGenUpgrade" />
+    <ModOp Type="replace" GUID='191144' Path="/Values/ItemEffect/EffectTargets/Item/GUID">
+        <GUID>191443</GUID>
+    </ModOp>
+    <ModOp Type="replace" GUID='191144' Path="/Values/AttackerUpgrade">
+        <AttackerUpgrade>
+			<BaseDamageUpgrade>
+				<Value>20</Value>
+				<Percental>1</Percental>
+			</BaseDamageUpgrade>
+		</AttackerUpgrade>
+    </ModOp>
+    <ModOp Type="replace" GUID='191144' Path="/Values/AttackableUpgrade">
+		<AttackableUpgrade>
+			<MaxHitpointsUpgrade>
+				<Value>1000</Value>
+			</MaxHitpointsUpgrade>
+		</AttackableUpgrade>
+    </ModOp>
+    <!-- Lost Tribes -->
+    <ModOp Type="replace" GUID='124914' Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/">
+        <GoodConsumptionUpgrade>
+            <Item>
+                <ProvidedNeed>1010206</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010237</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010203</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>120043</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>            
+            <Item>
+                <ProvidedNeed>1010247</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>120037</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010247</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>114401</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>114430</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+        </GoodConsumptionUpgrade>
+    </ModOp>
+    <!-- New World Huaca -->
+    <ModOp Type="replace" GUID='191145' Path="/Values/VisitorHarborUpgrade/SpawnProbabilityFactor/Value">
+        <Value>20</Value>
+    </ModOp>
+    <!-- Pool -->
+    <ModOp Type="replace" GUID='191510' Path="/Values/RewardPool/ItemsPool">
+        <ItemsPool>
+            <Item>
+                <ItemLink>193393</ItemLink>
+                <Weight>40</Weight>
+            </Item>
+            <Item>
+                <ItemLink>193394</ItemLink>
+                <Weight>60</Weight>
+            </Item>
+        </ItemsPool>
+    </ModOp>
+    <!-- Nothern Sagas -->
+    <ModOp Type="merge" GUID='191149' Path="/Values">
+        <Values>
+            <AttackerUpgrade>
+                <HitpointDamage>
+                    <Item>
+                        <MinDamageFactor>1.5</MinDamageFactor>
+                    </Item>
+                </HitpointDamage>
+                <DamageFactor>
+                    <SailShip>
+                        <Factor>1.2</Factor>
+                    </SailShip>
+                </DamageFactor>
+                <BaseDamageUpgrade>
+                    <Value>23</Value>
+                    <Percental>1</Percental>
+                </BaseDamageUpgrade>
+            </AttackerUpgrade>
+            <AttackableUpgrade>
+                <MaxHitpointsUpgrade>
+                    <Value>5</Value>
+                    <Percental>1</Percental>
+                </MaxHitpointsUpgrade>
+            </AttackableUpgrade>
+            <VehicleUpgrade>
+                <ForwardSpeedUpgrade>
+                    <Value>3</Value>
+                    <Percental>1</Percental>
+                </ForwardSpeedUpgrade>
+                <MaintainanceUpgrade>
+                    <Value>-5</Value>
+                    <Percental>1</Percental>
+                </MaintainanceUpgrade>
+                <IgnoreDamageFactorUpgrade>
+                    <Value>10</Value>
+                    <Percental>1</Percental>
+                </IgnoreDamageFactorUpgrade>
+            </VehicleUpgrade>
+        </Values>
+    </ModOp>
+    <!-- Roots of Enbesa -->
+    <ModOp Type="replace" GUID='124915' Path="/Values/ResidenceUpgrade/AdditionalResearch">
+        <AdditionalResearch>25</AdditionalResearch>
+    </ModOp>
+    <!-- Skull and Bones -->
+    <Include File="skullandbones.museum.include.xml" />
+    <ModOp Type="merge" GUID='191128' Path="/Values/ItemSocketSet">
+        <SetBuff>1600000003</SetBuff>
+        <BuffScope>Area</BuffScope>
+    </ModOp>
+</ModOps>

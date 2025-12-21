@@ -1,0 +1,5 @@
+# Track ALL .pdb.txt files in these specific T9 directories
+Non-ModIO/Anno1800T9/T9/t9properties.pdb.txt filter=lfs diff=lfs merge=lfs -text
+Non-ModIO/Anno1800T9/T9/localt9properties.pdb.txt filter=lfs diff=lfs merge=lfs -text
+
+Non-ModIO/Anno1800T9/T9_Tourists/t9properties.pdb.txt filter=lfs diff=lfs merge=lfs -text

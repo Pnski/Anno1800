@@ -1,0 +1,8 @@
+<ModOps>
+    <ModOp Type="merge" Template="Warehouse" Path="/Properties/LogisticNode/QueueConfiguration">
+        <ProcessingQueueParallelCount>4</ProcessingQueueParallelCount>
+    </ModOp>
+    <ModOp Type="merge" Template="HarborWarehouse7" Path="/Properties/LogisticNode/QueueConfiguration">
+        <ProcessingQueueParallelCount>4</ProcessingQueueParallelCount>
+    </ModOp>
+  </ModOps>

@@ -1,0 +1,53 @@
+{
+  "Version": "0.0.2",
+  "ModID": "UnleashItemTransfer",
+  "DeprecateIds": [],
+  "LoadAfterIds": ["Hackner_EnbesaMailIntegration",
+  "Hackner_ArcticAirshipPlatformEnhanced"],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Unleash Transfer Item Depot",
+    "English": "Unleash Transfer Item Depot",
+    "French": "Unleash Transfer Item Depot",
+    "German": "Unleash Transfer Item Depot",
+    "Italian": "Unleash Transfer Item Depot",
+    "Japanese": "Unleash Transfer Item Depot",
+    "Korean": "Unleash Transfer Item Depot",
+    "Polish": "Unleash Transfer Item Depot",
+    "Russian": "Unleash Transfer Item Depot",
+    "Spanish": "Unleash Transfer Item Depot",
+    "Taiwanese": "Unleash Transfer Item Depot"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

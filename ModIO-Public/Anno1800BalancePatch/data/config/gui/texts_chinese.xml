@@ -1,0 +1,56 @@
+<ModOps>
+  <ModOp Type="add" Path="/TextExport/Texts">
+		<Text>
+			<GUID>1600000001</GUID>
+			<Text>玛苏玛苏展览会</Text>
+		</Text>
+		<Text>
+			<GUID>1600000002</GUID>
+			<Text>亚特兰提斯展览会</Text>
+		</Text>
+		<Text>
+			<GUID>1600000003</GUID>
+			<Text>骷髅与骸骨展览会</Text>
+		</Text>
+		<Text>
+			<GUID>1600000004</GUID>
+			<Text>深海园区</Text>
+		</Text>
+		<Text>
+			<GUID>1600000005</GUID>
+			<Text>东方丛林公园</Text>
+		</Text>
+        <Text>
+			<GUID>1600000006</GUID>
+			<Text>神圣花园</Text>
+		</Text>
+	</ModOp>
+</ModOps>
+<ModOps><!--hanthe2th-->
+	<ModOp Type="add" Path="/TextExport/Texts">
+		  <Text>
+			  <GUID>1600000001</GUID>
+			  <Text>玛苏玛苏展览会</Text>
+		  </Text>
+		  <Text>
+			  <GUID>1600000002</GUID>
+			  <Text>亚特兰提斯展览会</Text>
+		  </Text>
+		  <Text>
+			  <GUID>1600000003</GUID>
+			  <Text>骷髅与骸骨展览会</Text>
+		  </Text>
+		  <Text>
+			  <GUID>1600000004</GUID>
+			  <Text>深海园区</Text>
+		  </Text>
+		  <Text>
+			  <GUID>1600000005</GUID>
+			  <Text>东方丛林公园</Text>
+		  </Text>
+		  <Text>
+			  <GUID>1600000006</GUID>
+			  <Text>神圣花园</Text>
+		  </Text>
+	  </ModOp>
+  </ModOps>

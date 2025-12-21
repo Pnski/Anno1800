@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "AddInfluence",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Add Influence",
+    "English": "Add Influence",
+    "French": "Add Influence",
+    "German": "Add Influence",
+    "Italian": "Add Influence",
+    "Japanese": "Add Influence",
+    "Korean": "Add Influence",
+    "Polish": "Add Influence",
+    "Russian": "Add Influence",
+    "Spanish": "Add Influence",
+    "Taiwanese": "Add Influence"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

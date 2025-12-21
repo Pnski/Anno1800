@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "UnlimitedlocalDepartments",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Unlimited local Departments",
+    "English": "Unlimited local Departments",
+    "French": "Unlimited local Departments",
+    "German": "Unlimited local Departments",
+    "Italian": "Unlimited local Departments",
+    "Japanese": "Unlimited local Departments",
+    "Korean": "Unlimited local Departments",
+    "Polish": "Unlimited local Departments",
+    "Russian": "Unlimited local Departments",
+    "Spanish": "Unlimited local Departments",
+    "Taiwanese": "Unlimited local Departments"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,tschd",
+  "CreatorContact": null,
+  "Image": null
+}

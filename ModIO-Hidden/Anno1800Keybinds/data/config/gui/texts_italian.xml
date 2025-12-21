@@ -1,0 +1,20 @@
+<ModOps>
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1600000037</GUID>
+      <Text>Toggle Upgradeable</Text>
+    </Text>
+    <Text>
+      <GUID>1600000038</GUID>
+      <Text>Toggle IgnoreCosts</Text>
+    </Text>
+    <Text>
+      <GUID>1600000039</GUID>
+      <Text>Add 1M Money</Text>
+    </Text>
+    <Text>
+      <GUID>1600000040</GUID>
+      <Text>StopCurFest+StartNew</Text>
+    </Text>
+  </ModOp>
+</ModOps>

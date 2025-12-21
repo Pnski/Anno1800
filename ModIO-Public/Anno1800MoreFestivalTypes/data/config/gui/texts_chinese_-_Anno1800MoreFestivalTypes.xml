@@ -1,0 +1,36 @@
+<ModOps>					
+	<ModOp Type = "add" Path="TextExport/Texts">
+		<Text>
+			<GUID>1600000025</GUID>
+			<Text>男性健康周</Text>
+		</Text>
+		<Text>
+			<GUID>1600000026</GUID>
+			<Text>男性健康周</Text>
+		</Text>
+		<Text>
+			<GUID>1600000027</GUID>
+			<Text>男性健康周</Text>
+		</Text>
+		<Text>
+			<GUID>1600000028</GUID>
+			<Text>认识和预防男性健康问题不仅仅是男性的问题。 因为它对妻子、母亲、女儿和姐妹的影响，男性的健康实际上是整个家庭的问题。</Text>
+		</Text>
+		<Text>
+			<GUID>1600000029</GUID>
+			<Text>圣诞节</Text>
+		</Text>
+		<Text>
+			<GUID>1600000030</GUID>
+			<Text>圣诞节</Text>
+		</Text>
+		<Text>
+			<GUID>1600000031</GUID>
+			<Text>圣诞节</Text>
+		</Text>
+		<Text>
+			<GUID>1600000032</GUID>
+			<Text>大规模庆祝圣诞节实际上始于19世纪，虽然这一习俗可以追溯到16世纪。最初的习俗是在冷杉花环上摆放24支蜡烛，从12月1日到24日每日点起一只。但可能由于花环上摆放如此多蜡烛太过麻烦，所以最后简化到了4支。</Text>
+		</Text>
+	</ModOp>
+</ModOps>

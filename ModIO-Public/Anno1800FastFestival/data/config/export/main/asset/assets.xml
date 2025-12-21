@@ -1,0 +1,14 @@
+<ModOps>
+  <ModOp Type="add" GUID='2001271' Path="/Values/GUIConfig/KeyBindings">
+    <!-- CycleFestivals -->
+    <Item>
+      <KeyTypes>Control;F12</KeyTypes>
+      <Command>ts.AreaManager.AreaFestival.SetStopFestival() ts.AreaManager.AreaFestival.SetTriggerFestival()</Command>
+      <Active>Session</Active>
+      <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+      <AudioEvent>200634</AudioEvent>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+    </Item>
+  </ModOp>
+</ModOps>

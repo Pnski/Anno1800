@@ -1,0 +1,62 @@
+<ModOps>					
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!-- 1600000008 | Ultimate Docklands | 0.0.1 | Text Building
+	1600000009 | Ultimate Docklands | 0.0.1 | Text Building-->	
+		<Text>
+			<GUID>1600000008</GUID>
+			<Text>Build I.N.G</Text>
+		</Text>
+		<Text>
+			<GUID>1600000009</GUID>
+			<Text>In 1600, a group of English businessmen asked Elizabeth I for a royal charter that would let them voyage to the Sunken Treasuries on behalf of the crown in exchange for a monopoly on trade. The merchants put up nearly 70,000 pounds of their own money to finance the venture, and the Build I.N.G was born.</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000010 | Ultimate Docklands | 0.0.1 | Text OW
+	1600000011 | Ultimate Docklands | 0.0.1 | Text OW-->	
+		<Text>
+			<GUID>1600000010</GUID>
+			<Text>Old World Trading Company</Text>
+		</Text>
+		<Text>
+			<GUID>1600000011</GUID>
+			<Text>The company's history is characterized by its expansion and diversification of its service offerings across various industries. Founded by the powerfull Serpens66, the company initially engaged in exporting Grapes before diversifying into other products and establishing itself as a major exporter. The company evolved from a traditional broker to a comprehensive supply chain solutions provider, offering services from design to logistics, which solidified its relationships with old world retailers.</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000012 | Ultimate Docklands | 0.0.1 | Text NW
+	1600000013 | Ultimate Docklands | 0.0.1 | Text NW-->	
+		<Text>
+			<GUID>1600000012</GUID>
+			<Text>New World Company</Text>
+		</Text>
+		<Text>
+			<GUID>1600000013</GUID>
+			<Text>Think Google or Apple are powerful? Then you’ve never heard of the New World Company, a profit-making enterprise so mighty, it once ruled nearly all of the new and old world. Between 1600 and 1874, it built the most powerful corporation the world had ever known, complete with its own army, its own territory, and a near-total hold on trade of a variety of products.</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000014 | Ultimate Docklands | 0.0.1 | Text Arctic
+	1600000015 | Ultimate Docklands | 0.0.1 | Text Arctic-->	
+		<Text>
+			<GUID>1600000014</GUID>
+			<Text>Arctic Expedition Crew</Text>
+		</Text>
+		<Text>
+			<GUID>1600000015</GUID>
+			<Text>The expeditions were mostly unsuccessful, partly due to its leaders lacking experience with the difficult arctic ice and weather conditions and partly due to its leaders eventually being given instructions to search for the King William Island on the east coast of the arctic region, but they found some native traders and brought valuable goods.</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+		<!--1600000016 | Ultimate Docklands | 0.0.1 | Text Mods
+		1600000017 | Ultimate Docklands | 0.0.1 | Text Mods-->	
+			<Text>
+				<GUID>1600000016</GUID>
+				<Text>Anno Mods</Text>
+			</Text>
+			<Text>
+				<GUID>1600000017</GUID>
+				<Text>Founded by Dalexy shortly after 1800 reached its peak industrialization. The company quickly gained influence compared to its counterpart Ubisoft. Later due to various personal reasons Dalexy gave the company to his CEO Taubenangriff, who maintains the hard working company to this day.</Text>
+			</Text>
+		</ModOp>
+</ModOps>

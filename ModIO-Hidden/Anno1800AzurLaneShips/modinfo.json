@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "Shipfu",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Ship",
+    "Chinese": "Ship",
+    "French": "Ship",
+    "German": "Ship",
+    "Italian": "Ship",
+    "Japanese": "Ship",
+    "Korean": "Ship",
+    "Polish": "Ship",
+    "Russian": "Ship",
+    "Spanish": "Ship",
+    "Taiwanese": "Ship"
+  },
+  "ModName": {
+    "Chinese": "Great Eastern Unicorn",
+    "English": "Great Eastern Unicorn",
+    "French": "Great Eastern Unicorn",
+    "German": "Great Eastern Unicorn",
+    "Italian": "Great Eastern Unicorn",
+    "Japanese": "Great Eastern Unicorn",
+    "Korean": "Great Eastern Unicorn",
+    "Polish": "Great Eastern Unicorn",
+    "Russian": "Great Eastern Unicorn",
+    "Spanish": "Great Eastern Unicorn",
+    "Taiwanese": "Great Eastern Unicorn"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

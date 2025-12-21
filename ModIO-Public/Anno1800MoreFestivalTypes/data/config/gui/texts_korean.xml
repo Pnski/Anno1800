@@ -1,0 +1,76 @@
+<ModOps>
+  <ModOp Type="add" Path="TextExport/Texts">
+    <Text>
+      <GUID>1600000025</GUID>
+      <Text>남성 건강 주간</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000026</GUID>
+      <Text>남성 건강 주간</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000027</GUID>
+      <Text>남성 건강 주간</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000028</GUID>
+      <Text>남성의 건강 문제를 인식하고 예방하는 것은 남성만의 문제가 아닙니다. 아내, 어머니, 딸, 자매에게 영향을 미치기 때문에 남성의 건강은 진정으로 가족의 문제입니다.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Recognizing and preventing men’s health problems is not just a man’s issue. Because of its impact on wives, mothers, daughters, and sisters, men’s health is truly a family issue.-->
+    </Text>
+    <Text>
+      <GUID>1600000029</GUID>
+      <Text>성탄절</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000030</GUID>
+      <Text>성탄절</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000031</GUID>
+      <Text>성탄절</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000032</GUID>
+      <Text>19세기에 시작되었지만 16세기에 뿌리를 둔 이 관습은 원래 24개의 촛불이 있는 전나무 화환(12월 1일부터 시작되는 크리스마스 전 24일)과 관련이 있었지만 화환에 너무 많은 촛불이 있는 어색함 때문에 그 수가 4개로 줄었습니다.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--The custom, which began in the 19th century but had roots in the 16th, originally involved a fir wreath with 24 candles (the 24 days before Christmas, starting December 1), but the awkwardness of having so many candles on the wreath reduced the number to four.-->
+    </Text>
+    <Text>
+      <GUID>1600000033</GUID>
+      <Text>북극광</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000034</GUID>
+      <Text>북극광</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000035</GUID>
+      <Text>북극광</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000036</GUID>
+      <Text>하늘, 주로 고위도(지구의 북극 및 남극 근처) 또는 다른 행성에서 발생하는 자연광 표시.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planet.-->
+    </Text>
+  </ModOp>
+</ModOps>

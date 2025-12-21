@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.3",
+  "ModID": "Docklands4x4",
+  "DeprecateIds": [],
+  "LoadAfterIds": ["NewWorldDocklands"],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Docklands Pyramid to Square",
+    "English": "Docklands Pyramid to Square",
+    "French": "Docklands Pyramid to Square",
+    "German": "Docklands Pyramid to Square",
+    "Italian": "Docklands Pyramid to Square",
+    "Japanese": "Docklands Pyramid to Square",
+    "Korean": "Docklands Pyramid to Square",
+    "Polish": "Docklands Pyramid to Square",
+    "Russian": "Docklands Pyramid to Square",
+    "Spanish": "Docklands Pyramid to Square",
+    "Taiwanese": "Docklands Pyramid to Square"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,Kurila,senfdeckel98",
+  "CreatorContact": null,
+  "Image": null
+}

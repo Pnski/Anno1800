@@ -1,0 +1,12 @@
+<ModOps>
+    <ModOp Type="remove" GUID='25734' Path="/Values/BuildingUpgrade" />
+    <ModOp Type="add" GUID='25734' Path="/Values/FactoryUpgrade">
+        <AdditionalOutput>
+            <Item>
+                <ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+                <AdditionalOutputCycle>3</AdditionalOutputCycle>
+                <Amount>1</Amount>
+            </Item>
+        </AdditionalOutput>
+    </ModOp>
+</ModOps>

@@ -1,0 +1,47 @@
+<ModOps>   
+    <ModOp GUID='193406' Type="addNextSibling">
+        <Asset>
+            <Template>VehicleBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1600000002</GUID>
+                    <Name>atlantean</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/museum/icon_temple_of_posseidon.png</IconFilename>
+                    <InfoDescription>22241</InfoDescription>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Atlantean Exhibition</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>32633</LineID>
+                </Text>
+                <VehicleUpgrade>
+                    <ForwardSpeedUpgrade>
+                        <Value>5</Value>
+                        <Percental>1</Percental>
+                    </ForwardSpeedUpgrade>
+                </VehicleUpgrade>
+                <TradeShipUpgrade>
+                    <LoadingSpeedUpgrade>
+                        <Value>20</Value>
+                        <Percental>1</Percental>
+                    </LoadingSpeedUpgrade>
+                </TradeShipUpgrade>
+                <UpgradeList/>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>193982</GUID>
+                        </Item>
+                        <Item>
+                            <GUID>7087</GUID>
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+            </Values>
+        </Asset>
+    </ModOp>
+</ModOps>

@@ -1,0 +1,74 @@
+<ModOps>					
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!-- 1600000008 | Ultimate Docklands | 0.0.1 | Text Building
+	1600000009 | Ultimate Docklands | 0.0.1 | Text Building-->	
+		<Text>
+			<GUID>1600000008</GUID>
+			<Text>Build I.N.G</Text>
+		</Text>
+		<Text>
+			<GUID>1600000009</GUID>
+			<Text>All goods, cheapest prices</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000010 | Ultimate Docklands | 0.0.1 | Text OW
+	1600000011 | Ultimate Docklands | 0.0.1 | Text OW-->	
+		<Text>
+			<GUID>1600000010</GUID>
+			<Text>Old World</Text>
+		</Text>
+		<Text>
+			<GUID>1600000011</GUID>
+			<Text>All goods, cheapest prices</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000012 | Ultimate Docklands | 0.0.1 | Text NW
+	1600000013 | Ultimate Docklands | 0.0.1 | Text NW-->	
+		<Text>
+			<GUID>1600000012</GUID>
+			<Text>New World</Text>
+		</Text>
+		<Text>
+			<GUID>1600000013</GUID>
+			<Text>All goods, cheapest prices</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000014 | Ultimate Docklands | 0.0.1 | Text Arctic
+	1600000015 | Ultimate Docklands | 0.0.1 | Text Arctic-->	
+		<Text>
+			<GUID>1600000014</GUID>
+			<Text>Arctic</Text>
+		</Text>
+		<Text>
+			<GUID>1600000015</GUID>
+			<Text>All goods, cheapest prices</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000016 | Ultimate Docklands | 0.0.1 | Text Colossus
+	1600000017 | Ultimate Docklands | 0.0.1 | Text Colossus-->	
+		<Text>
+			<GUID>1600000016</GUID>
+			<Text>Colossus</Text>
+		</Text>
+		<Text>
+			<GUID>1600000017</GUID>
+			<Text>All goods, cheapest prices</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000018 | Ultimate Docklands | 0.0.1 | Text Horizon
+	1600000019 | Ultimate Docklands | 0.0.1 | Text Horizon-->	
+		<Text>
+			<GUID>1600000018</GUID>
+			<Text>New Horizon</Text>
+		</Text>
+		<Text>
+			<GUID>1600000019</GUID>
+			<Text>All goods, cheapest prices</Text>
+		</Text>
+	</ModOp>
+</ModOps>

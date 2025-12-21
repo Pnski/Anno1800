@@ -1,0 +1,29 @@
+<!--1600000034 | MoreFestivalTypes_Nyk | 0.0.1 | FestivalSound: Christmas Day - SoundBank-->
+<ModOps>
+	<!-- Buff Rewards trigger the Stadium Festival with the same buff in NW. So, we just override the buff. -->
+	<!--Stadium2,3,4,5 reserved NewHorizon-->
+	<!--Stadium1,6,11 reserved for Rewards-->
+	<!--Using Stadium 7,8,9,10-->
+	<ModOp  Type="replace" GUID="6499,6500,6501,6502" Path="/Values/Reward/RewardAssets/Item[2]/Reward">
+		<Reward>6931</Reward><!--local-->
+	</ModOp>
+	<ModOp  Type="replace" GUID="6948,6949,6950,6951" Path="/Values/Reward/RewardAssets/Item[2]/Reward">
+		<Reward>6936</Reward><!--regional-->
+	</ModOp>
+	<ModOp  Type="replace" GUID="6503,6504,6505,6506" Path="/Values/Reward/RewardAssets/Item[2]/Reward">
+		<Reward>6941</Reward><!--world-->
+	</ModOp>
+	<Include File = "menshealth.include.xml" /><!--Stadium7-->
+	<Include File = "christmas.include.xml" /><!--Stadium8-->
+	<Include File = "aurora.include.xml" /><!--Stadium9-->
+	<!--CocaColaFestival?-->
+	<!--<AllowedFestivals>BeerFestival;HarvestFestival;ArtsFestival;Commemoration;Carnival;AnarchyFest</AllowedFestivals>-->
+	<ModOp Type="add" GUID='141893' Path="/Values/IncidentFestival/FestivalsPerRegion/*[self::Moderate or self::Colony01]/AllowedFestivals">;Stadium7;Stadium8</ModOp>
+	<ModOp Type="add" GUID='141893' Path="/Values/IncidentFestival/FestivalsPerRegion/*[self::Africa]/AllowedFestivals">;Stadium7</ModOp>
+	<ModOp Type="add" GUID='141893' Path="/Values/IncidentFestival/FestivalsPerRegion/*[self::Arctic]/AllowedFestivals" Condition="/Values/IncidentFestival/FestivalsPerRegion/Arctic[1]">;Stadium9</ModOp>
+	<ModOp Type="merge" GUID='141893' Path="/Values/IncidentFestival/FestivalsPerRegion/" Condition="!/Values/IncidentFestival/FestivalsPerRegion/Arctic[1]">
+		<Arctic>
+			<AllowedFestivals>Stadium9</AllowedFestivals>
+		</Arctic>
+	</ModOp>
+</ModOps>

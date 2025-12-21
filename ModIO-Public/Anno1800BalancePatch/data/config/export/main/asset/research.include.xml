@@ -1,0 +1,63 @@
+<ModOps>
+    <!-- Research Institute 100 000 Engineers = 1 min research -->
+    <!-- Items -->
+    <ModOp Type="merge" GUID='120244' Path="/Values/ResearchFeature/ItemCraftingConfig">
+        <ItemCraftingConfig>
+            <Uncommon>
+                <MaximumWorkforceAmount>100000</MaximumWorkforceAmount>
+                <MaximumWorkforceTime>60000</MaximumWorkforceTime>
+            </Uncommon>
+            <Common>
+                <MaximumWorkforceAmount>100000</MaximumWorkforceAmount>
+                <MaximumWorkforceTime>60000</MaximumWorkforceTime>
+            </Common>
+            <Rare>
+                <MaximumWorkforceAmount>100000</MaximumWorkforceAmount>
+                <MaximumWorkforceTime>60000</MaximumWorkforceTime>
+            </Rare>
+            <Epic>
+                <MaximumWorkforceAmount>100000</MaximumWorkforceAmount>
+                <MaximumWorkforceTime>60000</MaximumWorkforceTime>
+            </Epic>
+            <Legendary>
+                <MaximumWorkforceAmount>100000</MaximumWorkforceAmount>
+                <MaximumWorkforceTime>60000</MaximumWorkforceTime>
+            </Legendary>
+        </ItemCraftingConfig>
+    </ModOp>
+    <!-- Objects -->
+    <ModOp Type="merge" GUID='124839,124840,124841,124842,125340,124843,124844,124846,124845,124849,124850' Path="/Values/Godlike/CraftingConfig">
+		<CraftingConfig>
+			<MaximumWorkforceAmount>100000</MaximumWorkforceAmount>
+			<MaximumWorkforceTime>60000</MaximumWorkforceTime>
+		</CraftingConfig>
+	</ModOp>
+    <ModOp Type="replace" GUID='126888' Path="/Values">
+        <Values>
+            <Standard>
+                <GUID>126888</GUID>
+                <Name>GodlikeResearchCostsBalancing</Name>
+            </Standard>
+            <ProgressBalancing>
+                <Progress>
+                    <Item>
+                        <Value>25000</Value>
+                    </Item>
+                    <Item>
+                        <Threshold>1</Threshold>
+                        <Value>50000</Value>
+                    </Item>
+                    <Item>
+                        <Threshold>2</Threshold>
+                        <Value>75000</Value>
+                    </Item>
+                </Progress>
+                <PostProgress>
+                    <ThresholdInterval>1</ThresholdInterval>
+                    <ValueIncrease>25000</ValueIncrease>
+                </PostProgress>
+                <AbsoluteLimit />
+            </ProgressBalancing>
+        </Values>
+    </ModOp>
+</ModOps>

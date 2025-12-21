@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "RemoveGraphics",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "Remove graphics",
+    "English": "Remove graphics",
+    "French": "Remove graphics",
+    "German": "Remove graphics",
+    "Italian": "Remove graphics",
+    "Japanese": "Remove graphics",
+    "Korean": "Remove graphics",
+    "Polish": "Remove graphics",
+    "Russian": "Remove graphics",
+    "Spanish": "Remove graphics",
+    "Taiwanese": "Remove graphics"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

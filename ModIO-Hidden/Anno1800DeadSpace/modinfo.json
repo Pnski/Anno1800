@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "Ornament_DeadSpace",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Ornament",
+    "Chinese": "Ornament",
+    "French": "Ornament",
+    "German": "Ornament",
+    "Italian": "Ornament",
+    "Japanese": "Ornament",
+    "Korean": "Ornament",
+    "Polish": "Ornament",
+    "Russian": "Ornament",
+    "Spanish": "Ornament",
+    "Taiwanese": "Ornament"
+  },
+  "ModName": {
+    "Chinese": "Ornamental building: Dead Space Marker",
+    "English": "Ornamental building: Dead Space Marker",
+    "French": "Ornamental building: Dead Space Marker",
+    "German": "Ornamental building: Dead Space Marker",
+    "Italian": "Ornamental building: Dead Space Marker",
+    "Japanese": "Ornamental building: Dead Space Marker",
+    "Korean": "Ornamental building: Dead Space Marker",
+    "Polish": "Ornamental building: Dead Space Marker",
+    "Russian": "Ornamental building: Dead Space Marker",
+    "Spanish": "Ornamental building: Dead Space Marker",
+    "Taiwanese": "Ornamental building: Dead Space Marker"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

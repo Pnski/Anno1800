@@ -1,0 +1,76 @@
+<ModOps>
+  <ModOp Type="add" Path="TextExport/Texts">
+    <Text>
+      <GUID>1600000025</GUID>
+      <Text>Semana de la Salud Masculina</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000026</GUID>
+      <Text>Semana de la Salud Masculina</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000027</GUID>
+      <Text>Semana de la Salud Masculina</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Mens Health Week-->
+    </Text>
+    <Text>
+      <GUID>1600000028</GUID>
+      <Text>Reconocer y prevenir los problemas de salud de los hombres no es solo un problema de hombres. Debido a su impacto en las esposas, madres, hijas y hermanas, la salud de los hombres es realmente un problema familiar.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Recognizing and preventing men’s health problems is not just a man’s issue. Because of its impact on wives, mothers, daughters, and sisters, men’s health is truly a family issue.-->
+    </Text>
+    <Text>
+      <GUID>1600000029</GUID>
+      <Text>Día de Navidad</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000030</GUID>
+      <Text>Día de Navidad</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000031</GUID>
+      <Text>Día de Navidad</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Christmas Day-->
+    </Text>
+    <Text>
+      <GUID>1600000032</GUID>
+      <Text>La costumbre, que comenzó en el siglo XIX pero tiene sus raíces en el XVI, originalmente implicaba una corona de abeto con 24 velas (los 24 días antes de Navidad, a partir del 1 de diciembre), pero la incomodidad de tener tantas velas en la corona redujo el número a cuatro.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--The custom, which began in the 19th century but had roots in the 16th, originally involved a fir wreath with 24 candles (the 24 days before Christmas, starting December 1), but the awkwardness of having so many candles on the wreath reduced the number to four.-->
+    </Text>
+    <Text>
+      <GUID>1600000033</GUID>
+      <Text>Aurora boreal</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000034</GUID>
+      <Text>Aurora boreal</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000035</GUID>
+      <Text>Aurora boreal</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Aurora Borealis-->
+    </Text>
+    <Text>
+      <GUID>1600000036</GUID>
+      <Text>Exhibición de luz natural que ocurre en el cielo, principalmente en latitudes altas (cerca del Ártico y la Antártida en la Tierra) o incluso en otro planeta.</Text>
+      <!--MachineTranslated by Nyk-->
+      <!--Natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planet.-->
+    </Text>
+  </ModOp>
+</ModOps>

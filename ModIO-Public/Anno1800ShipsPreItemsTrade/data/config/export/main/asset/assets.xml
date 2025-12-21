@@ -1,0 +1,114 @@
+<ModOps>
+  <!-- Wind Ships -->
+  <ModOp Type="merge" GUID='100438' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>191625</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <ModOp Type="merge" GUID='100441' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>191624</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <!-- Steel Ships -->
+  <ModOp Type="merge" GUID='1010062' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>121023</Item>
+        </Item>
+        <Item>
+          <Item>191624</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <ModOp Type="merge" GUID='15835,132404' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>191624</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <ModOp Type="merge" GUID='15836,118718,102455' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>121023</Item>
+        </Item>
+        <Item>
+          <Item>191624</Item>
+        </Item>
+        <Item>
+          <Item>191453</Item>
+        </Item>
+      </InitSocketItems>
+      <InitSlotItems>
+        <Item>
+          <Item>191626</Item>
+          <StackSize>1</StackSize>
+        </Item>
+      </InitSlotItems>
+    </ItemContainer>
+  </ModOp>
+  <ModOp Type="add" GUID='112084' Path="/Values/ItemContainer">
+    <InitSocketItems>
+       <Item>
+         <Item>112553</Item>
+       </Item>
+       <Item>
+         <Item>112550</Item>
+       </Item>
+       <Item>
+         <Item>112556</Item>
+       </Item>
+    </InitSocketItems>
+  </ModOp>
+  <!-- Air Ships -->
+  <ModOp Type="merge" GUID='1654,1733' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>117303</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <ModOp Type="merge" GUID='1059,1736' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>116175</Item>
+        </Item>
+        <Item>
+          <Item>117303</Item>
+        </Item>
+        <Item>
+          <Item>4133</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <ModOp Type="merge" GUID='1655,1058,1734,1735,1060,1737' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>116175</Item>
+        </Item>
+        <Item>
+          <Item>117303</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+</ModOps>

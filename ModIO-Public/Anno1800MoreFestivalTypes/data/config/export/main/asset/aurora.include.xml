@@ -1,0 +1,166 @@
+<!--1600000033 | MoreFestivalTypes_Nyk | 0.0.1 | Festivalname: Aurora Borealis
+1600000034 | MoreFestivalTypes_Nyk | 0.0.1 | FestivalBuff1: Aurora Borealis
+1600000035 | MoreFestivalTypes_Nyk | 0.0.1 | FestivalBuff2: Aurora Borealis
+1600000036 | MoreFestivalTypes_Nyk | 0.0.1 | FestivalBuff: Aurora Borealis - Description-->
+<ModOps>
+    <!--Aurora Borealis-->
+	<ModOp Type="replace" GUID='141893' Path="/Values/IncidentFestival/FestivalTypes/Stadium9/*">
+		<StartNotification>501208</StartNotification>
+		<EndNotification>501210</EndNotification>
+		<AboutToEndNotification>501211</AboutToEndNotification>
+		<EstimatedRemainingTimeForAboutToEndNotification>150000</EstimatedRemainingTimeForAboutToEndNotification>
+		<!--<BonusAttractiveness>100</BonusAttractiveness>--><!--no attractiveness in arctic-->
+		<IncidentProtection>
+			<Fire><Protected>1</Protected></Fire>
+			<Riot><Protected>1</Protected></Riot>
+			<!--<Illness><Protected>1</Protected></Illness>-->
+			<Explosion><Protected>1</Protected></Explosion>
+		</IncidentProtection>
+		<Effects>
+			<Item>
+				<Effect>1600000034</Effect><!--ResidenceBuff?-->
+			</Item>
+			<Item>
+				<Effect>1600000035</Effect><!--ProductionBuff?-->
+			</Item>
+		</Effects>
+		<FestivalName>1600000033</FestivalName>
+		<FestivalIcon>1600000033</FestivalIcon>
+		<ParadeWagons>
+		<Item><Wagon>ParadeDancer</Wagon></Item>
+		<Item><Wagon>ParadeDancer</Wagon></Item>
+		<Item><Wagon>ParadeDancer</Wagon></Item>
+		<Item><Wagon>ParadeDancer</Wagon></Item>
+		</ParadeWagons>
+		<MinParadeDistance>10</MinParadeDistance>
+		<MaxParadeDistance>20</MaxParadeDistance>
+		<ParadeSoundEvent>200735</ParadeSoundEvent>
+		<CrowdSoundEvent>200733</CrowdSoundEvent>
+		<FestivalDecoration>142641</FestivalDecoration>
+	</ModOp>
+	<!--Text-->
+	<ModOp Type="addNextSibling" GUID='129671'>
+		<Asset>
+			<Template>Text</Template>
+			<Values>
+				<Standard>
+					<GUID>1600000033</GUID>
+					<Name>Aurora Borealis Festival Name</Name>
+					<IconFilename>data/ui/2kimages/main/aurora2.png</IconFilename>
+				</Standard>
+			</Values>
+		</Asset>		
+	</ModOp>
+    <!--Buff-->
+	<ModOp Type="addNextSibling" GUID='1600000033'>
+		<Asset>
+			<Template>FestivalBuff</Template>
+			<Values>
+				<Standard>
+					<GUID>1600000034</GUID>
+					<Name>AuroraBorealisResidencesBuff</Name>
+					<IconFilename>data/ui/2kimages/main/aurora2.png</IconFilename>
+					<InfoDescription>1600000036</InfoDescription>
+				</Standard>
+				<PopulationUpgrade />
+				<ResidenceUpgrade>
+					<GoodConsumptionUpgrade>
+						<Item>
+							<ProvidedNeed>1010216</ProvidedNeed>
+							<AmountInPercent>-25</AmountInPercent>
+						</Item>
+						<Item>
+							<ProvidedNeed>120032</ProvidedNeed>
+							<AmountInPercent>-25</AmountInPercent>
+						</Item>
+						<Item>
+							<ProvidedNeed>1010257</ProvidedNeed>
+							<AmountInPercent>-25</AmountInPercent>
+						</Item>
+						<Item>
+							<ProvidedNeed>1010214</ProvidedNeed>
+							<AmountInPercent>-25</AmountInPercent>
+						</Item>
+					</GoodConsumptionUpgrade>
+				</ResidenceUpgrade>
+				<ItemEffect>
+					<EffectTargets>
+						<Item>
+							<GUID>112091</GUID>
+						</Item>
+						<Item>
+							<GUID>112652</GUID>
+						</Item>
+					</EffectTargets>
+				</ItemEffect>
+				<Buff/>
+				<CultureUpgrade/>
+				<KontorUpgrade/>
+				<AttackableUpgrade/>
+				<AttackerUpgrade/>
+				<BuildingUpgrade/>
+				<FactoryUpgrade/>
+				<PassiveTradeGoodGenUpgrade/>
+				<ShipyardUpgrade/>
+				<VisitorHarborUpgrade/>
+				<VisitorUpgrade/>
+			</Values>
+		</Asset>	
+	</ModOp>
+	<ModOp Type="addNextSibling" GUID='1600000034'>
+		<Asset>
+			<Template>FestivalBuff</Template>
+			<Values>
+				<Standard>
+					<GUID>1600000035</GUID>
+					<Name>AuroraBorealisProductionBuff</Name>
+					<IconFilename>data/ui/2kimages/main/aurora2.png</IconFilename>
+					<InfoDescription>1600000036</InfoDescription>
+				</Standard>
+				<PopulationUpgrade/>
+				<ResidenceUpgrade/>
+				<ItemEffect>
+					<EffectTargets>
+						<Item>
+							<GUID>193856</GUID>
+						</Item>
+					</EffectTargets>
+				</ItemEffect>
+				<Buff/>
+				<CultureUpgrade/>
+				<KontorUpgrade/>
+				<AttackableUpgrade/>
+				<AttackerUpgrade/>
+				<BuildingUpgrade>
+					<WorkforceAmountUpgrade>
+						<Value>-10</Value>
+						<Percental>1</Percental>
+					</WorkforceAmountUpgrade>
+				</BuildingUpgrade>
+				<FactoryUpgrade>
+					<ProductivityUpgrade>
+						<Value>10</Value>
+						<Percental>1</Percental>
+					</ProductivityUpgrade>
+				</FactoryUpgrade>
+				<PassiveTradeGoodGenUpgrade/>
+				<ShipyardUpgrade/>
+				<VisitorHarborUpgrade/>
+				<VisitorUpgrade/>
+			</Values>
+		</Asset>
+	</ModOp>
+    <!--Description-->
+    <ModOp Type="addNextSibling" GUID='1600000033'>
+		<Asset>
+			<Template>Text</Template>
+			<Values>
+				<Standard>
+					<GUID>1600000036</GUID>
+					<Name>Aurora Borealis Week Description</Name>
+					<IconFilename>data/ui/2kimages/main/aurora2.png</IconFilename>
+				</Standard>
+			</Values>
+		</Asset>
+	</ModOp>
+</ModOps>

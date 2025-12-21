@@ -1,0 +1,148 @@
+<ModOps>
+    <!--PassiveHarbors-->
+    <!--OW-->
+    <!--100680 - Blake-->
+    <!--100681 - Harlow-->
+    <!--101117 - Nate-->
+    <!--100685 - eli-->
+    <!--NW-->
+    <!--100682 - Fortune-->
+    <!--100683 - Sarmento-->
+    <!--Enbesa-->
+    <!--119409 Ketema-->
+    <!--Arctic-->
+    <!--116035 - Inuit-->
+    <ModOp Type="replace" GUID='100680,100681,101117,100685,100682,100683,119409,116035' Path="/Values/LoadingPier">
+        <LoadingPier>
+            <NumOfPiers>4</NumOfPiers><!--more just makes them bounce-->
+            <LoadingSpeed>50</LoadingSpeed>
+        </LoadingPier>
+    </ModOp>
+
+    <!-- 3rdParty Budget changes pirates, giving them a piraty tradefleet-->
+    <ModOp Type = "merge" GUID = '73,76' Path = "/Values/Trader/Progression">
+        <EarlyGame>
+            <TradeFleet>
+                <Item>
+                    <ShipAsset>100438</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>102429</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+            </TradeFleet>
+            <BuyBudget>15000</BuyBudget>
+            <SellBudget>15000</SellBudget>
+        </EarlyGame>
+        <EarlyMidGame>
+            <TradeFleet>
+                <Item>
+                    <ShipAsset>100438</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>100441</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>102429</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+            </TradeFleet>
+            <BuyBudget>30000</BuyBudget>
+            <SellBudget>30000</SellBudget>
+        </EarlyMidGame>
+        <MidGame>
+            <TradeFleet>
+                <Item>
+                    <ShipAsset>100441</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>1010062</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>102432</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+            </TradeFleet>
+            <BuyBudget>60000</BuyBudget>
+            <SellBudget>60000</SellBudget>
+        </MidGame>
+        <LateMidGame>
+            <TradeFleet>
+                <Item>
+                    <ShipAsset>100441</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>1010062</ShipAsset>
+                    <Amount>1</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>102432</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+            </TradeFleet>
+            <BuyBudget>120000</BuyBudget>
+            <SellBudget>120000</SellBudget>
+        </LateMidGame>
+        <LateGame>
+            <TradeFleet>
+                <Item>
+                    <ShipAsset>1010062</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>102432</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+            </TradeFleet>
+            <BuyBudget>225000</BuyBudget>
+            <SellBudget>225000</SellBudget>
+        </LateGame>
+        <EndGame>
+            <TradeFleet>
+                <Item>
+                    <ShipAsset>1010062</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+                <Item>
+                    <ShipAsset>102432</ShipAsset>
+                    <Amount>2</Amount>
+                </Item>
+            </TradeFleet>
+            <BuyBudget>300000</BuyBudget>
+            <SellBudget>300000</SellBudget>
+        </EndGame>
+    </ModOp>
+    <!--1:1 Serp-->
+    <ModOp Type = "merge" GUID = '45,46,77,78,29,237,119051' Path = "/Values/Trader/Progression">
+        <EarlyGame>
+          <BuyBudget>15000</BuyBudget>
+          <SellBudget>15000</SellBudget>
+        </EarlyGame>
+        <EarlyMidGame>
+          <BuyBudget>30000</BuyBudget>
+          <SellBudget>30000</SellBudget>
+        </EarlyMidGame>
+        <MidGame>
+          <BuyBudget>60000</BuyBudget>
+          <SellBudget>60000</SellBudget>
+        </MidGame>
+        <LateMidGame>
+          <BuyBudget>120000</BuyBudget>
+          <SellBudget>120000</SellBudget>
+        </LateMidGame>
+        <LateGame>
+          <BuyBudget>225000</BuyBudget>
+          <SellBudget>225000</SellBudget>
+        </LateGame>
+        <EndGame>
+          <BuyBudget>300000</BuyBudget>
+          <SellBudget>300000</SellBudget>
+        </EndGame>
+    </ModOp>
+</ModOps>

@@ -1,0 +1,57 @@
+{
+	"Version": "0.0.5",
+	"ModID": "InstantShipBuild",
+	"DeprecateIds": [],
+	"LoadAfterIds": [
+		"Imperio Schiffswerft",
+		"Eva_Icebreaker",
+		"Tisogno_FunnyShips",
+		"military_attention_ships"
+	],
+	"IncompatibleIds": null,
+	"ModDependencies": null,
+	"Category": {
+		"English": "Misc",
+		"Chinese": "杂项",
+		"French": "Divers",
+		"German": "Sonstiges",
+		"Italian": "Altri",
+		"Japanese": "雑貨",
+		"Korean": "기타",
+		"Polish": "Różne",
+		"Russian": "Разное",
+		"Spanish": "Misc",
+		"Taiwanese": "雜項"
+	},
+	"ModName": {
+		"Chinese": "即时船舶建造",
+		"English": "Instant Ship Build",
+		"French": "Construction instantanée du vaisseau",
+		"German": "Sofortiger Schiffsbau",
+		"Italian": "Costruzione istantanea della nave",
+		"Japanese": "インスタントシップビルド",
+		"Korean": "즉석 함선 건조",
+		"Polish": "Natychmiastowa budowa statku",
+		"Russian": "Мгновенная постройка корабля",
+		"Spanish": "Construcción instantánea de naves",
+		"Taiwanese": "即時船舶建造"
+	},
+	"Description": {
+		"English": "Reduces the buildingtime of ships to 0",
+		"German": "Reduziert die Bauzeit von Schiffen auf 0",
+		"Chinese": "将船舶的建造时间减少到0",
+		"French": "Réduit le temps de construction des navires à 0",
+		"Italian": "Riduce a 0 il tempo di costruzione delle navi",
+		"Japanese": "艦艇の建造時間を0に短縮",
+		"Korean": "함선 건조 시간이 0으로 감소합니다.",
+		"Polish": "Skraca czas budowy statków do 0",
+		"Russian": "Сокращает время постройки кораблей до 0",
+		"Spanish": "Reduce el tiempo de construcción de los barcos a 0",
+		"Taiwanese": "將船舶的建造時間減少到0"
+	},
+	"KnownIssues": null,
+	"DLCDependencies": null,
+	"CreatorName": "Pnski",
+	"CreatorContact": null,
+	"Image": null
+}

@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "Node16",
+		"target": "ES2022",
+		"outDir": "./out",
+		"noImplicitAny": true, // Report error when not all code paths in function return a value.
+		"strictNullChecks": false, // ignore possible undefined -> risky but better than ! everywhere
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"lib": ["ES2022"],
+		"sourceMap": true,
+		"removeComments": true,
+		
+		//"rootDir": "src",
+		"strict": true /* enable all strict type-checking options */
+	},
+	"include": ["**/*.ts", "Component/**/*.ts", "files/**/*.ts", "lang/**/*.ts", "message/**/*.ts"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}

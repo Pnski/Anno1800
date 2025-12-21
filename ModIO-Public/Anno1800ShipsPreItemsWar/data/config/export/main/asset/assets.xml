@@ -1,0 +1,80 @@
+<ModOps>
+  <!-- Airships-->
+   <!-- small 2 -->
+  <ModOp Type="merge" GUID='1054,1731' Path="/Values/ItemContainer">
+    <InitSocketItems>
+       <Item>
+         <Item>2226</Item>
+       </Item>
+       <Item>
+         <Item>4135</Item>
+       </Item>
+    </InitSocketItems>
+  </ModOp>
+  <!-- medium 3-->
+  <ModOp Type="merge" GUID='1056,1732' Path="/Values/ItemContainer">
+    <InitSocketItems>
+       <Item>
+         <Item>2226</Item>
+       </Item>
+       <Item>
+         <Item>4135</Item>
+       </Item>
+       <Item>
+         <Item>117302</Item>
+       </Item>
+    </InitSocketItems>
+  </ModOp>
+  <!--Ships-->
+  <!--Sail-->
+  <!--SOTL 3-->
+  <ModOp Type="merge" GUID='100440,102431,102419' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>191607</Item>
+        </Item>
+        <Item>
+          <Item>112370</Item>
+        </Item>
+        <Item>
+          <Item>111130</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <!--steel-->
+  <!--battlecruiser 4-->
+  <ModOp Type="merge" GUID='100442,102425' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>191851</Item>
+        </Item>
+        <Item>
+          <Item>191611</Item>
+        </Item>
+        <Item>
+          <Item>112370</Item>
+        </Item>
+        <Item>
+          <Item>191610</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+  <!--monitor 2/frigatte/flagship-->
+  <!--reddit:hit'n'run /speed/hp+selfheal-->
+  <ModOp Type="merge" GUID='968,1537,720,100439,102429,101121,100437,102429,100443,102432,104017' Path="/Values/ItemContainer">
+    <ItemContainer>
+      <InitSocketItems>
+        <Item>
+          <Item>191453</Item>
+        </Item>
+        <Item>
+          <Item>192168</Item>
+        </Item>
+      </InitSocketItems>
+    </ItemContainer>
+  </ModOp>
+</ModOps>

@@ -1,0 +1,20 @@
+<ModOps>
+	<ModOp Type="merge" GUID='465' Path="/Values/ItemTransferFeature/ItemCooldowns/*/Duration">
+		<Duration>0</Duration>
+	</ModOp>
+	<ModOp Type="merge" GUID='465' Path="/Values/ItemTransferFeature/CreativeModeItemCooldown">
+		<CreativeModeItemCooldown>0</CreativeModeItemCooldown>
+	</ModOp>
+	<ModOp Type="merge" GUID='465' Path="/Values/ItemTransferFeature/MaxStorageSize">
+		<MaxStorageSize>80</MaxStorageSize>
+	</ModOp>
+	<ModOp Type="merge" GUID='964,2274' Path="Values/MetaItemStorageAccess/ProvidedStorageAmount">
+		<ProvidedStorageAmount>20</ProvidedStorageAmount>
+	</ModOp>
+	<ModOp Type="merge" GUID='103693004' Path="Values/MetaItemStorageAccess/ProvidedStorageAmount" Condition="#Hackner_EnbesaMailIntegration">
+		<ProvidedStorageAmount>20</ProvidedStorageAmount>
+	</ModOp>
+	<ModOp Type="merge" GUID='103692002' Path="Values/MetaItemStorageAccess/ProvidedStorageAmount" Condition="#Hackner_ArcticAirshipPlatformEnhanced">
+		<ProvidedStorageAmount>20</ProvidedStorageAmount>
+	</ModOp>
+</ModOps>

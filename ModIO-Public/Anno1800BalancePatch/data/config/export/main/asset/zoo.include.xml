@@ -1,0 +1,212 @@
+<ModOps>
+    <!-- Abyssal Depth -->
+    <Include File="abyssal.zoo.include.xml" />
+    <ModOp Type="merge" GUID='193401' Path="/Values/ItemSocketSet">
+        <SetBuff>1600000004</SetBuff>
+        <BuffScope>Area</BuffScope>
+    </ModOp>
+    <!-- Cordillera -->
+    <ModOp Type="replace" GUID='191132' Path="/Values/ItemEffect/EffectTargets">
+        <EffectTargets>
+            <Item>
+                <GUID>190762</GUID>
+            </Item>
+        </EffectTargets>
+    </ModOp>
+    <!-- Domestic Animals -->
+    <ModOp Type="replace" GUID='191139' Path="/Values/ItemEffect/EffectTargets/Item/GUID">
+        <GUID>1965</GUID>
+    </ModOp>
+    <ModOp Type="remove" GUID='191139' Path="/Values/BuildingUpgrade" />
+    <ModOp Type="replace" GUID='191139' Path="/Values/FactoryUpgrade">
+		<FactoryUpgrade>
+			<ProductivityUpgrade>
+				<Value>25</Value>
+				<Percental>1</Percental>
+			</ProductivityUpgrade>
+			<AdditionalOutput>
+				<Item>
+					<ForceProductSameAsFactoryOutput>1</ForceProductSameAsFactoryOutput>
+					<AdditionalOutputCycle>3</AdditionalOutputCycle>
+					<Amount>1</Amount>
+				</Item>
+			</AdditionalOutput>
+		</FactoryUpgrade>
+    </ModOp>
+    <ModOp Type="replace" GUID='191139' Path="/Values/ModuleOwnerUpgrade">
+		<ModuleOwnerUpgrade>
+			<ModuleLimitPercent>-25</ModuleLimitPercent>
+		</ModuleOwnerUpgrade>
+    </ModOp>
+    <!-- Eastern Jungle -->
+    <Include File="jungle.zoo.include.xml" />
+    <ModOp Type="replace" GUID='191120' Path="/Values/ItemSocketSet/SetBuff">
+        <SetBuff>1600000005</SetBuff>
+    </ModOp>
+    <!-- Enbesean Highlands -->
+    <ModOp Type="remove" GUID='124208' Path="/Values/ResidenceUpgrade" />
+    <ModOp Type="replace" GUID='124208' Path="/Values/PopulationUpgrade">
+        <PopulationUpgrade>
+			<InputBenefitModifier>
+                <Item>
+					<Product>1010353</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+                <Item>
+					<Product>1010217</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+				<Item>
+					<Product>114430</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+				<Item>
+					<Product>114410</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+				<Item>
+					<Product>114431</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+				<Item>
+					<Product>1010248</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+                <Item>
+					<Product>1010354</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+                <Item>
+					<Product>114425</Product>
+					<AdditionalResearch>5</AdditionalResearch>
+				</Item>
+			</InputBenefitModifier>
+		</PopulationUpgrade>
+    </ModOp>
+    <!-- Great Coral Reef -->
+    <ModOp Type="replace" GUID='191135' Path="/Values/ItemEffect/EffectTargets">
+        <EffectTargets>
+            <Item>
+                <GUID>190762</GUID>
+            </Item>
+        </EffectTargets>
+    </ModOp>
+    <ModOp Type="replace" GUID='191135' Path="/Values/ResidenceUpgrade/AdditionalHappiness">
+        <AdditionalHappiness>5</AdditionalHappiness>
+    </ModOp>
+    <!-- Luminaries -->
+    <ModOp Type="replace" GUID='193404' Path="/Values/CultureUpgrade/AttractivenessUpgrade/Value">
+        <Value>5</Value>
+    </ModOp>
+    <ModOp Type="add" GUID='193404' Path="/Values/ItemEffect/EffectTargets">
+        <Item>
+            <GUID>191540</GUID>
+        </Item>
+        <Item>
+            <GUID>193872</GUID>
+        </Item>
+        <Item>
+            <GUID>1010360</GUID>
+        </Item>
+    </ModOp>
+    <!-- Miombo Woodlands -->
+    <ModOp Type="add" GUID='124210' Path="/Values/ItemEffect/EffectTargets">
+        <Item>
+            <GUID>194008</GUID>
+        </Item>
+    </ModOp>
+    <ModOp Type="replace" GUID='124210' Path="/Values/FactoryUpgrade/NeededAreaPercentUpgrade/Value">
+        <Value>-15</Value>
+    </ModOp>
+    <!-- Ocean Predetors -->
+    <ModOp Type="replace" GUID='191140' Path="/Values/FactoryUpgrade/ProductivityUpgrade/Value">
+        <Value>30</Value>
+    </ModOp>
+    <!-- Rainforest -->
+    <!-- 6Item both Influence -->
+    <ModOp Type="replace" GUID='191136' Path="/Values/ItemEffect/EffectTargets">
+        <EffectTargets>
+			<Item>
+				<GUID>190781</GUID>
+			</Item>
+			<Item>
+				<GUID>193990</GUID>
+			</Item>
+		</EffectTargets>
+    </ModOp>
+    <ModOp Type="merge" GUID='191136' Path="/Values">
+        <InfluenceSourceUpgrade>
+			<InfluenceAmounUpgrade>
+				<Value>10</Value>
+			</InfluenceAmounUpgrade>
+		</InfluenceSourceUpgrade>
+    </ModOp>
+    <ModOp Type="remove" GUID='191136' Path="/Values/CultureUpgrade" />
+    <!-- Taiga Forest -->
+    <!-- Reduce all food needs -->
+    <ModOp Type="replace" GUID='191133' Path="/Values/ResidenceUpgrade/GoodConsumptionUpgrade/">
+        <GoodConsumptionUpgrade>
+            <Item>
+                <ProvidedNeed>1010200</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010213</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010217</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010238</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>1010258</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>120033</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>120035</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>114410</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>135186</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>135229</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>112705</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+            <Item>
+                <ProvidedNeed>114359</ProvidedNeed>
+                <AmountInPercent>-5</AmountInPercent>
+            </Item>
+        </GoodConsumptionUpgrade>
+    </ModOp>
+    <!-- Teeming Lakes -->
+    <ModOp Type="remove" GUID='124207' Path="/Values/FactoryUpgrade" />
+    <ModOp Type="replace" GUID='124207' Path="/Values/PierUpgrade">
+        <PierUpgrade>
+			<PierSpeedUpgrade>
+				<Value>15</Value>
+				<Percental>1</Percental>
+			</PierSpeedUpgrade>
+		</PierUpgrade>
+    </ModOp>
+    <ModOp Type="replace" GUID='124207' Path="/Values/ItemEffect/EffectTargets/Item/GUID">
+        <GUID>193480</GUID>
+    </ModOp>
+</ModOps>

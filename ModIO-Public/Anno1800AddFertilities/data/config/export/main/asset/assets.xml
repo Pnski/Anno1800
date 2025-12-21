@@ -1,0 +1,13 @@
+<ModOps>
+    <ModOp Type="add" GUID='2001271' Path="/Values/GUIConfig/KeyBindings">
+        <Item>
+            <KeyTypes>Shift;P</KeyTypes>
+            <Command>TextSources.TextSourceRoots.Cheat.GlobalCheats.ToggleIgnoreFertilities()</Command>
+            <Active>Menu;Session;WorldMap;VideoCameraSequence;TextInput;PostcardView;Pause</Active>
+            <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+            <Text>10395</Text>
+            <AudioEvent>200634</AudioEvent>
+            <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+        </Item>
+    </ModOp>
+</ModOps>

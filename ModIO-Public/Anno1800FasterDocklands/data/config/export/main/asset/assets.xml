@@ -1,0 +1,15 @@
+<ModOps>
+  <ModOp Type="merge" GUID="132706" Path="/Values">
+    <Walking>
+      <ForwardSpeed>100</ForwardSpeed>
+      <Acceleration>10</Acceleration>
+			<Deceleration>10</Deceleration>
+      <ReservationLength>2</ReservationLength><!-- Bumping issue -->
+			<ReservationWidth>2</ReservationWidth><!-- Bumping issue -->
+    </Walking>
+    <TradeRouteVehicle>
+      <LoadingSpeedFactor>2000</LoadingSpeedFactor>
+      <MinimumLoadingTime>1</MinimumLoadingTime>
+    </TradeRouteVehicle>
+  </ModOp>
+</ModOps>

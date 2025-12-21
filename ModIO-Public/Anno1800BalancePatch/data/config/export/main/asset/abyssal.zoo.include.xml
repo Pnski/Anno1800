@@ -1,0 +1,55 @@
+<ModOps>
+    <ModOp GUID='193402' Type="addNextSibling">
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1600000004</GUID>
+                    <Name>deep water</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/animals/icon_kraken.png</IconFilename>
+                    <InfoDescription>22237</InfoDescription>
+                </Standard>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Abyssal Depths Park</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>32635</LineID>
+                </Text>
+                <FactoryUpgrade>
+                    <AdditionalOutput>
+                        <Item>
+                            <Product>1010200</Product>
+                            <AdditionalOutputCycle>10</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>120042</Product>
+                            <AdditionalOutputCycle>10</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>118728</Product>
+                            <AdditionalOutputCycle>10</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                        <Item>
+                            <Product>5380</Product>
+                            <AdditionalOutputCycle>10</AdditionalOutputCycle>
+                            <Amount>1</Amount>
+                        </Item>
+                    </AdditionalOutput>
+                </FactoryUpgrade>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190779</GUID>
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+            </Values>
+        </Asset>
+    </ModOp>
+</ModOps>

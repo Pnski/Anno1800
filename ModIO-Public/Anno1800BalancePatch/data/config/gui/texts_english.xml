@@ -1,0 +1,28 @@
+<ModOps>
+  <ModOp Type="add" Path="/TextExport/Texts">
+		<Text>
+			<GUID>1600000001</GUID>
+			<Text>Masu Masu Exhibition</Text>
+		</Text>
+		<Text>
+			<GUID>1600000002</GUID>
+			<Text>Atlantean Exhibition</Text>
+		</Text>
+		<Text>
+			<GUID>1600000003</GUID>
+			<Text>Skull and Bones Exhibition</Text>
+		</Text>
+		<Text>
+			<GUID>1600000004</GUID>
+			<Text>Abyssal Depths Park</Text>
+		</Text>
+		<Text>
+			<GUID>1600000005</GUID>
+			<Text>Eastern Jungle Park</Text>
+		</Text>
+		<Text>
+			<GUID>1600000006</GUID>
+			<Text>Sacred Garden</Text>
+		</Text>
+	</ModOp>
+</ModOps>

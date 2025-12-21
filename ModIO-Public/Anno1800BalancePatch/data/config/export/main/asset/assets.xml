@@ -1,0 +1,9 @@
+<ModOps>
+  <Include File="palace.include.xml" />
+  <Include File="research.include.xml" />
+  <Include File="item.include.xml" />
+  <Include File="zoo.include.xml" />
+  <Include File="museum.include.xml" />
+  <Include File="garden.include.xml" />
+  <Include File="hacienda.include.xml" />
+</ModOps>

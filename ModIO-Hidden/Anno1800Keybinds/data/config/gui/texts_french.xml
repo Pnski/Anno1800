@@ -1,0 +1,34 @@
+<ModOps>
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>Basculer ajouter Évolutif</Text>
+  </ModOp>
+  <ModOp Type="replace" Path="/TextExport/Texts">
+    <Text>Basculer remplacer Évolutif</Text>
+  </ModOp>
+  <ModOp Type="replace" Path="/TextExport/Texts">
+    <GUID>WorstGUIDinHistory</GUID>
+    <Text></Text>
+  </ModOp>
+  <ModOp Type="add" Path="/TextExport/Texts">
+    <Text>
+      <GUID>1600000038</GUID>
+      <Text>Basculer IgnoreCosts</Text>
+    </Text>
+    <Text>
+      <GUID>1600000039</GUID>
+      <Text>Ajouter 1M d’argent</Text>
+    </Text>
+    <Text>
+      <GUID>1600000040</GUID>
+      <Text>StopCurFest+StartNouveau</Text>
+    </Text>
+    <Text>
+      <GUID>1600000041</GUID>
+      <Text>Augmenter les effectifs de 500</Text>
+    </Text>
+    <Text>
+      <GUID>1600000042</GUID>
+      <Text>Réduire les effectifs de 500</Text>
+    </Text>
+  </ModOp>
+</ModOps>

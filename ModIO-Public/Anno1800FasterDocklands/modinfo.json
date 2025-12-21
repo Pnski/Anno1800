@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "FasterDocklands",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Faster Docklands",
+    "English": "Faster Docklands",
+    "French": "Faster Docklands",
+    "German": "Faster Docklands",
+    "Italian": "Faster Docklands",
+    "Japanese": "Faster Docklands",
+    "Korean": "Faster Docklands",
+    "Polish": "Faster Docklands",
+    "Russian": "Faster Docklands",
+    "Spanish": "Faster Docklands",
+    "Taiwanese": "Faster Docklands"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,seekmod222",
+  "CreatorContact": null,
+  "Image": null
+}

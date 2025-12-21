@@ -1,0 +1,5 @@
+<ModOps>
+    <ModOp Type="replace" GUID='118718' Path="/Values/Object/Variations/Item/Filename">
+        <Filename>data/graphics/AzurLane/Unicorn/unicorn.cfg</Filename>
+    </ModOp>
+</ModOps>

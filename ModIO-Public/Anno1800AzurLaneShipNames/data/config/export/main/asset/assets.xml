@@ -1,0 +1,266 @@
+<ModOps><!--isn't needed just as backup-->
+  <ModOp Type="replace" GUID = '2302' Path="/Values/Text/LocaText/English/Text"><Text>Friedrich der Große</Text></ModOp>
+  <ModOp Type="replace" GUID = '10723' Path="/Values/Text/LocaText/English/Text"><Text>Hakuryuu</Text></ModOp>
+  <ModOp Type="replace" GUID = '10814' Path="/Values/Text/LocaText/English/Text"><Text>Ägir</Text></ModOp>
+  <ModOp Type="replace" GUID = '2303' Path="/Values/Text/LocaText/English/Text"><Text>Plymouth</Text></ModOp>
+  <ModOp Type="replace" GUID = '2304' Path="/Values/Text/LocaText/English/Text"><Text>Prinz Rupprecht</Text></ModOp>
+  <ModOp Type="replace" GUID = '2305' Path="/Values/Text/LocaText/English/Text"><Text>Harbin</Text></ModOp>
+  <ModOp Type="replace" GUID = '2306' Path="/Values/Text/LocaText/English/Text"><Text>Chkalov</Text></ModOp>
+  <ModOp Type="replace" GUID = '2307' Path="/Values/Text/LocaText/English/Text"><Text>Brest</Text></ModOp>
+  <ModOp Type="replace" GUID = '2308' Path="/Values/Text/LocaText/English/Text"><Text>Kearsarge</Text></ModOp>
+  <ModOp Type="replace" GUID = '2309' Path="/Values/Text/LocaText/English/Text"><Text>Shimanto</Text></ModOp>
+  <ModOp Type="replace" GUID = '2310' Path="/Values/Text/LocaText/English/Text"><Text>Felix Schultz</Text></ModOp>
+  <ModOp Type="replace" GUID = '20495' Path="/Values/Text/LocaText/English/Text"><Text>Hindenburg</Text></ModOp>
+  <ModOp Type="replace" GUID = '10724' Path="/Values/Text/LocaText/English/Text"><Text>Flandre</Text></ModOp>
+  <ModOp Type="replace" GUID = '20496' Path="/Values/Text/LocaText/English/Text"><Text>Neptune</Text></ModOp>
+  <ModOp Type="replace" GUID = '20497' Path="/Values/Text/LocaText/English/Text"><Text>Monarch</Text></ModOp>
+  <ModOp Type="replace" GUID = '20498' Path="/Values/Text/LocaText/English/Text"><Text>Ibuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '20499' Path="/Values/Text/LocaText/English/Text"><Text>Izumo</Text></ModOp>
+  <ModOp Type="replace" GUID = '20500' Path="/Values/Text/LocaText/English/Text"><Text>Roon</Text></ModOp>
+  <ModOp Type="replace" GUID = '20501' Path="/Values/Text/LocaText/English/Text"><Text>Saint Louis</Text></ModOp>
+  <ModOp Type="replace" GUID = '20502' Path="/Values/Text/LocaText/English/Text"><Text>Seattle</Text></ModOp>
+  <ModOp Type="replace" GUID = '20503' Path="/Values/Text/LocaText/English/Text"><Text>Georgia</Text></ModOp>
+  <ModOp Type="replace" GUID = '20504' Path="/Values/Text/LocaText/English/Text"><Text>Kitakaze</Text></ModOp>
+  <ModOp Type="replace" GUID = '20505' Path="/Values/Text/LocaText/English/Text"><Text>Azuma</Text></ModOp>
+  <ModOp Type="replace" GUID = '10725' Path="/Values/Text/LocaText/English/Text"><Text>Gascogne</Text></ModOp>
+  <ModOp Type="replace" GUID = '20506' Path="/Values/Text/LocaText/English/Text"><Text>Cheshire</Text></ModOp>
+  <ModOp Type="replace" GUID = '20507' Path="/Values/Text/LocaText/English/Text"><Text>Drake</Text></ModOp>
+  <ModOp Type="replace" GUID = '20508' Path="/Values/Text/LocaText/English/Text"><Text>Mainz</Text></ModOp>
+  <ModOp Type="replace" GUID = '20509' Path="/Values/Text/LocaText/English/Text"><Text>Odin</Text></ModOp>
+  <ModOp Type="replace" GUID = '20510' Path="/Values/Text/LocaText/English/Text"><Text>Champagne</Text></ModOp>
+  <ModOp Type="replace" GUID = '20511' Path="/Values/Text/LocaText/English/Text"><Text>Anchorage</Text></ModOp>
+  <ModOp Type="replace" GUID = '20512' Path="/Values/Text/LocaText/English/Text"><Text>August von Parseval</Text></ModOp>
+  <ModOp Type="replace" GUID = '20513' Path="/Values/Text/LocaText/English/Text"><Text>Marco Polo</Text></ModOp>
+  <ModOp Type="replace" GUID = '20514' Path="/Values/Text/LocaText/English/Text"><Text>New Jersey</Text></ModOp>
+  <ModOp Type="replace" GUID = '20515' Path="/Values/Text/LocaText/English/Text"><Text>Vanguard</Text></ModOp>
+  <ModOp Type="replace" GUID = '10726' Path="/Values/Text/LocaText/English/Text"><Text>Musashi</Text></ModOp>
+  <ModOp Type="replace" GUID = '20516' Path="/Values/Text/LocaText/English/Text"><Text>Shinano</Text></ModOp>
+  <ModOp Type="replace" GUID = '20517' Path="/Values/Text/LocaText/English/Text"><Text>Shimakaze</Text></ModOp>
+  <ModOp Type="replace" GUID = '20518' Path="/Values/Text/LocaText/English/Text"><Text>Sovetsky Soyuz</Text></ModOp>
+  <ModOp Type="replace" GUID = '20519' Path="/Values/Text/LocaText/English/Text"><Text>Ulrich von Hutten</Text></ModOp>
+  <ModOp Type="replace" GUID = '20520' Path="/Values/Text/LocaText/English/Text"><Text>Kronshtadt</Text></ModOp>
+  <ModOp Type="replace" GUID = '20521' Path="/Values/Text/LocaText/English/Text"><Text>Yorktown II</Text></ModOp>
+  <ModOp Type="replace" GUID = '20522' Path="/Values/Text/LocaText/English/Text"><Text>Implacable</Text></ModOp>
+  <ModOp Type="replace" GUID = '20523' Path="/Values/Text/LocaText/English/Text"><Text>Bismarck Zwei</Text></ModOp>
+  <ModOp Type="replace" GUID = '20524' Path="/Values/Text/LocaText/English/Text"><Text>Unzen</Text></ModOp>
+  <ModOp Type="replace" GUID = '20525' Path="/Values/Text/LocaText/English/Text"><Text>Laffey II</Text></ModOp>
+  <ModOp Type="replace" GUID = '10727' Path="/Values/Text/LocaText/English/Text"><Text>Guam</Text></ModOp>
+  <ModOp Type="replace" GUID = '20526' Path="/Values/Text/LocaText/English/Text"><Text>Alsace</Text></ModOp>
+  <ModOp Type="replace" GUID = '20527' Path="/Values/Text/LocaText/English/Text"><Text>Mogador</Text></ModOp>
+  <ModOp Type="replace" GUID = '20528' Path="/Values/Text/LocaText/English/Text"><Text>Eldridge</Text></ModOp>
+  <ModOp Type="replace" GUID = '20529' Path="/Values/Text/LocaText/English/Text"><Text>San Diego</Text></ModOp>
+  <ModOp Type="replace" GUID = '20530' Path="/Values/Text/LocaText/English/Text"><Text>Baltimore</Text></ModOp>
+  <ModOp Type="replace" GUID = '20531' Path="/Values/Text/LocaText/English/Text"><Text>North Carolina</Text></ModOp>
+  <ModOp Type="replace" GUID = '20532' Path="/Values/Text/LocaText/English/Text"><Text>Washington</Text></ModOp>
+  <ModOp Type="replace" GUID = '20533' Path="/Values/Text/LocaText/English/Text"><Text>South Dakota</Text></ModOp>
+  <ModOp Type="replace" GUID = '20534' Path="/Values/Text/LocaText/English/Text"><Text>Enterprise</Text></ModOp>
+  <ModOp Type="replace" GUID = '20535' Path="/Values/Text/LocaText/English/Text"><Text>Dido</Text></ModOp>
+  <ModOp Type="replace" GUID = '10728' Path="/Values/Text/LocaText/English/Text"><Text>Belfast</Text></ModOp>
+  <ModOp Type="replace" GUID = '20536' Path="/Values/Text/LocaText/English/Text"><Text>Hood</Text></ModOp>
+  <ModOp Type="replace" GUID = '20537' Path="/Values/Text/LocaText/English/Text"><Text>Warspite</Text></ModOp>
+  <ModOp Type="replace" GUID = '20538' Path="/Values/Text/LocaText/English/Text"><Text>King George V</Text></ModOp>
+  <ModOp Type="replace" GUID = '20539' Path="/Values/Text/LocaText/English/Text"><Text>Prince of Wales</Text></ModOp>
+  <ModOp Type="replace" GUID = '20540' Path="/Values/Text/LocaText/English/Text"><Text>Duke of York</Text></ModOp>
+  <ModOp Type="replace" GUID = '20541' Path="/Values/Text/LocaText/English/Text"><Text>Illustrious</Text></ModOp>
+  <ModOp Type="replace" GUID = '20542' Path="/Values/Text/LocaText/English/Text"><Text>Victorious</Text></ModOp>
+  <ModOp Type="replace" GUID = '20543' Path="/Values/Text/LocaText/English/Text"><Text>Formidable</Text></ModOp>
+  <ModOp Type="replace" GUID = '20544' Path="/Values/Text/LocaText/English/Text"><Text>Yuudachi</Text></ModOp>
+  <ModOp Type="replace" GUID = '20545' Path="/Values/Text/LocaText/English/Text"><Text>Yukikaze</Text></ModOp>
+  <ModOp Type="replace" GUID = '10729' Path="/Values/Text/LocaText/English/Text"><Text>Chikuma</Text></ModOp>
+  <ModOp Type="replace" GUID = '20546' Path="/Values/Text/LocaText/English/Text"><Text>Takao</Text></ModOp>
+  <ModOp Type="replace" GUID = '20547' Path="/Values/Text/LocaText/English/Text"><Text>Atago</Text></ModOp>
+  <ModOp Type="replace" GUID = '20548' Path="/Values/Text/LocaText/English/Text"><Text>Maya</Text></ModOp>
+  <ModOp Type="replace" GUID = '20549' Path="/Values/Text/LocaText/English/Text"><Text>Choukai</Text></ModOp>
+  <ModOp Type="replace" GUID = '20550' Path="/Values/Text/LocaText/English/Text"><Text>Nagato</Text></ModOp>
+  <ModOp Type="replace" GUID = '20551' Path="/Values/Text/LocaText/English/Text"><Text>Kii</Text></ModOp>
+  <ModOp Type="replace" GUID = '20552' Path="/Values/Text/LocaText/English/Text"><Text>Tosa</Text></ModOp>
+  <ModOp Type="replace" GUID = '20553' Path="/Values/Text/LocaText/English/Text"><Text>Akagi</Text></ModOp>
+  <ModOp Type="replace" GUID = '20554' Path="/Values/Text/LocaText/English/Text"><Text>Kaga</Text></ModOp>
+  <ModOp Type="replace" GUID = '20555' Path="/Values/Text/LocaText/English/Text"><Text>Shoukaku</Text></ModOp>
+  <ModOp Type="replace" GUID = '10730' Path="/Values/Text/LocaText/English/Text"><Text>Zuikaku</Text></ModOp>
+  <ModOp Type="replace" GUID = '20556' Path="/Values/Text/LocaText/English/Text"><Text>Taihou</Text></ModOp>
+  <ModOp Type="replace" GUID = '20557' Path="/Values/Text/LocaText/English/Text"><Text>Akashi</Text></ModOp>
+  <ModOp Type="replace" GUID = '20559' Path="/Values/Text/LocaText/English/Text"><Text>Blücher</Text></ModOp>
+  <ModOp Type="replace" GUID = '20560' Path="/Values/Text/LocaText/English/Text"><Text>Prinz Eugen</Text></ModOp>
+  <ModOp Type="replace" GUID = '20561' Path="/Values/Text/LocaText/English/Text"><Text>Bismarck</Text></ModOp>
+  <ModOp Type="replace" GUID = '20562' Path="/Values/Text/LocaText/English/Text"><Text>Tirpitz</Text></ModOp>
+  <ModOp Type="replace" GUID = '20563' Path="/Values/Text/LocaText/English/Text"><Text>Graf Zeppelin</Text></ModOp>
+  <ModOp Type="replace" GUID = '20564' Path="/Values/Text/LocaText/English/Text"><Text>Avrora</Text></ModOp>
+  <ModOp Type="replace" GUID = '20565' Path="/Values/Text/LocaText/English/Text"><Text>Z46</Text></ModOp>
+  <ModOp Type="replace" GUID = '20566' Path="/Values/Text/LocaText/English/Text"><Text>Kawakaze</Text></ModOp>
+  <ModOp Type="replace" GUID = '10731' Path="/Values/Text/LocaText/English/Text"><Text>Mikasa</Text></ModOp>
+  <ModOp Type="replace" GUID = '20567' Path="/Values/Text/LocaText/English/Text"><Text>Noshiro</Text></ModOp>
+  <ModOp Type="replace" GUID = '20568' Path="/Values/Text/LocaText/English/Text"><Text>Sakawa</Text></ModOp>
+  <ModOp Type="replace" GUID = '20569' Path="/Values/Text/LocaText/English/Text"><Text>Montpelier</Text></ModOp>
+  <ModOp Type="replace" GUID = '20570' Path="/Values/Text/LocaText/English/Text"><Text>Le Triomphant</Text></ModOp>
+  <ModOp Type="replace" GUID = '20571' Path="/Values/Text/LocaText/English/Text"><Text>Jean Bart</Text></ModOp>
+  <ModOp Type="replace" GUID = '20572' Path="/Values/Text/LocaText/English/Text"><Text>Massachusetts</Text></ModOp>
+  <ModOp Type="replace" GUID = '20573' Path="/Values/Text/LocaText/English/Text"><Text>Centaur</Text></ModOp>
+  <ModOp Type="replace" GUID = '20574' Path="/Values/Text/LocaText/English/Text"><Text>Essex</Text></ModOp>
+  <ModOp Type="replace" GUID = '20575' Path="/Values/Text/LocaText/English/Text"><Text>Albacore</Text></ModOp>
+  <ModOp Type="replace" GUID = '20576' Path="/Values/Text/LocaText/English/Text"><Text>Minneapolis</Text></ModOp>
+  <ModOp Type="replace" GUID = '10732' Path="/Values/Text/LocaText/English/Text"><Text>Amagi</Text></ModOp>
+  <ModOp Type="replace" GUID = '20577' Path="/Values/Text/LocaText/English/Text"><Text>Kaga (Battleship)</Text></ModOp>
+  <ModOp Type="replace" GUID = '20578' Path="/Values/Text/LocaText/English/Text"><Text>Sirius</Text></ModOp>
+  <ModOp Type="replace" GUID = '20579' Path="/Values/Text/LocaText/English/Text"><Text>Shangri-La</Text></ModOp>
+  <ModOp Type="replace" GUID = '20580' Path="/Values/Text/LocaText/English/Text"><Text>Bunker Hill</Text></ModOp>
+  <ModOp Type="replace" GUID = '20581' Path="/Values/Text/LocaText/English/Text"><Text>I-13</Text></ModOp>
+  <ModOp Type="replace" GUID = '20582' Path="/Values/Text/LocaText/English/Text"><Text>Swiftsure</Text></ModOp>
+  <ModOp Type="replace" GUID = '20583' Path="/Values/Text/LocaText/English/Text"><Text>Le Malin</Text></ModOp>
+  <ModOp Type="replace" GUID = '20584' Path="/Values/Text/LocaText/English/Text"><Text>Alabama</Text></ModOp>
+  <ModOp Type="replace" GUID = '20585' Path="/Values/Text/LocaText/English/Text"><Text>Cavalla</Text></ModOp>
+  <ModOp Type="replace" GUID = '20586' Path="/Values/Text/LocaText/English/Text"><Text>Littorio</Text></ModOp>
+  <ModOp Type="replace" GUID = '10715' Path="/Values/Text/LocaText/English/Text"><Text>Zara</Text></ModOp>
+  <ModOp Type="replace" GUID = '10733' Path="/Values/Text/LocaText/English/Text"><Text>Gascogne µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '20587' Path="/Values/Text/LocaText/English/Text"><Text>Akagi µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '2311' Path="/Values/Text/LocaText/English/Text"><Text>Suruga</Text></ModOp>
+  <ModOp Type="replace" GUID = '2312' Path="/Values/Text/LocaText/English/Text"><Text>Ryuuhou</Text></ModOp>
+  <ModOp Type="replace" GUID = '2313' Path="/Values/Text/LocaText/English/Text"><Text>Tashkent</Text></ModOp>
+  <ModOp Type="replace" GUID = '2314' Path="/Values/Text/LocaText/English/Text"><Text>Kirov</Text></ModOp>
+  <ModOp Type="replace" GUID = '2315' Path="/Values/Text/LocaText/English/Text"><Text>Chapayev</Text></ModOp>
+  <ModOp Type="replace" GUID = '2316' Path="/Values/Text/LocaText/English/Text"><Text>Sovetskaya Belorussiya</Text></ModOp>
+  <ModOp Type="replace" GUID = '2317' Path="/Values/Text/LocaText/English/Text"><Text>Sovetskaya Rossiya</Text></ModOp>
+  <ModOp Type="replace" GUID = '2318' Path="/Values/Text/LocaText/English/Text"><Text>Intrepid</Text></ModOp>
+  <ModOp Type="replace" GUID = '2319' Path="/Values/Text/LocaText/English/Text"><Text>Bremerton</Text></ModOp>
+  <ModOp Type="replace" GUID = '21342' Path="/Values/Text/LocaText/English/Text"><Text>Reno</Text></ModOp>
+  <ModOp Type="replace" GUID = '10734' Path="/Values/Text/LocaText/English/Text"><Text>Richelieu</Text></ModOp>
+  <ModOp Type="replace" GUID = '10735' Path="/Values/Text/LocaText/English/Text"><Text>Jeanne d'Arc</Text></ModOp>
+  <ModOp Type="replace" GUID = '10736' Path="/Values/Text/LocaText/English/Text"><Text>Algérie</Text></ModOp>
+  <ModOp Type="replace" GUID = '10737' Path="/Values/Text/LocaText/English/Text"><Text>Howe</Text></ModOp>
+  <ModOp Type="replace" GUID = '10738' Path="/Values/Text/LocaText/English/Text"><Text>Perseus</Text></ModOp>
+  <ModOp Type="replace" GUID = '10739' Path="/Values/Text/LocaText/English/Text"><Text>Hermione</Text></ModOp>
+  <ModOp Type="replace" GUID = '10740' Path="/Values/Text/LocaText/English/Text"><Text>Suzutsuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '10741' Path="/Values/Text/LocaText/English/Text"><Text>Taihou µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10742' Path="/Values/Text/LocaText/English/Text"><Text>Tashkent µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10716' Path="/Values/Text/LocaText/English/Text"><Text>Dido µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10743' Path="/Values/Text/LocaText/English/Text"><Text>Roon µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10744' Path="/Values/Text/LocaText/English/Text"><Text>Illustrious µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10745' Path="/Values/Text/LocaText/English/Text"><Text>Le Malin µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10746' Path="/Values/Text/LocaText/English/Text"><Text>Peter Strasser</Text></ModOp>
+  <ModOp Type="replace" GUID = '10747' Path="/Values/Text/LocaText/English/Text"><Text>Prinz Heinrich</Text></ModOp>
+  <ModOp Type="replace" GUID = '10748' Path="/Values/Text/LocaText/English/Text"><Text>Pola</Text></ModOp>
+  <ModOp Type="replace" GUID = '10749' Path="/Values/Text/LocaText/English/Text"><Text>Tallinn</Text></ModOp>
+  <ModOp Type="replace" GUID = '10750' Path="/Values/Text/LocaText/English/Text"><Text>Vittorio Veneto</Text></ModOp>
+  <ModOp Type="replace" GUID = '10751' Path="/Values/Text/LocaText/English/Text"><Text>Duca degli Abruzzi</Text></ModOp>
+  <ModOp Type="replace" GUID = '10752' Path="/Values/Text/LocaText/English/Text"><Text>Aquila</Text></ModOp>
+  <ModOp Type="replace" GUID = '10717' Path="/Values/Text/LocaText/English/Text"><Text>Allen M. Sumner</Text></ModOp>
+  <ModOp Type="replace" GUID = '10753' Path="/Values/Text/LocaText/English/Text"><Text>Ticonderoga</Text></ModOp>
+  <ModOp Type="replace" GUID = '10754' Path="/Values/Text/LocaText/English/Text"><Text>San Francisco</Text></ModOp>
+  <ModOp Type="replace" GUID = '10755' Path="/Values/Text/LocaText/English/Text"><Text>Archerfish</Text></ModOp>
+  <ModOp Type="replace" GUID = '10756' Path="/Values/Text/LocaText/English/Text"><Text>Kazagumo</Text></ModOp>
+  <ModOp Type="replace" GUID = '10757' Path="/Values/Text/LocaText/English/Text"><Text>Ingraham</Text></ModOp>
+  <ModOp Type="replace" GUID = '10758' Path="/Values/Text/LocaText/English/Text"><Text>Katsuragi</Text></ModOp>
+  <ModOp Type="replace" GUID = '10759' Path="/Values/Text/LocaText/English/Text"><Text>New Orleans</Text></ModOp>
+  <ModOp Type="replace" GUID = '10760' Path="/Values/Text/LocaText/English/Text"><Text>Le Terrible</Text></ModOp>
+  <ModOp Type="replace" GUID = '10761' Path="/Values/Text/LocaText/English/Text"><Text>Magdeburg</Text></ModOp>
+  <ModOp Type="replace" GUID = '10762' Path="/Values/Text/LocaText/English/Text"><Text>Prinz Adalbert</Text></ModOp>
+  <ModOp Type="replace" GUID = '10718' Path="/Values/Text/LocaText/English/Text"><Text>Charybdis</Text></ModOp>
+  <ModOp Type="replace" GUID = '10763' Path="/Values/Text/LocaText/English/Text"><Text>Bristol</Text></ModOp>
+  <ModOp Type="replace" GUID = '10764' Path="/Values/Text/LocaText/English/Text"><Text>Kiev</Text></ModOp>
+  <ModOp Type="replace" GUID = '10765' Path="/Values/Text/LocaText/English/Text"><Text>Volga</Text></ModOp>
+  <ModOp Type="replace" GUID = '10766' Path="/Values/Text/LocaText/English/Text"><Text>Impero</Text></ModOp>
+  <ModOp Type="replace" GUID = '10767' Path="/Values/Text/LocaText/English/Text"><Text>Pompeo Magno</Text></ModOp>
+  <ModOp Type="replace" GUID = '10769' Path="/Values/Text/LocaText/English/Text"><Text>Seydlitz</Text></ModOp>
+  <ModOp Type="replace" GUID = '10770' Path="/Values/Text/LocaText/English/Text"><Text>Lützow</Text></ModOp>
+  <ModOp Type="replace" GUID = '10771' Path="/Values/Text/LocaText/English/Text"><Text>Emden</Text></ModOp>
+  <ModOp Type="replace" GUID = '10772' Path="/Values/Text/LocaText/English/Text"><Text>Jervis</Text></ModOp>
+  <ModOp Type="replace" GUID = '10773' Path="/Values/Text/LocaText/English/Text"><Text>Indomitable</Text></ModOp>
+  <ModOp Type="replace" GUID = '10719' Path="/Values/Text/LocaText/English/Text"><Text>Joffre</Text></ModOp>
+  <ModOp Type="replace" GUID = '10774' Path="/Values/Text/LocaText/English/Text"><Text>L'Indomptable</Text></ModOp>
+  <ModOp Type="replace" GUID = '10775' Path="/Values/Text/LocaText/English/Text"><Text>Leonardo da Vinci</Text></ModOp>
+  <ModOp Type="replace" GUID = '10776' Path="/Values/Text/LocaText/English/Text"><Text>Giuseppe Garibaldi</Text></ModOp>
+  <ModOp Type="replace" GUID = '10777' Path="/Values/Text/LocaText/English/Text"><Text>Roma</Text></ModOp>
+  <ModOp Type="replace" GUID = '10778' Path="/Values/Text/LocaText/English/Text"><Text>Brünhilde</Text></ModOp>
+  <ModOp Type="replace" GUID = '10779' Path="/Values/Text/LocaText/English/Text"><Text>Wakatsuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '10780' Path="/Values/Text/LocaText/English/Text"><Text>Janus</Text></ModOp>
+  <ModOp Type="replace" GUID = '10781' Path="/Values/Text/LocaText/English/Text"><Text>Albion</Text></ModOp>
+  <ModOp Type="replace" GUID = '10782' Path="/Values/Text/LocaText/English/Text"><Text>Royal Fortune</Text></ModOp>
+  <ModOp Type="replace" GUID = '10783' Path="/Values/Text/LocaText/English/Text"><Text>Hornet II</Text></ModOp>
+  <ModOp Type="replace" GUID = '10720' Path="/Values/Text/LocaText/English/Text"><Text>Northampton II</Text></ModOp>
+  <ModOp Type="replace" GUID = '10784' Path="/Values/Text/LocaText/English/Text"><Text>Kuybyshev</Text></ModOp>
+  <ModOp Type="replace" GUID = '10785' Path="/Values/Text/LocaText/English/Text"><Text>Theseus</Text></ModOp>
+  <ModOp Type="replace" GUID = '10786' Path="/Values/Text/LocaText/English/Text"><Text>Royal Oak</Text></ModOp>
+  <ModOp Type="replace" GUID = '10787' Path="/Values/Text/LocaText/English/Text"><Text>Scylla</Text></ModOp>
+  <ModOp Type="replace" GUID = '10788' Path="/Values/Text/LocaText/English/Text"><Text>Kursk</Text></ModOp>
+  <ModOp Type="replace" GUID = '10789' Path="/Values/Text/LocaText/English/Text"><Text>Voroshilov</Text></ModOp>
+  <ModOp Type="replace" GUID = '10790' Path="/Values/Text/LocaText/English/Text"><Text>Otto von Alvensleben</Text></ModOp>
+  <ModOp Type="replace" GUID = '10791' Path="/Values/Text/LocaText/English/Text"><Text>Regensburg</Text></ModOp>
+  <ModOp Type="replace" GUID = '10792' Path="/Values/Text/LocaText/English/Text"><Text>Attilio Regolo</Text></ModOp>
+  <ModOp Type="replace" GUID = '10793' Path="/Values/Text/LocaText/English/Text"><Text>Gorizia</Text></ModOp>
+  <ModOp Type="replace" GUID = '10721' Path="/Values/Text/LocaText/English/Text"><Text>Marseillaise</Text></ModOp>
+  <ModOp Type="replace" GUID = '10794' Path="/Values/Text/LocaText/English/Text"><Text>Painlevé</Text></ModOp>
+  <ModOp Type="replace" GUID = '10795' Path="/Values/Text/LocaText/English/Text"><Text>Guichen</Text></ModOp>
+  <ModOp Type="replace" GUID = '10796' Path="/Values/Text/LocaText/English/Text"><Text>Clemenceau</Text></ModOp>
+  <ModOp Type="replace" GUID = '10797' Path="/Values/Text/LocaText/English/Text"><Text>Owari</Text></ModOp>
+  <ModOp Type="replace" GUID = '10798' Path="/Values/Text/LocaText/English/Text"><Text>Hatsuzuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '10799' Path="/Values/Text/LocaText/English/Text"><Text>Houston II</Text></ModOp>
+  <ModOp Type="replace" GUID = '10800' Path="/Values/Text/LocaText/English/Text"><Text>Golden Hind</Text></ModOp>
+  <ModOp Type="replace" GUID = '10801' Path="/Values/Text/LocaText/English/Text"><Text>Mary Celeste</Text></ModOp>
+  <ModOp Type="replace" GUID = '10802' Path="/Values/Text/LocaText/English/Text"><Text>São Martinho</Text></ModOp>
+  <ModOp Type="replace" GUID = '10803' Path="/Values/Text/LocaText/English/Text"><Text>Constellation</Text></ModOp>
+  <ModOp Type="replace" GUID = '10722' Path="/Values/Text/LocaText/English/Text"><Text>Flasher</Text></ModOp>
+  <ModOp Type="replace" GUID = '10804' Path="/Values/Text/LocaText/English/Text"><Text>Huan Ch'ang</Text></ModOp>
+  <ModOp Type="replace" GUID = '10805' Path="/Values/Text/LocaText/English/Text"><Text>Ognevoy</Text></ModOp>
+  <ModOp Type="replace" GUID = '10806' Path="/Values/Text/LocaText/English/Text"><Text>Nubian</Text></ModOp>
+  <ModOp Type="replace" GUID = '10807' Path="/Values/Text/LocaText/English/Text"><Text>Formidable µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10808' Path="/Values/Text/LocaText/English/Text"><Text>Prinz Eugen µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10809' Path="/Values/Text/LocaText/English/Text"><Text>Noshiro µ</Text></ModOp>
+  <ModOp Type="replace" GUID = '10810' Path="/Values/Text/LocaText/English/Text"><Text>Friedrich Carl</Text></ModOp>
+  <ModOp Type="replace" GUID = '10811' Path="/Values/Text/LocaText/English/Text"><Text>Brennus</Text></ModOp>
+  <ModOp Type="replace" GUID = '10812' Path="/Values/Text/LocaText/English/Text"><Text>Maury</Text></ModOp>
+  <ModOp Type="replace" GUID = '10813' Path="/Values/Text/LocaText/English/Text"><Text>Charles Ausburne</Text></ModOp>
+  <!--Africa-->
+  <ModOp Type="replace" GUID = '23590' Path="/Values/Text/LocaText/English/Text"><Text>Laffey</Text></ModOp>
+  <ModOp Type="replace" GUID = '23599' Path="/Values/Text/LocaText/English/Text"><Text>Helena</Text></ModOp>
+  <ModOp Type="replace" GUID = '23600' Path="/Values/Text/LocaText/English/Text"><Text>Cleveland</Text></ModOp>
+  <ModOp Type="replace" GUID = '23601' Path="/Values/Text/LocaText/English/Text"><Text>Columbia</Text></ModOp>
+  <ModOp Type="replace" GUID = '23602' Path="/Values/Text/LocaText/English/Text"><Text>Houston</Text></ModOp>
+  <ModOp Type="replace" GUID = '23603' Path="/Values/Text/LocaText/English/Text"><Text>Indianapolis</Text></ModOp>
+  <ModOp Type="replace" GUID = '23604' Path="/Values/Text/LocaText/English/Text"><Text>Astoria</Text></ModOp>
+  <ModOp Type="replace" GUID = '23605' Path="/Values/Text/LocaText/English/Text"><Text>Quincy</Text></ModOp>
+  <ModOp Type="replace" GUID = '23606' Path="/Values/Text/LocaText/English/Text"><Text>Vincennes</Text></ModOp>
+  <ModOp Type="replace" GUID = '23607' Path="/Values/Text/LocaText/English/Text"><Text>Wichita</Text></ModOp>
+  <ModOp Type="replace" GUID = '23608' Path="/Values/Text/LocaText/English/Text"><Text>Arizona</Text></ModOp>
+  <ModOp Type="replace" GUID = '23591' Path="/Values/Text/LocaText/English/Text"><Text>Colorado</Text></ModOp>
+  <ModOp Type="replace" GUID = '23609' Path="/Values/Text/LocaText/English/Text"><Text>Maryland</Text></ModOp>
+  <ModOp Type="replace" GUID = '23610' Path="/Values/Text/LocaText/English/Text"><Text>West Virginia</Text></ModOp>
+  <ModOp Type="replace" GUID = '23611' Path="/Values/Text/LocaText/English/Text"><Text>Lexington</Text></ModOp>
+  <ModOp Type="replace" GUID = '23612' Path="/Values/Text/LocaText/English/Text"><Text>Saratoga</Text></ModOp>
+  <ModOp Type="replace" GUID = '23613' Path="/Values/Text/LocaText/English/Text"><Text>Yorktown</Text></ModOp>
+  <ModOp Type="replace" GUID = '23614' Path="/Values/Text/LocaText/English/Text"><Text>Hornet</Text></ModOp>
+  <ModOp Type="replace" GUID = '23615' Path="/Values/Text/LocaText/English/Text"><Text>Vestal</Text></ModOp>
+  <ModOp Type="replace" GUID = '23616' Path="/Values/Text/LocaText/English/Text"><Text>Grenville</Text></ModOp>
+  <ModOp Type="replace" GUID = '23617' Path="/Values/Text/LocaText/English/Text"><Text>Glowworm</Text></ModOp>
+  <ModOp Type="replace" GUID = '23618' Path="/Values/Text/LocaText/English/Text"><Text>Hardy</Text></ModOp>
+  <ModOp Type="replace" GUID = '23592' Path="/Values/Text/LocaText/English/Text"><Text>Javelin</Text></ModOp>
+  <ModOp Type="replace" GUID = '23619' Path="/Values/Text/LocaText/English/Text"><Text>Vampire</Text></ModOp>
+  <ModOp Type="replace" GUID = '23620' Path="/Values/Text/LocaText/English/Text"><Text>Sheffield</Text></ModOp>
+  <ModOp Type="replace" GUID = '23621' Path="/Values/Text/LocaText/English/Text"><Text>Manchester</Text></ModOp>
+  <ModOp Type="replace" GUID = '23622' Path="/Values/Text/LocaText/English/Text"><Text>Gloucester</Text></ModOp>
+  <ModOp Type="replace" GUID = '23623' Path="/Values/Text/LocaText/English/Text"><Text>Edinburgh</Text></ModOp>
+  <ModOp Type="replace" GUID = '23624' Path="/Values/Text/LocaText/English/Text"><Text>Aurora</Text></ModOp>
+  <ModOp Type="replace" GUID = '23625' Path="/Values/Text/LocaText/English/Text"><Text>London</Text></ModOp>
+  <ModOp Type="replace" GUID = '23626' Path="/Values/Text/LocaText/English/Text"><Text>Dorsetshire</Text></ModOp>
+  <ModOp Type="replace" GUID = '23627' Path="/Values/Text/LocaText/English/Text"><Text>York</Text></ModOp>
+  <ModOp Type="replace" GUID = '23628' Path="/Values/Text/LocaText/English/Text"><Text>Exeter</Text></ModOp>
+  <ModOp Type="replace" GUID = '23593' Path="/Values/Text/LocaText/English/Text"><Text>Renown</Text></ModOp>
+  <ModOp Type="replace" GUID = '23629' Path="/Values/Text/LocaText/English/Text"><Text>Queen Elizabeth</Text></ModOp>
+  <ModOp Type="replace" GUID = '23630' Path="/Values/Text/LocaText/English/Text"><Text>Nelson</Text></ModOp>
+  <ModOp Type="replace" GUID = '23631' Path="/Values/Text/LocaText/English/Text"><Text>Rodney</Text></ModOp>
+  <ModOp Type="replace" GUID = '23632' Path="/Values/Text/LocaText/English/Text"><Text>Unicorn</Text></ModOp>
+  <ModOp Type="replace" GUID = '23633' Path="/Values/Text/LocaText/English/Text"><Text>Eagle</Text></ModOp>
+  <ModOp Type="replace" GUID = '23634' Path="/Values/Text/LocaText/English/Text"><Text>Ark Royal</Text></ModOp>
+  <ModOp Type="replace" GUID = '23635' Path="/Values/Text/LocaText/English/Text"><Text>Glorious</Text></ModOp>
+  <ModOp Type="replace" GUID = '23636' Path="/Values/Text/LocaText/English/Text"><Text>Erebus</Text></ModOp>
+  <ModOp Type="replace" GUID = '23637' Path="/Values/Text/LocaText/English/Text"><Text>Terror</Text></ModOp>
+  <ModOp Type="replace" GUID = '23638' Path="/Values/Text/LocaText/English/Text"><Text>Fubuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '23594' Path="/Values/Text/LocaText/English/Text"><Text>Shirayuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '23639' Path="/Values/Text/LocaText/English/Text"><Text>Miyuki</Text></ModOp>
+  <ModOp Type="replace" GUID = '23640' Path="/Values/Text/LocaText/English/Text"><Text>Ayanami</Text></ModOp>
+  <ModOp Type="replace" GUID = '23641' Path="/Values/Text/LocaText/English/Text"><Text>Hibiki</Text></ModOp>
+  <ModOp Type="replace" GUID = '23642' Path="/Values/Text/LocaText/English/Text"><Text>Shigure</Text></ModOp>
+  <ModOp Type="replace" GUID = '23595' Path="/Values/Text/LocaText/English/Text"><Text>Nowaki</Text></ModOp>
+  <ModOp Type="replace" GUID = '23596' Path="/Values/Text/LocaText/English/Text"><Text>Yuubari</Text></ModOp>
+  <ModOp Type="replace" GUID = '23597' Path="/Values/Text/LocaText/English/Text"><Text>Natori</Text></ModOp>
+  <ModOp Type="replace" GUID = '23598' Path="/Values/Text/LocaText/English/Text"><Text>Yura</Text></ModOp>
+</ModOps>

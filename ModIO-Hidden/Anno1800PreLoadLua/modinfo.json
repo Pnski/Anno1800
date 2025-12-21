@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "PreEmptive",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "PreEmptive",
+    "English": "PreEmptive",
+    "French": "PreEmptive",
+    "German": "PreEmptive",
+    "Italian": "PreEmptive",
+    "Japanese": "PreEmptive",
+    "Korean": "PreEmptive",
+    "Polish": "PreEmptive",
+    "Russian": "PreEmptive",
+    "Spanish": "PreEmptive",
+    "Taiwanese": "PreEmptive"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

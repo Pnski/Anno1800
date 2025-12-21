@@ -1,0 +1,52 @@
+{
+  "Version": "0.2.1",
+  "ModID": "AddFertilities",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "AddFertilities",
+    "English": "AddFertilities",
+    "French": "AddFertilities",
+    "German": "AddFertilities",
+    "Italian": "AddFertilities",
+    "Japanese": "AddFertilities",
+    "Korean": "AddFertilities",
+    "Polish": "AddFertilities",
+    "Russian": "AddFertilities",
+    "Spanish": "AddFertilities",
+    "Taiwanese": "AddFertilities"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

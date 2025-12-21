@@ -1,0 +1,62 @@
+<ModOps>					
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!-- 1600000008 | Ultimate Docklands | 0.0.1 | Text Building
+	1600000009 | Ultimate Docklands | 0.0.1 | Text Building-->	
+		<Text>
+			<GUID>1600000008</GUID>
+			<Text>建材商</Text>
+		</Text>
+		<Text>
+			<GUID>1600000009</GUID>
+			<Text>应有尽有，物优价廉</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000010 | Ultimate Docklands | 0.0.1 | Text OW
+	1600000011 | Ultimate Docklands | 0.0.1 | Text OW-->	
+		<Text>
+			<GUID>1600000010</GUID>
+			<Text>旧世界</Text>
+		</Text>
+		<Text>
+			<GUID>1600000011</GUID>
+			<Text>应有尽有，物优价廉</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000012 | Ultimate Docklands | 0.0.1 | Text NW
+	1600000013 | Ultimate Docklands | 0.0.1 | Text NW-->	
+		<Text>
+			<GUID>1600000012</GUID>
+			<Text>新世界</Text>
+		</Text>
+		<Text>
+			<GUID>1600000013</GUID>
+			<Text>应有尽有，物优价廉</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000014 | Ultimate Docklands | 0.0.1 | Text Arctic
+	1600000015 | Ultimate Docklands | 0.0.1 | Text Arctic-->	
+		<Text>
+			<GUID>1600000014</GUID>
+			<Text>北极</Text>
+		</Text>
+		<Text>
+			<GUID>1600000015</GUID>
+			<Text>应有尽有，物优价廉</Text>
+		</Text>
+	</ModOp>
+	<ModOp Type = "add" Path="TextExport/Texts">
+	<!--1600000016 | Ultimate Docklands | 0.0.1 | Text Mods
+		1600000017 | Ultimate Docklands | 0.0.1 | Text Mods-->	
+		<Text>
+			<GUID>1600000016</GUID>
+			<Text>纪元模组</Text>
+		</Text>
+		<Text>
+			<GUID>1600000017</GUID>
+			<Text>应有尽有，物优价廉</Text>
+		</Text>
+	</ModOp>
+</ModOps>

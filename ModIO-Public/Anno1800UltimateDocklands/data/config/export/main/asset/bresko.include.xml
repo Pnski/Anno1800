@@ -1,0 +1,16 @@
+<ModOps>
+    <Group Condition="#Green_energy">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1800000302']">
+            <Item><Good>1800000302</Good></Item><!--Wood Chips-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1800000303']">
+            <Item><Good>1800000303</Good></Item><!--Pallets-->
+        </ModOp>
+        <ModOp Type="Add" GUID='1600000024' Path="/Values/ProductList/List" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1800000302']">
+            <Item><Product>1800000302</Product></Item><!--Wood Chips-->
+        </ModOp>
+        <ModOp Type="Add" GUID='1600000024' Path="/Values/ProductList/List" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1800000303']">
+            <Item><Product>1800000303</Product></Item><!--Pallets-->
+        </ModOp>
+    </Group>
+</ModOps>

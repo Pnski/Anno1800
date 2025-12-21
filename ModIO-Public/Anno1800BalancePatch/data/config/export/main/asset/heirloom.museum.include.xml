@@ -1,0 +1,55 @@
+<ModOps>   
+   <ModOp GUID='124916' Type="addNextSibling">
+        <Asset>
+            <Template>TownhallBuff</Template>
+            <Values>
+                <Standard>
+                    <GUID>1600000001</GUID>
+                    <Name>setbuff_MansaMasu</Name>
+                    <IconFilename>data/ui/2kimages/main/3dicons/museum/africa/icon_mansa_musas_souvenir.png</IconFilename>
+                    <InfoDescription>124920</InfoDescription>
+                </Standard>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>190762</GUID>
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+                <Text>
+                    <LocaText>
+                        <English>
+                            <Text>Masu Masu Exhibition</Text>
+                            <Status>Exported</Status>
+                        </English>
+                    </LocaText>
+                    <LineID>44822</LineID>
+                </Text>
+                <ResidenceUpgrade>
+                    <GoodConsumptionUpgrade>
+                        <Item>
+                            <ProvidedNeed>120030</ProvidedNeed>
+                            <AmountInPercent>-5</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010250</ProvidedNeed>
+                            <AmountInPercent>-5</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010208</ProvidedNeed>
+                            <AmountInPercent>-5</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010246</ProvidedNeed>
+                            <AmountInPercent>-5</AmountInPercent>
+                        </Item>
+                        <Item>
+                            <ProvidedNeed>1010248</ProvidedNeed>
+                            <AmountInPercent>-5</AmountInPercent>
+                        </Item>
+                    </GoodConsumptionUpgrade>
+                </ResidenceUpgrade>
+            </Values>
+        </Asset>
+    </ModOp>
+</ModOps>

@@ -1,0 +1,265 @@
+<ModOps>
+  <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2302']/Text"><Text>Harbin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10723']/Text"><Text>Abukuma</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10814']/Text"><Text>Admiral Graf Spee</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2303']/Text"><Text>Admiral Hipper</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2304']/Text"><Text>Adventure Galley</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2305']/Text"><Text>Agano</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2306']/Text"><Text>Ägir</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2307']/Text"><Text>Akagi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2308']/Text"><Text>Akagi-chan</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2309']/Text"><Text>Akashi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2310']/Text"><Text>Akatsuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20495']/Text"><Text>Alfredo Oriani</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10724']/Text"><Text>Algérie</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20496']/Text"><Text>Alsace</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20497']/Text"><Text>Amagi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20498']/Text"><Text>Amagi-chan</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20499']/Text"><Text>Andrea Doria</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20500']/Text"><Text>Aoba</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20501']/Text"><Text>Aquila</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20502']/Text"><Text>Arashio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20503']/Text"><Text>Ariake</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20504']/Text"><Text>Asanagi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20505']/Text"><Text>Asashio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10725']/Text"><Text>Ashigara</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20506']/Text"><Text>Atago</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20507']/Text"><Text>Attilio Regolo</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20508']/Text"><Text>August von Parseval</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20509']/Text"><Text>Ayanami</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20510']/Text"><Text>Azuma</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20511']/Text"><Text>Béarn</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20512']/Text"><Text>Bismarck</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20513']/Text"><Text>Bismarck Zwei</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20514']/Text"><Text>Blücher</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20515']/Text"><Text>Bolzano</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10726']/Text"><Text>Brennus</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20516']/Text"><Text>Brest</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20517']/Text"><Text>Brünhilde</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20518']/Text"><Text>Carabiniere</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20519']/Text"><Text>Champagne</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20520']/Text"><Text>Chikuma</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20521']/Text"><Text>Chitose</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20522']/Text"><Text>Chiyoda</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20523']/Text"><Text>Choukai</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20524']/Text"><Text>Clemenceau</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20525']/Text"><Text>Conte di Cavour</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10727']/Text"><Text>Deutschland</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20526']/Text"><Text>Duca degli Abruzzi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20527']/Text"><Text>Dunkerque</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20528']/Text"><Text>Elbe</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20529']/Text"><Text>Elbing</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20530']/Text"><Text>Emanuele Pessagno</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20531']/Text"><Text>Emden</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20532']/Text"><Text>Émile Bertin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20533']/Text"><Text>Épée</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20534']/Text"><Text>Felix Schultz</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20535']/Text"><Text>Flandre</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10728']/Text"><Text>Fleuret</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20536']/Text"><Text>Foch</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20537']/Text"><Text>Forbin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20538']/Text"><Text>Friedrich Carl</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20539']/Text"><Text>Friedrich der Große</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20540']/Text"><Text>Fubuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20541']/Text"><Text>Fumizuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20542']/Text"><Text>Furutaka</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20543']/Text"><Text>Fusou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20544']/Text"><Text>Gascogne</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20545']/Text"><Text>Giulio Cesare</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10729']/Text"><Text>Giuseppe Garibaldi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20546']/Text"><Text>Gneisenau</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20547']/Text"><Text>Golden Hind</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20548']/Text"><Text>Gorizia</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20549']/Text"><Text>Graf Zeppelin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20550']/Text"><Text>Guichen</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20551']/Text"><Text>Haguro</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20552']/Text"><Text>Hakuryuu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20553']/Text"><Text>Hamakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20554']/Text"><Text>Hanazuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20555']/Text"><Text>Haruna</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10730']/Text"><Text>Harutsuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20556']/Text"><Text>Hatakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20557']/Text"><Text>Hatsuharu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20559']/Text"><Text>Hatsushimo</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20560']/Text"><Text>Hatsuzuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20561']/Text"><Text>Hibiki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20562']/Text"><Text>Hiei</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20563']/Text"><Text>Hiei-chan</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20564']/Text"><Text>Hindenburg</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20565']/Text"><Text>Hiryuu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20566']/Text"><Text>Hiyou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10731']/Text"><Text>Houshou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20567']/Text"><Text>Hyuuga</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20568']/Text"><Text>I-13</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20569']/Text"><Text>Ibuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20570']/Text"><Text>Ikazuchi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20571']/Text"><Text>Impero</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20572']/Text"><Text>Inazuma</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20573']/Text"><Text>Ise</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20574']/Text"><Text>Isokaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20575']/Text"><Text>Isuzu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20576']/Text"><Text>Izumo</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10732']/Text"><Text>Jade</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20577']/Text"><Text>Jean Bart</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20578']/Text"><Text>Jeanne d'Arc</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20579']/Text"><Text>Jintsuu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20580']/Text"><Text>Joffre</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20581']/Text"><Text>Junyou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20582']/Text"><Text>Kaga</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20583']/Text"><Text>Kagerou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20584']/Text"><Text>Kako</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20585']/Text"><Text>Kamikaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20586']/Text"><Text>Karlsruhe</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10715']/Text"><Text>Kashino</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10733']/Text"><Text>Kasumi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20587']/Text"><Text>Katsuragi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2311']/Text"><Text>Kawakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2312']/Text"><Text>Kazagumo</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2313']/Text"><Text>Kersaint</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2314']/Text"><Text>Kii</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2315']/Text"><Text>Kinu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2316']/Text"><Text>Kinugasa</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2317']/Text"><Text>Kirishima</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2318']/Text"><Text>Kisaragi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2319']/Text"><Text>Kitakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '21342']/Text"><Text>Kiyonami</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10734']/Text"><Text>Köln</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10735']/Text"><Text>Kongou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10736']/Text"><Text>Königsberg</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10737']/Text"><Text>Kumano</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10738']/Text"><Text>Kuroshio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10739']/Text"><Text>L'Indomptable</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10740']/Text"><Text>L'Opiniâtre</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10741']/Text"><Text>La Galissonnière</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10742']/Text"><Text>Le Malin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10716']/Text"><Text>Le Mars</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10743']/Text"><Text>Le Téméraire</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10744']/Text"><Text>Le Terrible</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10745']/Text"><Text>Le Triomphant</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10746']/Text"><Text>Leipzig</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10747']/Text"><Text>Leonardo da Vinci</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10748']/Text"><Text>Libeccio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10749']/Text"><Text>Little Friedrich</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10750']/Text"><Text>Little Prinz Eugen</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10751']/Text"><Text>Little Spee</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10752']/Text"><Text>Littorio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10717']/Text"><Text>Lützow</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10753']/Text"><Text>Lyon</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10754']/Text"><Text>Maestrale</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10755']/Text"><Text>Magdeburg</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10756']/Text"><Text>Maillé Brézé</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10757']/Text"><Text>Mainz</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10758']/Text"><Text>Makinami</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10759']/Text"><Text>Marco Polo</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10760']/Text"><Text>Marseillaise</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10761']/Text"><Text>Mary Celeste</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10762']/Text"><Text>Matsukaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10718']/Text"><Text>Maya</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10763']/Text"><Text>Michishio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10764']/Text"><Text>Mikasa</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10765']/Text"><Text>Mikazuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10766']/Text"><Text>Mikuma</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10767']/Text"><Text>Minazuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10769']/Text"><Text>Miyuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10770']/Text"><Text>Mogador</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10771']/Text"><Text>Mogami</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10772']/Text"><Text>Musashi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10773']/Text"><Text>Mutsu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10719']/Text"><Text>Mutsuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10774']/Text"><Text>Myoukou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10775']/Text"><Text>Nachi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10776']/Text"><Text>Naganami</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10777']/Text"><Text>Nagara</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10778']/Text"><Text>Nagato</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10779']/Text"><Text>Nagatsuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10780']/Text"><Text>Naka</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10781']/Text"><Text>Natori</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10782']/Text"><Text>Nicoloso da Recco</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10783']/Text"><Text>Niizuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10720']/Text"><Text>Noshiro</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10784']/Text"><Text>Nowaki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10785']/Text"><Text>Nürnberg</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10786']/Text"><Text>Odin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10787']/Text"><Text>Oite</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10788']/Text"><Text>Ooshio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10789']/Text"><Text>Otto von Alvensleben</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10790']/Text"><Text>Owari</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10791']/Text"><Text>Oyashio</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10792']/Text"><Text>Painlevé</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10793']/Text"><Text>Peter Strasser</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10721']/Text"><Text>Pola</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10794']/Text"><Text>Pompeo Magno</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10795']/Text"><Text>Prinz Adalbert</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10796']/Text"><Text>Prinz Eugen</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10797']/Text"><Text>Prinz Heinrich</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10798']/Text"><Text>Prinz Rupprecht</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10799']/Text"><Text>Regensburg</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10800']/Text"><Text>Richelieu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10801']/Text"><Text>Roma</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10802']/Text"><Text>Roon</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10803']/Text"><Text>Royal Fortune</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10722']/Text"><Text>Ryuuhou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10804']/Text"><Text>Ryuujou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10805']/Text"><Text>Saint Louis</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10806']/Text"><Text>Sakawa</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10807']/Text"><Text>São Martinho</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10808']/Text"><Text>Scharnhorst</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10809']/Text"><Text>Sendai</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10810']/Text"><Text>Seydlitz</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10811']/Text"><Text>Shigure</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10812']/Text"><Text>Shimakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10813']/Text"><Text>Shimanto</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23590']/Text"><Text>Shinano</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23599']/Text"><Text>Shinano-chan</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23600']/Text"><Text>Shiranui</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23601']/Text"><Text>Shiratsuyu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23602']/Text"><Text>Shirayuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23603']/Text"><Text>Shouhou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23604']/Text"><Text>Shoukaku</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23605']/Text"><Text>Souryuu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23606']/Text"><Text>Suffren</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23607']/Text"><Text>Surcouf</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23608']/Text"><Text>Suruga</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23591']/Text"><Text>Suzutsuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23609']/Text"><Text>Suzuya</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23610']/Text"><Text>Taihou</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23611']/Text"><Text>Taihou-chan</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23612']/Text"><Text>Takao</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23613']/Text"><Text>Tanikaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23614']/Text"><Text>Tartu</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23615']/Text"><Text>Thüringen</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23616']/Text"><Text>Tirpitz</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23617']/Text"><Text>Torricelli</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23618']/Text"><Text>Tosa</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23592']/Text"><Text>Trento</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23619']/Text"><Text>Trieste</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23620']/Text"><Text>Ulrich von Hutten</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23621']/Text"><Text>Umikaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23622']/Text"><Text>Unzen</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23623']/Text"><Text>Urakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23624']/Text"><Text>Uranami</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23625']/Text"><Text>Uzuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23626']/Text"><Text>Vauquelin</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23627']/Text"><Text>Vincenzo Gioberti</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23628']/Text"><Text>Vittorio Veneto</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23593']/Text"><Text>Wakaba</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23629']/Text"><Text>Wakatsuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23630']/Text"><Text>Weser</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23631']/Text"><Text>Whydah</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23632']/Text"><Text>Yamakaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23633']/Text"><Text>Yamashiro</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23634']/Text"><Text>Yoizuki</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23635']/Text"><Text>Yorck</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23636']/Text"><Text>Yukikaze</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23637']/Text"><Text>Yura</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23638']/Text"><Text>Yuubari</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23594']/Text"><Text>Yuudachi</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23639']/Text"><Text>Yuugure</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23640']/Text"><Text>Z1</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23641']/Text"><Text>Z16</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23642']/Text"><Text>Z18</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23595']/Text"><Text>Z19</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23596']/Text"><Text>Z2</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23597']/Text"><Text>Z20</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23598']/Text"><Text>Z21</Text></ModOp>
+</ModOps>

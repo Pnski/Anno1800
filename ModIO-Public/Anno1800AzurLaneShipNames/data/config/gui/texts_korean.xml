@@ -1,0 +1,265 @@
+<ModOps>
+  <ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2302']/Text"><Text>하얼빈</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10723']/Text"><Text>Z1</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10814']/Text"><Text>Z16</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2303']/Text"><Text>Z18</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2304']/Text"><Text>Z19</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2305']/Text"><Text>Z2</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2306']/Text"><Text>Z20</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2307']/Text"><Text>Z21</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2308']/Text"><Text>Z23</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2309']/Text"><Text>Z24</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2310']/Text"><Text>Z25</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20495']/Text"><Text>Z26</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10724']/Text"><Text>Z28</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20496']/Text"><Text>Z35</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20497']/Text"><Text>Z36</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20498']/Text"><Text>Z46</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20499']/Text"><Text>아크 로얄</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20500']/Text"><Text>아덴트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20501']/Text"><Text>아우구스트 폰 파세발</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20502']/Text"><Text>아카스타</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20503']/Text"><Text>아킬리즈</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20504']/Text"><Text>애드미럴 그라프 슈페</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20505']/Text"><Text>애드미럴 히퍼</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10725']/Text"><Text>아버크롬비</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20506']/Text"><Text>아마존</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20507']/Text"><Text>알리슈저</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20508']/Text"><Text>알비온</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20509']/Text"><Text>이글</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20510']/Text"><Text>이카루스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20511']/Text"><Text>일러스트 리아스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20512']/Text"><Text>인도 미타블</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20513']/Text"><Text>임프라카블</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20514']/Text"><Text>변종</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20515']/Text"><Text>뱅가드</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10726']/Text"><Text>뱀파이어</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20516']/Text"><Text>빅토리아스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20517']/Text"><Text>베저</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20518']/Text"><Text>워스파이트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20519']/Text"><Text>울리히 폰 푸텐</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20520']/Text"><Text>에길</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20521']/Text"><Text>에이잭스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20522']/Text"><Text>엑서터</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20523']/Text"><Text>에코</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20524']/Text"><Text>에스키모</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20525']/Text"><Text>에든버러</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10727']/Text"><Text>엠덴</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20526']/Text"><Text>엘빙</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20527']/Text"><Text>엘베</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20528']/Text"><Text>엘레바스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20529']/Text"><Text>오딘</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20530']/Text"><Text>오로라</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20531']/Text"><Text>오토 폰 알펜슬레벤</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20532']/Text"><Text>칼류</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20533']/Text"><Text>칼스루에</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20534']/Text"><Text>갈라티아</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20535']/Text"><Text>카리브 디스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10728']/Text"><Text>큐라소</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20536']/Text"><Text>킹 조지 5세</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20537']/Text"><Text>퀸 엘리자베스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20538']/Text"><Text>그나이제나우</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20539']/Text"><Text>그라프 제펠린</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20540']/Text"><Text>글래스고</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20541']/Text"><Text>크레센트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20542']/Text"><Text>글렌빌</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20543']/Text"><Text>글로우 웜</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20544']/Text"><Text>글로스터</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20545']/Text"><Text>글로리아스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10729']/Text"><Text>케니히스베르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20546']/Text"><Text>쾰른</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20547']/Text"><Text>켄트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20548']/Text"><Text>코멧</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20549']/Text"><Text>자이드리츠</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20550']/Text"><Text>사우샘프턴</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20551']/Text"><Text>서 섹스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20552']/Text"><Text>서퍽</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20553']/Text"><Text>바다 신발</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20554']/Text"><Text>제너스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20555']/Text"><Text>셰필드</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10730']/Text"><Text>시그니트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20556']/Text"><Text>저비스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20557']/Text"><Text>저지</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20559']/Text"><Text>자벨린</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20560']/Text"><Text>자메이카</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20561']/Text"><Text>샤른홀스트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20562']/Text"><Text>주노</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20563']/Text"><Text>주피터</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20564']/Text"><Text>슈페짱</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20565']/Text"><Text>슈롭셔</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20566']/Text"><Text>시라</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10731']/Text"><Text>시리아스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20567']/Text"><Text>스위프트 슈어</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20568']/Text"><Text>센토</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20569']/Text"><Text>다이도</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20570']/Text"><Text>체이서</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20571']/Text"><Text>체셔</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20572']/Text"><Text>틸 피츠</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20573']/Text"><Text>데본셔</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20574']/Text"><Text>듀크 오브 요크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20575']/Text"><Text>튀링겐</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20576']/Text"><Text>텔러</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10732']/Text"><Text>도셋셔</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20577']/Text"><Text>도이추란트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20578']/Text"><Text>드레이크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20579']/Text"><Text>뉴캐슬</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20580']/Text"><Text>뉘른베르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20581']/Text"><Text>누비안</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20582']/Text"><Text>해왕성</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20583']/Text"><Text>넬슨</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20584']/Text"><Text>노퍽</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20585']/Text"><Text>퍼슈스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20586']/Text"><Text>하디</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10715']/Text"><Text>헤르미온니</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10733']/Text"><Text>하미즈</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '20587']/Text"><Text>하우</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2311']/Text"><Text>사냥꾼</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2312']/Text"><Text>비글</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2313']/Text"><Text>영웅</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2314']/Text"><Text>비스마르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2315']/Text"><Text>비스마르크 Zwei</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2316']/Text"><Text>힌덴부르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2317']/Text"><Text>피지</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2318']/Text"><Text>필릭스 슐츠</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '2319']/Text"><Text>포춘</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '21342']/Text"><Text>포미 더블</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10734']/Text"><Text>폭스하운드</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10735']/Text"><Text>후드</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10736']/Text"><Text>블랙 프린스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10737']/Text"><Text>프리드리히 칼</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10738']/Text"><Text>프리드리히 데어 그로세</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10739']/Text"><Text>프리드리히</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10740']/Text"><Text>플리머스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10741']/Text"><Text>브뤼히</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10742']/Text"><Text>브뤼힐데</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10716']/Text"><Text>프린스 오브 웨일즈</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10743']/Text"><Text>프린츠 아달벨트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10744']/Text"><Text>프린츠 오이겐</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10745']/Text"><Text>프린츠 오이겐 짱</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10746']/Text"><Text>프린츠 하인리히</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10747']/Text"><Text>프린츠 루프레흐트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10748']/Text"><Text>불독</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10749']/Text"><Text>페터 슈트라 사서</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10750']/Text"><Text>페넬로피</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10751']/Text"><Text>벨짱</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10752']/Text"><Text>벨파스트</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10717']/Text"><Text>벨로나</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10753']/Text"><Text>마인츠</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10754']/Text"><Text>맥데부르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10755']/Text"><Text>마스케티아</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10756']/Text"><Text>매치리스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10757']/Text"><Text>맨체스터</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10758']/Text"><Text>모나크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10759']/Text"><Text>야데</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10760']/Text"><Text>유니콘</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10761']/Text"><Text>요크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10762']/Text"><Text>요르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10718']/Text"><Text>라이프치히</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10763']/Text"><Text>리안더</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10764']/Text"><Text>리버풀</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10765']/Text"><Text>리벤지</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10766']/Text"><Text>리틀 일러스트 리아스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10767']/Text"><Text>리틀 체셔</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10769']/Text"><Text>리틀 포미 더블</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10770']/Text"><Text>리틀 레나운</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10771']/Text"><Text>류초</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10772']/Text"><Text>레겐스부르크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10773']/Text"><Text>레나운</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10719']/Text"><Text>레펄스</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10774']/Text"><Text>대출</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10775']/Text"><Text>로얄 오크</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10776']/Text"><Text>로드니</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10777']/Text"><Text>런던</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10778']/Text"><Text>초승달</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10779']/Text"><Text>미카사</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10780']/Text"><Text>미쿠마</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10781']/Text"><Text>시라 불</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10782']/Text"><Text>五十鈴</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10783']/Text"><Text>伊13</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10720']/Text"><Text>이세</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10784']/Text"><Text>이부키</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10785']/Text"><Text>시나노</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10786']/Text"><Text>시나노 짱</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10787']/Text"><Text>이즈모</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10788']/Text"><Text>초봄</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10789']/Text"><Text>첫 달</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10790']/Text"><Text>첫 서리</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10791']/Text"><Text>가고</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10792']/Text"><Text>가가</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10793']/Text"><Text>북풍</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10721']/Text"><Text>지요다</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10794']/Text"><Text>치토세</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10795']/Text"><Text>우즈키</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10796']/Text"><Text>고타카</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10797']/Text"><Text>나토리</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10798']/Text"><Text>눈보라</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10799']/Text"><Text>아내</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10800']/Text"><Text>시만토</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10801']/Text"><Text>유바리</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10802']/Text"><Text>황혼</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10803']/Text"><Text>저녁</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10722']/Text"><Text>대조</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10804']/Text"><Text>대봉</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10805']/Text"><Text>오호 짱</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10806']/Text"><Text>아마기</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10807']/Text"><Text>아마기 짱</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10808']/Text"><Text>키사라기</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10809']/Text"><Text>묘고</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10810']/Text"><Text>연월</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10811']/Text"><Text>소비가</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10812']/Text"><Text>오와리</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '10813']/Text"><Text>산성</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23590']/Text"><Text>산풍</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23599']/Text"><Text>섬풍</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23600']/Text"><Text>카와우치</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23601']/Text"><Text>권파</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23602']/Text"><Text>아타고</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23603']/Text"><Text>후소</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23604']/Text"><Text>마야</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23605']/Text"><Text>문월</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23606']/Text"><Text>신월</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23607']/Text"><Text>깃발</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23608']/Text"><Text>히나타</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23591']/Text"><Text>아카시</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23609']/Text"><Text>춘월</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23610']/Text"><Text>시간 비</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23611']/Text"><Text>새벽</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23612']/Text"><Text>최상</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23613']/Text"><Text>아리아케</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23614']/Text"><Text>朝凪</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23615']/Text"><Text>아사시오</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23616']/Text"><Text>송풍</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23617']/Text"><Text>사나</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23618']/Text"><Text>카시노</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23592']/Text"><Text>무사시</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23619']/Text"><Text>히에이</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23620']/Text"><Text>미즈키</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23621']/Text"><Text>장풍</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23622']/Text"><Text>하마 바람</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23623']/Text"><Text>우라나미</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23624']/Text"><Text>우라카제</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23625']/Text"><Text>바다 바람</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23626']/Text"><Text>료월</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23627']/Text"><Text>심설</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23628']/Text"><Text>청파</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23593']/Text"><Text>만조</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23629']/Text"><Text>쿠마노</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23630']/Text"><Text>즈이즈루</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23631']/Text"><Text>백설</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23632']/Text"><Text>백이슬</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23633']/Text"><Text>백룡</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23634']/Text"><Text>츠키즈키</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23635']/Text"><Text>이소풍</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23636']/Text"><Text>신통</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23637']/Text"><Text>카미카제</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23638']/Text"><Text>祥鳳</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23594']/Text"><Text>쓰쿠마</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23639']/Text"><Text>기이</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23640']/Text"><Text>아야나미</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23641']/Text"><Text>하구로</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23642']/Text"><Text>쇼츠루</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23595']/Text"><Text>노시로</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23596']/Text"><Text>하나즈키</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23597']/Text"><Text>와카츠키</Text></ModOp>
+<ModOp Type="replace" Path="/TextExport/Texts/Text[GUID = '23598']/Text"><Text>젊음</Text></ModOp>
+</ModOps>

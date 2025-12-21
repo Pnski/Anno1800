@@ -1,0 +1,10 @@
+<ModOps>
+    <Group Condition="#Pet_Needs_For_Residents">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='2023052502']">
+            <Item><Good>2023052502</Good></Item><!--pet cat-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='2023052504']">
+            <Item><Good>2023052504</Good></Item><!--cat food-->
+        </ModOp>
+    </Group>
+</ModOps>

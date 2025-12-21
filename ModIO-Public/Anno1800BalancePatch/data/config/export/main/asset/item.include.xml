@@ -1,0 +1,9 @@
+<ModOps>
+    <!-- Pedologists -->
+    <ModOp Type="merge" GUID='1961,1956' Path="/Values/FactoryUpgrade/AdditionalOutput/Item">
+        <Item>
+            <Amount>1</Amount>
+            <AdditionalOutputCycle>2</AdditionalOutputCycle>
+        </Item>
+    </ModOp>
+</ModOps>

@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.4",
+  "ModID": "ShipsPreItemsTrade",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "附带预配置项目：贸易",
+    "English": "Ships with preconfigured items: Trade",
+    "French": "Livré avec des éléments préconfigurés : Échange",
+    "German": "Schiffe mit vorkonfigurierten Artikeln: Handel",
+    "Italian": "Spedito con articoli preconfigurati: Commercio",
+    "Japanese": "事前構成されたアイテムが同梱されます: Trade",
+    "Korean": "사전 구성된 품목과 함께 배송: 무역",
+    "Polish": "Statki z wstępnie skonfigurowanymi przedmiotami: Handel",
+    "Russian": "Поставляется с предварительно настроенными предметами: Торговля",
+    "Spanish": "Se envía con artículos preconfigurados: Comercio",
+    "Taiwanese": "附带预配置项目：贸易"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

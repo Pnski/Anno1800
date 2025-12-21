@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.2",
+  "ModID": "Keybinds_Nyk",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "Keybinds (Nyk)",
+    "English": "Keybinds (Nyk)",
+    "French": "Keybinds (Nyk)",
+    "German": "Keybinds (Nyk)",
+    "Italian": "Keybinds (Nyk)",
+    "Japanese": "Keybinds (Nyk)",
+    "Korean": "Keybinds (Nyk)",
+    "Polish": "Keybinds (Nyk)",
+    "Russian": "Keybinds (Nyk)",
+    "Spanish": "Keybinds (Nyk)",
+    "Taiwanese": "Keybinds (Nyk)"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

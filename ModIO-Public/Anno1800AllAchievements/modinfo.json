@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.2",
+  "ModID": "AllAchievements",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "All Achievements",
+    "English": "All Achievements",
+    "French": "All Achievements",
+    "German": "All Achievements",
+    "Italian": "All Achievements",
+    "Japanese": "All Achievements",
+    "Korean": "All Achievements",
+    "Polish": "All Achievements",
+    "Russian": "All Achievements",
+    "Spanish": "All Achievements",
+    "Taiwanese": "All Achievements"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

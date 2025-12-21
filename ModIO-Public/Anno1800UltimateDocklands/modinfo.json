@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.7",
+  "ModID": "Ultimate_Docklands",
+  "DeprecateIds": [],
+  "LoadAfterIds": ["*"],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Ultimate Docklands",
+    "English": "Ultimate Docklands",
+    "French": "Ultimate Docklands",
+    "German": "Ultimate Docklands",
+    "Italian": "Ultimate Docklands",
+    "Japanese": "Ultimate Docklands",
+    "Korean": "Ultimate Docklands",
+    "Polish": "Ultimate Docklands",
+    "Russian": "Ultimate Docklands",
+    "Spanish": "Ultimate Docklands",
+    "Taiwanese": "Ultimate Docklands"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,Senfdeckel98",
+  "CreatorContact": null,
+  "Image": null
+}

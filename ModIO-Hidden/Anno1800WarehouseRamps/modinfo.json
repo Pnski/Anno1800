@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "WarehouseRampsD",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "Warehouseramps x2",
+    "English": "Warehouseramps x2",
+    "French": "Warehouseramps x2",
+    "German": "Warehouseramps x2",
+    "Italian": "Warehouseramps x2",
+    "Japanese": "Warehouseramps x2",
+    "Korean": "Warehouseramps x2",
+    "Polish": "Warehouseramps x2",
+    "Russian": "Warehouseramps x2",
+    "Spanish": "Warehouseramps x2",
+    "Taiwanese": "Warehouseramps x2"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

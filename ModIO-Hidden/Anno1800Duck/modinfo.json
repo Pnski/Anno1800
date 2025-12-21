@@ -1,0 +1,52 @@
+{
+	"Version": "0.0.1",
+	"ModID": "Skins_Duck",
+	"DeprecateIds": [],
+	"LoadAfterIds": [],
+	"IncompatibleIds": null,
+	"ModDependencies": null,
+	"Category": {
+		"English": "Ship",
+		"Chinese": "船",
+		"French": "Bateau",
+		"German": "Schiff",
+		"Italian": "Nave",
+		"Japanese": "舟",
+		"Korean": "배",
+		"Polish": "Statek",
+		"Russian": "Корабль",
+		"Spanish": "Navío",
+		"Taiwanese": "船"
+	},
+	"ModName": {
+		"Chinese": "船皮鸭",
+		"English": "Ship Skins Duck",
+		"French": "Peaux de bateau Canard",
+		"German": "Schiffs-Skins Ente",
+		"Italian": "Pelli di nave Anatra",
+		"Japanese": "船の皮ダック",
+		"Korean": "선박 스킨 오리",
+		"Polish": "Skórki okrętowe Kaczka",
+		"Russian": "Скины корабля Утка",
+		"Spanish": "Pieles de barco Pato",
+		"Taiwanese": "船皮鴨"
+	},
+	"Description": {
+		"English": null,
+		"German": null,
+		"Chinese": null,
+		"French": null,
+		"Italian": null,
+		"Japanese": null,
+		"Korean": null,
+		"Polish": null,
+		"Russian": null,
+		"Spanish": null,
+		"Taiwanese": null
+	},
+	"KnownIssues": null,
+	"DLCDependencies": null,
+	"CreatorName": "Pnski",
+	"CreatorContact": null,
+	"Image": null
+}

@@ -1,0 +1,58 @@
+<ModOps>
+    <ModOp Type="add" GUID='2001271' Path="/Values/GUIConfig/KeyBindings">
+        <Item>
+            <KeyTypes>Shift;P</KeyTypes>
+            <Command>getAllItems()</Command>
+            <Active>Menu;Session;WorldMap;VideoCameraSequence;TextInput;PostcardView;Pause</Active>
+            <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+            <Text>10395</Text>
+            <AudioEvent>200634</AudioEvent>
+            <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+        </Item>
+    </ModOp>
+    <ModOp GUID="130216" Type="addNextSibling">
+        <Asset>
+        <Template>Trigger</Template>
+        <Values>
+            <Standard>
+            <GUID>1600019998</GUID>
+            <Name>Trigger Reinitialize Script</Name>
+            </Standard>
+            <Trigger>
+            <TriggerCondition>
+                <Template>ConditionEvent</Template>
+                <Values>
+                <Condition />
+                <ConditionEvent>
+                    <ConditionEvent>SessionEnter</ConditionEvent>
+                </ConditionEvent>
+                </Values>
+            </TriggerCondition>
+            <TriggerActions>
+                <Item>
+                <TriggerAction>
+                    <Template>ActionExecuteScript</Template>
+                    <Values>
+                    <Action />
+                    <ActionExecuteScript>
+                        <ScriptFileName>data/scripts/items.lua</ScriptFileName>
+                    </ActionExecuteScript>
+                    </Values>
+                </TriggerAction>
+                </Item>
+                <Item>
+                <TriggerAction>
+                    <Template>ActionResetTrigger</Template>
+                    <Values>
+                    <Action />
+                    <ActionResetTrigger />
+                    </Values>
+                </TriggerAction>
+                </Item>
+            </TriggerActions>
+            </Trigger>
+            <TriggerSetup />
+        </Values>
+        </Asset>
+    </ModOp>
+</ModOps>

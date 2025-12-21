@@ -1,0 +1,52 @@
+{
+	"Version": "0.0.2",
+	"ModID": "AzurLaneShipNames",
+	"DeprecateIds": [],
+	"LoadAfterIds": [],
+	"IncompatibleIds": null,
+	"ModDependencies": null,
+	"Category": {
+		"English": "Gameplay",
+		"Chinese": "游戏玩法",
+		"French": "Jouabilité",
+		"German": "Spielablauf",
+		"Italian": "Stile di gioco",
+		"Japanese": "ゲームプレイ",
+		"Korean": "게임플레이",
+		"Polish": "Rozgrywka",
+		"Russian": "Игровой процесс",
+		"Spanish": "Jugabilidad",
+		"Taiwanese": "遊戲玩法"
+	},
+	"ModName": {
+		"Chinese": "将默认船名更改为 Azur Lane 中的船名",
+		"English": "Changes Default Ship Names to ones from Azur Lane",
+		"French": "Remplace les noms de navires par défaut par ceux d’Azur Lane",
+		"German": "Ändert die Standard-Schiffsnamen in solche von Azur Lane",
+		"Italian": "Cambia i nomi delle navi predefiniti in quelli di Azur Lane",
+		"Japanese": "デフォルトの艦艇名をアズールレーンの艦名に変更",
+		"Korean": "기본 함선 이름을 Azur Lane의 이름으로 변경합니다.",
+		"Polish": "Zmienia domyślne nazwy statków na te z Azur Lane",
+		"Russian": "Изменяет названия кораблей по умолчанию на названия из Azur Lane",
+		"Spanish": "Cambia los nombres de barco predeterminados por los de Azur Lane.",
+		"Taiwanese": "將預設船名更改為 Azur Lane 中的船名"
+	},
+	"Description": {
+		"English": null,
+		"German": null,
+		"Chinese": null,
+		"French": null,
+		"Italian": null,
+		"Japanese": null,
+		"Korean": null,
+		"Polish": null,
+		"Russian": null,
+		"Spanish": null,
+		"Taiwanese": null
+	},
+	"KnownIssues": null,
+	"DLCDependencies": null,
+	"CreatorName": "Pnski",
+	"CreatorContact": null,
+	"Image": null
+}

@@ -1,0 +1,16 @@
+<ModOps>
+    <Group Condition="#Marble-Slabs-Drakkam">
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1555000091']">
+            <Item><Good>1555000091</Good></Item><!-- Marble Stone-->
+        </ModOp>
+        <ModOp Type="Add" GUID='131764' Path="/Values/TradeContractFeature/Traders/Item[TraderName='1600000016']/TradeLevels/Item/Trades" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1555000093']">
+            <Item><Good>1555000093</Good></Item><!--Marble Slabs-->
+        </ModOp>
+        <ModOp Type="Add" GUID='1600000024' Path="/Values/ProductList/List" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1555000091']">
+            <Item><Product>1555000091</Product></Item><!-- Marble Stone-->
+        </ModOp>
+        <ModOp Type="Add" GUID='1600000024' Path="/Values/ProductList/List" Condition="!/Values[Standard/GUID='131764']/TradeContractFeature/Traders/Item/TradeLevels/Item/Trades/Item[Good='1555000093']">
+            <Item><Product>1555000093</Product></Item><!--Marble Slabs-->
+        </ModOp>
+    </Group>
+</ModOps>

@@ -1,0 +1,54 @@
+{
+  "Version": "0.0.2",
+  "ModID": "BalancePatch_Pnski",
+  "DeprecateIds": [
+    "final_BalancePatch_Pnski"
+  ],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Gameplay",
+    "Chinese": "Gameplay",
+    "French": "Gameplay",
+    "German": "Gameplay",
+    "Italian": "Gameplay",
+    "Japanese": "Gameplay",
+    "Korean": "Gameplay",
+    "Polish": "Gameplay",
+    "Russian": "Gameplay",
+    "Spanish": "Gameplay",
+    "Taiwanese": "Gameplay"
+  },
+  "ModName": {
+    "Chinese": "Balance Patch v 0.0.1",
+    "English": "Balance Patch v 0.0.1",
+    "French": "Balance Patch v 0.0.1",
+    "German": "Balance Patch v 0.0.1",
+    "Italian": "Balance Patch v 0.0.1",
+    "Japanese": "Balance Patch v 0.0.1",
+    "Korean": "Balance Patch v 0.0.1",
+    "Polish": "Balance Patch v 0.0.1",
+    "Russian": "Balance Patch v 0.0.1",
+    "Spanish": "Balance Patch v 0.0.1",
+    "Taiwanese": "Balance Patch v 0.0.1"
+  },
+  "Description": {
+    "English": "file::README.ENG.md",
+    "German": "file::README.GER.md",
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

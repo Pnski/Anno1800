@@ -1,0 +1,5 @@
+<ModOps>
+  <ModOp Type="merge" GUID='500115' Path="/Values//Item[Command='GameManager.fastQuit(2)']">
+    <Command>os.exit()</Command>
+  </ModOp>
+</ModOps>

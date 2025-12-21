@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "GoldenFeras",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Cheat",
+    "Chinese": "Cheat",
+    "French": "Cheat",
+    "German": "Cheat",
+    "Italian": "Cheat",
+    "Japanese": "Cheat",
+    "Korean": "Cheat",
+    "Polish": "Cheat",
+    "Russian": "Cheat",
+    "Spanish": "Cheat",
+    "Taiwanese": "Cheat"
+  },
+  "ModName": {
+    "Chinese": "GoldenFeras",
+    "English": "GoldenFeras",
+    "French": "GoldenFeras",
+    "German": "GoldenFeras",
+    "Italian": "GoldenFeras",
+    "Japanese": "GoldenFeras",
+    "Korean": "GoldenFeras",
+    "Polish": "GoldenFeras",
+    "Russian": "GoldenFeras",
+    "Spanish": "GoldenFeras",
+    "Taiwanese": "GoldenFeras"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,tschd",
+  "CreatorContact": null,
+  "Image": null
+}

@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "SuddenDeath",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "SuddenDeath",
+    "English": "SuddenDeath",
+    "French": "SuddenDeath",
+    "German": "SuddenDeath",
+    "Italian": "SuddenDeath",
+    "Japanese": "SuddenDeath",
+    "Korean": "SuddenDeath",
+    "Polish": "SuddenDeath",
+    "Russian": "SuddenDeath",
+    "Spanish": "SuddenDeath",
+    "Taiwanese": "SuddenDeath"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

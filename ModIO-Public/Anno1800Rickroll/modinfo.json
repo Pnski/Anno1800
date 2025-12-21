@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "RickRoll",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "RickRoll",
+    "English": "RickRoll",
+    "French": "RickRoll",
+    "German": "RickRoll",
+    "Italian": "RickRoll",
+    "Japanese": "RickRoll",
+    "Korean": "RickRoll",
+    "Polish": "RickRoll",
+    "Russian": "RickRoll",
+    "Spanish": "RickRoll",
+    "Taiwanese": "RickRoll"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}

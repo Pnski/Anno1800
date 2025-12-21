@@ -1,0 +1,178 @@
+Microsoft (R) Debugging Information Dumper  Version 14.00.23611
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+*** IDs
+
+
+*** MODULES
+
+0001 "E2F40FA4" "T9SDKAuto.MyGlobalVars"
+
+*** PUBLICS
+
+
+
+*** TYPES
+
+
+*** TYPES Mismatch Warnings
+
+
+*** SYMBOLS
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+(000004) S_GMANPROC: [0001:00000000], Cb: 00000007, Token: 06000001, .ctor
+         Parent: 00000000, End: 00000068, Next: 00000000
+         Debug start: 00000000, Debug end: 00000000
+         Return Reg: ???(0x0000)
+
+(000034)  S_OEM: {C6EA3FC9-59B3-49D6-BC25-0902BBABB460}, Type:     T_NOTYPE(0000)
+
+(000068) S_END
+
+(00006C) S_GMANPROC: [0001:00000007], Cb: 0000000B, Token: 06000002, .cctor
+         Parent: 00000000, End: 000000CC, Next: 00000000
+         Debug start: 00000000, Debug end: 00000000
+         Return Reg: ???(0x0000)
+
+(00009C)  S_OEM: {C6EA3FC9-59B3-49D6-BC25-0902BBABB460}, Type:     T_NOTYPE(0000)
+
+(0000CC) S_END
+
+
+*** GLOBALS
+
+
+S_TOKENREF: 0x00000000: (   1, 0000006C) 06000002
+S_PROCREF: 0x00000000: (   1, 00000004) .ctor
+S_TOKENREF: 0x00000000: (   1, 00000004) 06000001
+S_PROCREF: 0x00000000: (   1, 0000006C) .cctor
+
+
+*** COFF SYMBOL RVA
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** INLINEE LINES
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** LINES
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+  d:\Projects\Anno7\Game\data\config\t9generated\t9datasets.cs (None), 0001:00000000-00000007, line/addr pairs = 2
+
+      5:3    -    5:24    00000000      7:3    -    7:4     00000006
+
+  d:\Projects\Anno7\Game\data\config\t9generated\t9datasets.cs (None), 0001:00000007-00000012, line/addr pairs = 2
+
+     12:3    -   12:234   00000007  feefee:0                00000011
+
+
+*** IL LINES
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** SOURCE FILES
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+     0 d:\Projects\Anno7\Game\data\config\t9generated\t9datasets.cs (None)
+
+
+*** SECTION CONTRIBUTIONS
+
+  Imod  Address        Size      Characteristics
+  0001  0001:00000000  00000007  00000000
+  0001  0001:00000007  0000000B  00000000
+
+*** SEGMENT MAP
+
+Sec  flags  ovl   grp   frm sname cname    offset    cbSeg
+ 01  010d  0000  0000  0001  ffff  ffff  00000000 00000012
+ 02  0208  0000  0000  0000  ffff  ffff  00000000 ffffffff
+
+*** FPO
+
+DBIOpenDbg(, dbgtypeFPO,) failed.
+DBIOpenDbg(, dbgtypeNewFPO,) failed.
+
+*** TokenMap
+
+DBIOpenDbg(, dbgtypeTokenRidMap,) failed.
+
+*** FIXUPS
+
+DBIOpenDbg(, dbgtypeFixup,) failed.
+
+*** OMAP FROM SRC
+
+DBIOpenDbg(, dbgtypeOmapFromSrc,) failed.
+
+*** OMAP TO SRC
+
+DBIOpenDbg(, dbgtypeOmapToSrc,) failed.
+
+*** PDATA/XDATA
+
+DBIOpenDbg(, dbgtypePdata,) failed.
+
+*** SECTION HEADERS
+
+
+SECTION HEADER #1
+         name
+      12 virtual size
+       0 virtual address
+      12 size of raw data
+       0 file pointer to raw data
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+       0 flags
+         (no align specified)
+
+*** ORIGINAL SECTION HEADERS
+
+DBIOpenDbg(, dbgtypeSectionHdrOrig,) failed.
+
+*** CROSS MODULE EXPORTS
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** CROSS MODULE IMPORTS
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** FUNCTION TOKEN MAP
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** TYPE TOKEN MAP
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** MERGED ASSEMBLY INPUT
+
+** Module: "T9SDKAuto.MyGlobalVars" from "E2F40FA4"
+
+
+*** STRINGTABLE
+
+00000001 d:\Projects\Anno7\Game\data\config\t9generated\t9datasets.cs
+0000003e 
+0000003f d:\projects\anno7\game\data\config\t9generated\t9datasets.cs
+0000007c d:\Projects2\Anno7\Game\data\config\t9generated\t9datasets.cs
+000000ba d:\projects2\anno7\game\data\config\t9generated\t9datasets.cs

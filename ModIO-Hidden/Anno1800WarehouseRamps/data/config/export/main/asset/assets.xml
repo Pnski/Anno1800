@@ -1,0 +1,29 @@
+<ModOps>
+    <ModOp Type="merge" Path="//Values/LogisticNode/QueueConfiguration[ProcessingQueueParallelCount='6']">
+        <!--269867,269869,269879-->
+        <!--inherit from 100511: 101292,114628,114631,112661,112867,116004-->
+        <!--inherit from 100515: 101295-->
+        <ProcessingQueueParallelCount>10</ProcessingQueueParallelCount>
+    </ModOp>
+    <ModOp Type="merge" Path="//Values/LogisticNode/QueueConfiguration[ProcessingQueueParallelCount='4']">
+        <!--100511,100515,100517-->
+        <!--inherit from 100511: 101292,114628,114631,112661,112867-->
+        <!--inherit from 100515: 101295-->
+        <!--inherit from 100517: 101325,114635,112658-->
+        <ProcessingQueueParallelCount>8</ProcessingQueueParallelCount>
+    </ModOp>
+    <ModOp Type="merge" Path="//Values/LogisticNode/QueueConfiguration[ProcessingQueueParallelCount='3']">
+        <!--100510,100514,100516-->
+        <!--inherit from 100510: 101291,114627,114630,112660,112866,116003-->
+        <!--inherit from 100514: 101294-->
+        <!--inherit from 100516: 101324,114537,112657-->
+        <ProcessingQueueParallelCount>6</ProcessingQueueParallelCount>
+    </ModOp>
+
+    <!-- Large Warehouse (new world)
+    <ModOp Type="add" GUID='101325' Path="/Values/LogisticNode">
+        <QueueConfiguration>
+        <ProcessingQueueParallelCount>10</ProcessingQueueParallelCount> original = 4
+        </QueueConfiguration>
+    </ModOp>-->
+</ModOps>

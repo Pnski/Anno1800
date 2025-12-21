@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "StopBillions",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Gameplay",
+    "Chinese": "Gameplay",
+    "French": "Gameplay",
+    "German": "Gameplay",
+    "Italian": "Gameplay",
+    "Japanese": "Gameplay",
+    "Korean": "Gameplay",
+    "Polish": "Gameplay",
+    "Russian": "Gameplay",
+    "Spanish": "Gameplay",
+    "Taiwanese": "Gameplay"
+  },
+  "ModName": {
+    "Chinese": "收入上限和更好的贸易",
+    "English": "Cap Income and better Trade",
+    "French": "Unlimited local Departments",
+    "German": "Unlimited local Departments",
+    "Italian": "Unlimited local Departments",
+    "Japanese": "Unlimited local Departments",
+    "Korean": "Unlimited local Departments",
+    "Polish": "Unlimited local Departments",
+    "Russian": "Unlimited local Departments",
+    "Spanish": "Unlimited local Departments",
+    "Taiwanese": "Unlimited local Departments"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski,tschd",
+  "CreatorContact": null,
+  "Image": null
+}

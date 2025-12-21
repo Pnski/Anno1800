@@ -1,0 +1,104 @@
+<!-- 1600000043 | Skins_Duck | 0.0.1 | Skin Small
+1600000044 | Skins_Duck | 0.0.1 | Skin Medium
+1600000045 | Skins_Duck | 0.0.1 | Skin Big/Normal -->
+<ModOps>
+    <ModOp Type="addNextSibling" GUID='133393'>
+        <Asset>
+            <Template>Skin</Template>
+            <Values>
+                <Standard>
+                    <GUID>1600000043</GUID>
+                    <Name>Skin Type01 Duck</Name>
+                    <IconFilename>data/graphics/vehicles/GE_Duck/duck.png</IconFilename>
+                    <ID>cdlc04_SkinType01Schooner</ID>
+                </Standard>
+                <Skin>
+                    <SkinName>133355</SkinName>
+                    <!--Skin Type01 Headline-->
+                    <SkinDescription>133356</SkinDescription>
+                    <!--Skin Type01 Fluff-->
+                    <SkinVariations>
+                        <Item>
+                            <FileName>data/graphics/vehicles/GE_Duck/duck_small.cfg</FileName>
+                        </Item>
+                    </SkinVariations>
+                    <SkinCategoryDescription>5761</SkinCategoryDescription>
+                    <!--Vehicle Liveries Category Name-->
+                </Skin>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                    <VisibleWhenLocked>1</VisibleWhenLocked>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='133393'>
+        <Asset>
+            <Template>Skin</Template>
+            <Values>
+                <Standard>
+                    <GUID>1600000044</GUID>
+                    <Name>Skin Type02 Duck</Name>
+                    <IconFilename>data/graphics/vehicles/GE_Duck/duck.png</IconFilename>
+                    <ID>cdlc04_SkinType01Schooner</ID>
+                </Standard>
+                <Skin>
+                    <SkinName>133355</SkinName>
+                    <!--Skin Type01 Headline-->
+                    <SkinDescription>133356</SkinDescription>
+                    <!--Skin Type01 Fluff-->
+                    <SkinVariations>
+                        <Item>
+                            <FileName>data/graphics/vehicles/GE_Duck/duck_medium.cfg</FileName>
+                        </Item>
+                    </SkinVariations>
+                    <SkinCategoryDescription>5761</SkinCategoryDescription>
+                    <!--Vehicle Liveries Category Name-->
+                </Skin>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                    <VisibleWhenLocked>1</VisibleWhenLocked>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="addNextSibling" GUID='133393'>
+        <Asset>
+            <Template>Skin</Template>
+            <Values>
+                <Standard>
+                    <GUID>1600000045</GUID>
+                    <Name>Skin Type03 Duck</Name>
+                    <IconFilename>data/graphics/vehicles/GE_Duck/duck.png</IconFilename>
+                    <ID>cdlc04_SkinType01Schooner</ID>
+                </Standard>
+                <Skin>
+                    <SkinName>133355</SkinName>
+                    <!--Skin Type01 Headline-->
+                    <SkinDescription>133356</SkinDescription>
+                    <!--Skin Type01 Fluff-->
+                    <SkinVariations>
+                        <Item>
+                            <FileName>data/graphics/vehicles/GE_Duck/duck.cfg</FileName>
+                        </Item>
+                    </SkinVariations>
+                    <SkinCategoryDescription>5761</SkinCategoryDescription>
+                    <!--Vehicle Liveries Category Name-->
+                </Skin>
+                <Locked>
+                    <DefaultLockedState>0</DefaultLockedState>
+                    <VisibleWhenLocked>1</VisibleWhenLocked>
+                </Locked>
+                <Text/>
+            </Values>
+        </Asset>
+    </ModOp>
+    <ModOp Type="add" Path="//Asset[Template='TradeShip' or Template='TradeShipPermit']/Values/Object/Skins/SkinList">
+        <Item><SkinAssetGuid>1600000043</SkinAssetGuid></Item>
+        <Item><SkinAssetGuid>1600000044</SkinAssetGuid></Item>
+        <Item><SkinAssetGuid>1600000045</SkinAssetGuid></Item>
+    </ModOp>
+    
+</ModOps>

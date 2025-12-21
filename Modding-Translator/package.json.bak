@@ -1,0 +1,63 @@
+,
+						"LibreTranslate",
+						"GoogleTranslate"
+
+                        ,
+				"amt.Google.Key": {
+					"title": "Google API Key",
+					"type": "string",
+					"editPresentation": "singlelineText",
+					"default": "Your Google API Key",
+					"markdownDescription": "https://aistudio.google.com/app/apikey"
+				}
+                "amt.Translation.Lang": {
+					"type": "string",
+					"default": "en",
+					"description": "Default Language",
+					"enum": [
+						"zh-Hans",
+						"zh-Hant",
+						"en",
+						"fr",
+						"de",
+						"it",
+						"ja",
+						"ko",
+						"pl",
+						"ru",
+						"es"
+					],
+					"enumItemLabels": [
+						"Chinese",
+						"Taiwanese",
+						"English",
+						"French",
+						"German",
+						"Italian",
+						"Japanese",
+						"Korean",
+						"Polish",
+						"Russian",
+						"Spanish"
+					],
+					"enumDescriptions": [
+						"中文",
+						"臺灣的",
+						"English",
+						"Français",
+						"Deutsch",
+						"Italiano",
+						"日本語",
+						"한국어",
+						"Polski",
+						"Русский",
+						"Español"
+					],
+					"markdownDescription": "Default language for inline translation."
+				},
+
+
+                "@types/xml2js": "^0.4.14",
+		"@typescript-eslint/eslint-plugin": "^7.11.0",
+		"@typescript-eslint/parser": "^7.11.0",
+		"eslint": "^8.57.0",

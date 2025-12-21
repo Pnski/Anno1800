@@ -1,0 +1,188 @@
+{
+	"name": "amt",
+	"displayName": "Anno Modding Translator",
+	"description": "translate texts.xml",
+	"version": "0.1.1",
+	"icon": "img/icon.png",
+	"publisher": "pnski",
+	"sponsor": {
+		"url": "https://ko-fi.com/Q5Q4YAI3F"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Pnski/anno-modding-translator"
+	},
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./dist/extensions.js",
+	"contributes": {
+		"configuration": {
+			"title": "Anno Translation Tool",
+			"properties": {
+				"amt.Comment.sourceString": {
+					"title": "Comments with SourceString",
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Enables that text that gets translated gets the sourcestring with the autodetection language <!-- Source EN: my english flyff text -->."
+				},
+				"amt.Comment.enable": {
+					"title": "Enables Comments",
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "If checked, a default comment to every translated <Text> will be added."
+				},
+				"amt.Comment.text": {
+					"title": "Comments Text",
+					"type": "string",
+					"editPresentation": "singlelineText",
+					"default": "MachineTranslated by Nyk",
+					"markdownDescription": "If comments are enabled this text will be added in <!-- -->."
+				},
+				"amt.Translation.Provider": {
+					"title": "Comments Text",
+					"type": "string",
+					"description": "Default translation provider.",
+					"enum": [
+						"BingTranslate"
+					],
+					"enumDescriptions": [
+						"Translation with translate.bing.com",
+						"Translation with libretranslate.com",
+						"translation with translate.google.com"
+					],
+					"default": "BingTranslate",
+					"markdownDescription": "Choose a translation provider, currently none with API-Key are used. (Google not working do not use)."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "amt.testingStuff",
+				"category": "testing",
+				"title": "Hello World"
+			},
+			{
+				"command": "amt.modInfo",
+				"category": "AnnoTranslate",
+				"title": "Autotranslate: Modinfo"
+			},
+			{
+				"command": "amt.singleFile",
+				"category": "AnnoTranslate",
+				"title": "Autotranslate: Single File"
+			},
+			{
+				"command": "amt.Inplace",
+				"category": "AnnoTranslate",
+				"title": "Inplace"
+			},
+			{
+				"command": "amt.multiFile",
+				"group": "AnnoTranslate",
+				"title": "Autotranslate: from This"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "amt.modInfo",
+				"key": "ctrl+alt+t",
+				"mac": "shift+cmd+t"
+			},
+			{
+				"command": "amt.singleFile",
+				"key": "ctrl+alt+z",
+				"mac": "shift+cmd+z"
+			},
+			{
+				"command": "amt.multiFile",
+				"key": "ctrl+alt+y",
+				"mac": "shift+cmd+y"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "amt.testingStuff",
+					"when": "false"
+				},
+				{
+					"command": "amt.modInfo",
+					"when": "resourceFilename =~ /modinfo.json$/"
+				},
+				{
+					"command": "amt.singleFile",
+					"when": "resourceFilename =~ /texts_.+xml$/"
+				},
+				{
+					"command": "amt.Inplace",
+					"when": "false"
+				},
+				{
+					"command": "amt.multiFile",
+					"when": "resourceFilename =~ /texts_.+xml$/"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "amt.testingStuff",
+					"when": "false",
+					"group": "AnnoTranslate"
+				},
+				{
+					"command": "amt.multiFile",
+					"when": "resourceFilename =~ /texts_.+xml$/",
+					"group": "AnnoTranslate"
+				},
+				{
+					"command": "amt.modInfo",
+					"when": "resourceFilename =~ /modinfo.json$/",
+					"group": "AnnoTranslate"
+				},
+				{
+					"command": "amt.singleFile",
+					"when": "resourceFilename =~ /texts_.+xml$/",
+					"group": "AnnoTranslate"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"download": "bash -c '(cd external; ./download.sh)'",
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode none",
+		"watch": "webpack --mode none --watch",
+		"pretest": "tsc -p ./ && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"assets": "tsc -p ./ && node ./out/scripts/compileAssets.js c:/anno/all-rda/data/config/export/main/asset/assets.xml",
+		"height": "tsc -p ./ && node ./out/scripts/heightmap.js ./generated/update.xml",
+		"buildmod:compile": "tsc -p ./",
+		"buildmod:pack": "npm run buildmod:compile && npm pack"
+	},
+	"devDependencies": {
+		"@types/google-translate-api": "^2.3.5",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.90.0",
+		"esbuild": "^0.23.0",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.4.5",
+		"webpack": "^5.92.1",
+		"webpack-cli": "^5.1.4"
+	},
+	"dependencies": {
+		"@google-ai/generativelanguage": "^2.6.0",
+		"@google/generative-ai": "^0.14.0",
+		"bing-translate-api": "^4.0.2",
+		"fast-xml-parser": "^4.4.0",
+		"fs": "^0.0.1-security",
+		"google-translate-api": "^2.3.0",
+		"path": "^0.12.7"
+	}
+}

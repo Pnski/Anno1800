@@ -1,0 +1,5 @@
+<ModOps>
+	<ModOp Type = "Replace" GUID='131764' Path="/Values/TradeContractFeature/TraderTransferTime">
+		<TraderTransferTime>600000</TraderTransferTime>
+	</ModOp>
+</ModOps>
