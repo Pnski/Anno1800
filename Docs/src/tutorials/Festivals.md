@@ -320,6 +320,140 @@ To properly display the infotip you have to make your own Infotip for your festi
   </ModOp>
 ```
 
-The Colorvalue is in ARGB with 1 byte per color, smashed to a 32-bit integer. The fellowing tool made by "Fam" converts RGB to ARGB.
+## Colorpicker
 
-[colorpicker](../../html/colorpicker.html ':include :type=iframe')
+```jsx
+const ColorPickerApp = () => {
+  const [rgba, setRgba] = React.useState({ r: 110, g: 245, b: 103, a: 165 });
+
+  // --- Converters ---
+  const rgba2hex = (r, g, b, a) => 
+    `#${[r, g, b, a].map(x => Math.round(x).toString(16).padStart(2, '0')).join('')}`;
+
+  const hex2rgba = (hex) => {
+    const m = hex.match(/#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?/i);
+    if (!m) return null;
+    return {
+      r: parseInt(m[1], 16),
+      g: parseInt(m[2], 16),
+      b: parseInt(m[3], 16),
+      a: m[4] ? parseInt(m[4], 16) : 255
+    };
+  };
+
+  const rgba2int = (r, g, b, a) => ((b >>> 0) + (g << 8 >>> 0) + (r << 16 >>> 0) + (a << 24 >>> 0)) >> 0;
+
+  const int2rgba = (num) => {
+    const n = (parseInt(num) || 0) >>> 0;
+    return { b: n & 0xFF, g: (n & 0xFF00) >>> 8, r: (n & 0xFF0000) >>> 16, a: (n & 0xFF000000) >>> 24 };
+  };
+
+  // --- Handlers ---
+  const updateChannel = (channel, val) => {
+    const num = Math.max(0, Math.min(255, parseInt(val) || 0));
+    setRgba(prev => ({ ...prev, [channel]: num }));
+  };
+
+  const updateAlphaPct = (pct) => {
+    const val = Math.round(parseFloat(pct) * 2.55);
+    updateChannel('a', val);
+  };
+
+  const onHexChange = (hex) => {
+    const result = hex2rgba(hex);
+    if (result) setRgba(result);
+  };
+
+  const cssColor = `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${Math.round((rgba.a / 255) * 100) / 100})`;
+  const alphaPercent = Math.round((rgba.a / 2.55) * 100) / 100;
+
+  return (
+    <div className="grid grid-cols-2">
+      {/* Visual Section */}
+      <div className="card">
+        <h3>Visual Picker</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <input type="color" 
+              value={rgba2hex(rgba.r, rgba.g, rgba.b, 255).substring(0, 7)} 
+              onChange={(e) => onHexChange(e.target.value)} 
+              style={{ width: '50px', height: '50px', padding: '0', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
+            />
+            <div style={{ flex: 1 }}>
+              <label style={{ fontSize: '0.75rem', fontWeight: 'bold' }}>HEXADECIMAL</label>
+              <input type="text" 
+                value={rgba2hex(rgba.r, rgba.g, rgba.b, rgba.a)} 
+                onChange={(e) => onHexChange(e.target.value)}
+                style={{ width: '80%'}}
+              />
+            </div>
+          </div>
+
+          <label style={{ display: 'block' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 'bold' }}>
+              <span>ALPHA %</span>
+              <span>{alphaPercent}%</span>
+            </div>
+            <input type="range" min="0" max="100" step="0.01" value={alphaPercent} 
+              onChange={(e) => updateAlphaPct(e.target.value)} 
+              style={{ width: '100%' }} />
+          </label>
+          
+          <div style={{ height: '50px', borderRadius: '8px', background: cssColor, border: '1px solid var(--theme-foreground-faint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+             <span style={{ color: (rgba.r+rgba.g+rgba.b)/3 > 128 ? 'black' : 'white', fontWeight: 'bold', fontSize: '0.8rem' }}>Preview</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Sliders Section */}
+      <div className="card">
+        <h3>Channels</h3>
+        {[
+          { key: 'r', label: 'Red' },
+          { key: 'g', label: 'Green' },
+          { key: 'b', label: 'Blue' },
+          { key: 'a', label: 'Alpha (0-255)' }
+        ].map(({key, label}) => (
+          <div key={key} style={{ marginBottom: '8px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2px', alignItems: 'center' }}>
+              <label style={{ fontSize: '0.8rem', fontWeight: '600' }}>{label}</label>
+              <input type="number" min="0" max="255" value={rgba[key]} 
+                onChange={(e) => updateChannel(key, e.target.value)}
+                style={{ width: '55px', textAlign: 'right', padding: '2px' }}
+              />
+            </div>
+            <input type="range" min="0" max="255" value={rgba[key]} 
+              onChange={(e) => updateChannel(key, e.target.value)} 
+              style={{ width: '100%', display: 'block' }} 
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Output Section */}
+      <div className="card grid-colspan-2">
+        <h3>Integer Output (Game Format)</h3>
+        <div style={{ display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <input type="text" 
+            value={rgba2int(rgba.r, rgba.g, rgba.b, rgba.a)} 
+            onChange={(e) => setRgba(int2rgba(e.target.value))} 
+            style={{ padding: '8px', width: '220px'}} 
+          />
+          <code style={{ fontSize: '0.9rem', padding: '4px 8px', borderRadius: '4px' }}>
+            {cssColor}
+          </code>
+          <button 
+            onClick={() => navigator.clipboard.writeText(rgba2int(rgba.r, rgba.g, rgba.b, rgba.a))}
+            className="button-primary"
+            style={{ marginLeft: 'auto', padding: '8px 16px', cursor: 'pointer' }}
+          >
+            Copy Integer
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+display(<ColorPickerApp />);
+```
