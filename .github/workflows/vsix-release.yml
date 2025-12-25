@@ -1,13 +1,11 @@
-name: Release Extension
+name: Release VSIX Extension
 
 on:
   # Run when you push to main branch (auto-create tags)
   push:
     branches: [main]
-    paths:
-      - 'Modding-Translator/package.json'
-      - 'Modding-Translator/src/**'
-      - 'Modding-Translator/package-lock.json'
+    paths: ['Modding-Translator/**']
+
   
   # Manual trigger
   workflow_dispatch:

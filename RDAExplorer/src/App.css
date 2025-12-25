@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, black --prefersdark;
+}
+
+/* Apply to all elements except those that shouldn't animate */
+* {
+  transition: 
+    background-color 300ms ease-out,
+    border-color 300ms ease-out,
+    color 300ms ease-out,
+    fill 300ms ease-out,
+    stroke 300ms ease-out,
+    opacity 300ms ease-out,
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out;
+}
+
+/* Optionally exclude certain elements */
+.no-transition,
+.no-transition * {
+  transition: none !important;
+}
