@@ -11,6 +11,8 @@ export default defineConfig(async () => ({
     tailwindcss(),
     react()
   ],
+  root: 'src',
+  base: '/',
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //

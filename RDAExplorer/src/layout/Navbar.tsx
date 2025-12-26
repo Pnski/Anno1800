@@ -1,4 +1,6 @@
-function Navbar() {
+import { exit } from '@tauri-apps/plugin-process';
+
+export function Navbar() {
   return (
     <div className="navbar bg-base-100 shadow-md shadow-(color:--color-primary)">
       <div className="navbar-start">
@@ -24,21 +26,14 @@ function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
+              <a>Open</a>
               <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
+                <li><a>Files</a></li>
+                <li><a>Folder</a></li>
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <button onClick={async (e) => {e.preventDefault(); await exit(1);}}>Exit</button>
             </li>
           </ul>
         </div>
@@ -47,22 +42,6 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1">
           <li>
             <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
           </li>
         </ul>
       </div>
@@ -93,5 +72,3 @@ function Navbar() {
     </div>
   );
 }
-
-export default Navbar;
