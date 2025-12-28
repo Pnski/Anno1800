@@ -1,0 +1,134 @@
+// src/rdaReader/structure.rs
+use tokio::fs::File;
+use tokio::io::{AsyncReadExt, AsyncSeekExt, SeekFrom};
+use crate::rdaReader::helper::*; // Ensure all helpers are imported
+use crate::rdaReader::types::{BlockHeader, VersionConfig};
+use crate::rdaReader::constants::{V20, V22};
+
+async fn detect_rda_version(file: &mut File) -> Result<VersionConfig, String> {
+    // 1. Check V2.2
+    let magic_v22 = read_bytes(file, V22.header.magic).await?;
+    if magic_v22 == b"Resource File V2.2" {
+        return Ok(V22);
+    } 
+
+    // 2. Reset and Check V2.0
+    file.seek(SeekFrom::Start(0)).await.map_err(|e| e.to_string())?;
+    let magic_v20 = read_bytes(file, V20.header.magic).await?;
+    if magic_v20.starts_with(b"R\x00e\x00s\x00o\x00u\x00r\x00c\x00e") { 
+        return Ok(V20);
+    }
+
+    Err("Unknown RDA file format or version".into())
+}
+
+pub async fn get_block_header(file: &mut File, ptr: u64, config: VersionConfig) -> Result<BlockHeader, String> {
+    file.seek(SeekFrom::Start(ptr)).await.map_err(|e| e.to_string())?;
+
+    Ok(BlockHeader {
+        flags: read_u32_le(file).await?,
+        num_files: read_u32_le(file).await?,
+        compressed_header_size: read_var_ptr(file, config.blockHeader.compressed_file_header_size_size).await?,
+        uncompressed_header_size: read_var_ptr(file, config.blockHeader.uncompressed_file_header_size_size).await?,
+        next_block_pointer: read_var_ptr(file, config.blockHeader.next_block_header_size).await?,
+    })
+}
+
+async fn get_file_paths_for_block(
+    file: &mut File, 
+    block_start_ptr: u64, // Pass the original block pointer
+    num_files: u32, 
+    config: VersionConfig
+) -> Result<Vec<String>, String> {
+
+    let entry_meta_size = (config.fileHeader.data_size 
+                         + config.fileHeader.compressed_file_size_size 
+                         + config.fileHeader.uncompressed_file_size_size 
+                         + config.fileHeader.timestamp_size 
+                         + config.fileHeader.unknown_size) as usize;
+    
+    let total_entry_size = 520 + entry_meta_size;
+    let total_to_read = num_files as usize * total_entry_size;
+
+    let files_start = block_start_ptr - total_to_read as u64;
+    file.seek(SeekFrom::Start(files_start)).await.map_err(|e| e.to_string())?;
+
+    // 3. Bulk Read
+    let bulk_data = read_bytes(file, total_to_read).await?;
+    let mut paths = Vec::with_capacity(num_files as usize);
+
+    // 4. Parse
+    for i in 0..num_files as usize {
+        let start = i * total_entry_size;
+        let end = start + 520;
+        
+        // Ensure we don't go out of bounds of our bulk_data
+        if end > bulk_data.len() { break; }
+
+        let path_slice = &bulk_data[start..end];
+
+        let path = String::from_utf16_lossy(
+            &path_slice.chunks_exact(2)
+                .map(|c| u16::from_le_bytes([c[0], c[1]]))
+                .take_while(|&u| u != 0) 
+                .collect::<Vec<u16>>()
+        );
+        
+        paths.push(path);
+    }
+
+    Ok(paths)
+}
+
+pub async fn read_structure(file_path: &str) -> Result<Vec<String>, String> {
+    let mut file = File::open(file_path).await.map_err(|e| e.to_string())?;
+
+    // Get total file size
+    let metadata = file.metadata().await.map_err(|e| e.to_string())?;
+    let file_size = metadata.len();
+
+    // FIX: Use 'let' instead of 'const' because the result is determined at runtime
+    let header_config: VersionConfig = detect_rda_version(&mut file).await?;
+
+    // Seek to the pointer location
+    file.seek(SeekFrom::Start(header_config.header.f_block_header_offset.into())).await.map_err(|e| e.to_string())?;
+    let buf = read_bytes(&mut file, header_config.header.f_block_header_size).await?;
+    
+    // Convert to u64 (handles both 4-byte and 8-byte versions)
+    let mut block_ptr = if header_config.header.f_block_header_size == 8 {
+        u64::from_le_bytes(buf.try_into().unwrap())
+    } else {
+        u32::from_le_bytes(buf.try_into().unwrap()) as u64
+    };
+
+    // FIX: println! requires a format string
+    println!("First block at: {}", block_ptr);
+
+    let mut all_blocks: Vec<BlockHeader> = Vec::new();
+    let mut all_file_paths: Vec<String> = Vec::new();
+
+    // 2. The loop you wanted
+    while block_ptr < file_size {
+        println!("block at: {}", block_ptr);
+        // You must await the result and push the actual header
+        let cur_block = get_block_header(&mut file, block_ptr, header_config).await?;
+        match cur_block.flags {
+            0 => {
+                let mut paths = get_file_paths_for_block(&mut file, block_ptr, cur_block.num_files, header_config).await?;
+                all_file_paths.append(&mut paths);
+                all_blocks.push(cur_block);
+            },
+            _ => println!("currently not supported"),
+        }
+        println!("cblock at: {:?}", cur_block);
+
+        //avoiding infinite loops
+        if block_ptr != cur_block.next_block_pointer {
+            block_ptr = cur_block.next_block_pointer;
+        } else {
+            continue;
+        }
+        
+    }
+    Ok(all_file_paths)
+}

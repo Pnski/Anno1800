@@ -1,7 +1,6 @@
 export type FileItem = {
-  id: ReturnType<typeof crypto.randomUUID>;
-  name: string;
   path: string;
+  name: string;
 };
 
 export interface FileAreaProps {
@@ -11,6 +10,13 @@ export interface FileAreaProps {
   onItemClick?: (item: FileItem) => void;
 }
 
-export interface DropFilesProps {
-  onFilesAdded: (newFiles: FileItem[]) => void;
+export interface HandleFilesProps {
+  handleAddFiles: (newFiles: FileItem[]) => void;
+}
+
+export interface RDANode {
+  id: string;      // Internal path or unique hash
+  name: string;    // Filename
+  children?: RDANode[]; // Only present if it's a folder
+  isOpen?: boolean;
 }

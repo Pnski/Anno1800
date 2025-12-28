@@ -1,6 +1,10 @@
 import { exit } from '@tauri-apps/plugin-process';
 
-export function Navbar() {
+import { FileItem } from '../modules/types';
+import { openFilesDialogue,openFolderDialogue } from '../modules/fileImporter';
+
+export function Navbar({ onFilesAdded }: { onFilesAdded: (files: FileItem[]) => void }) {
+
   return (
     <div className="navbar bg-base-100 shadow-md shadow-(color:--color-primary)">
       <div className="navbar-start">
@@ -28,8 +32,8 @@ export function Navbar() {
             <li>
               <a>Open</a>
               <ul className="p-2">
-                <li><a>Files</a></li>
-                <li><a>Folder</a></li>
+                <li><button onClick={() => openFilesDialogue(onFilesAdded)}>Files</button></li>
+                <li><button onClick={() => openFolderDialogue(onFilesAdded)}>Folder</button></li>
               </ul>
             </li>
             <li>

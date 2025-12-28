@@ -53,8 +53,8 @@ export function FileArea({
     >
       {sortedItems.map(file => (
         <FileRow
-          key={file.id}
-          id={file.id}
+          key={file.path}
+          id={file.path}
           name={file.name}
           onRemove={onRemove}
           onClick={() => onItemClick?.(file)}

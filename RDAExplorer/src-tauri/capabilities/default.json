@@ -6,9 +6,11 @@
     "main"
   ],
   "permissions": [
-    "core:default",
-    "opener:default",
-    "dialog:default",
-    "process:allow-exit"
+    "core:default"
+    ,"opener:default"
+    ,"dialog:default"
+    ,"process:allow-exit"
+    ,"fs:allow-read-dir"
+    ,"fs:allow-app-read-recursive"
   ]
 }
