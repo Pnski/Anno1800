@@ -25,6 +25,7 @@ pub const V22: VersionConfig = VersionConfig {
     magic_len: 18,
     first_block_offset: 784,
 
+
     // Block Header
     // V2.2: flags(4) + num(4) + comp(8) + uncomp(8) + next(8) = 32 bytes
     block_header_size: 32,

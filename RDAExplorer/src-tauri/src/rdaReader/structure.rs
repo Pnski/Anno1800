@@ -68,14 +68,30 @@ pub async fn read_structure(file_path: String) -> Result<Vec<String>, String> {
     };
 
     let mut all_paths = Vec::new();
-    let mut current_block_offset = config.first_block_offset;
+    // 1. We move the "needle" to the hardcoded offset (784 or 1044)
+    reader.seek(SeekFrom::Start(config.first_block_offset)).await?;
+
+    // 2. We prepare a small bucket the size of a pointer (4 or 8 bytes)
+    let mut start_ptr_buf = vec![0u8; config.ptr_size];
+
+    // 3. We read the BYTES of the address from that location
+    reader.read_exact(&mut start_ptr_buf).await?;
+
+    // 4. We convert those bytes into a real number (the actual offset)
+    let mut current_block_offset = if config.ptr_size == 8 {
+        u64::from_le_bytes(start_ptr_buf.try_into().unwrap())
+    } else {
+        u32::from_le_bytes(start_ptr_buf.try_into().unwrap()) as u64
+    };
 
     while current_block_offset != 0 && current_block_offset < file_size {
-        let mut header_buf = vec![0u8; config.block_header_size];
+        println!("cblock at: {}", config.ptr_size);
+        let mut header_buf = vec![0u8; config.ptr_size];
         reader.seek(SeekFrom::Start(current_block_offset)).await.map_err(|e| e.to_string())?;
         reader.read_exact(&mut header_buf).await.map_err(|e| e.to_string())?;
         
         let block_info = BlockHeader::from_cursor(Cursor::new(header_buf), config.ptr_size);
+        println!("cblock at: {:?}", block_info);
 
         if (block_info.flags & 8) != 8 { // Skip deleted
             if let Ok(mut paths) = get_file_paths(&mut reader, current_block_offset, &block_info, &config).await {
