@@ -1,25 +1,41 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 mod rdaReader;
+mod utils;
 
 #[tauri::command]
-async fn read_rda_files(paths: Vec<String>) -> Vec<Result<Vec<String>, String>> {
+async fn read_rda_files(
+    paths: Vec<String>
+) -> //Result<Vec<String>, String>
+Result<Vec<utils::FileTreeNode>, String> {
     let mut tasks = Vec::new();
 
     for path in paths {
         tasks.push(tokio::spawn(async move {
-            rdaReader::read_structure(path).await
+            let mut reader = rdaReader::FILEREADER::initialize(&path)?;
+            reader.read_files_from_block()
         }));
     }
 
-    let results = futures::future::join_all(tasks).await;
-    
-    results.into_iter()
-        .map(|r| match r {
-            Ok(inner) => inner,
-            Err(e) => Err(format!("Thread panic: {}", e)),
-        })
-        .collect()
+    let mut all_results = Vec::new();
+
+    for task in tasks {
+        match task.await {
+            Ok(Ok(files)) => all_results.extend(files),
+            Ok(Err(e)) => return Err(e),
+            Err(e) => return Err(format!("Task panic: {}", e)),
+        }
+    }
+    //println!("main task wants to return: {:?}", all_results);
+    let tree = utils::build_tree(&all_results);
+    Ok(tree)
+    //Ok(all_results)
+}
+
+#[tauri::command]
+async fn get_file_tree(paths: Vec<String>) -> Result<Vec<utils::FileTreeNode>, String> {
+    let tree = utils::build_tree(&paths);
+    Ok(tree)
 }
 
 fn main() {
@@ -27,7 +43,10 @@ fn main() {
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_process::init())
         .plugin(tauri_plugin_fs::init())
-        .invoke_handler(tauri::generate_handler![read_rda_files])
+        .invoke_handler(tauri::generate_handler![
+            read_rda_files,
+            get_file_tree
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

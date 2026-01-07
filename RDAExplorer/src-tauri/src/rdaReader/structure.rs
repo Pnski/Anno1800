@@ -1,104 +1,99 @@
-use tokio::fs::File;
-use tokio::io::{AsyncReadExt, AsyncSeekExt, BufReader, SeekFrom};
-use std::io::{Cursor, Read as StdRead};
-use crate::rdaReader::types::{BlockHeader, VersionConfig};
-use crate::rdaReader::constants::{V20, V22};
-use flate2::read::ZlibDecoder;
+use memmap2::Mmap;
+use tokio::task;
 
-pub async fn get_file_paths(
-    reader: &mut BufReader<File>,
-    block_offset: u64,
-    block: &BlockHeader,
-    config: &VersionConfig,
-) -> Result<Vec<String>, String> {
-    // Calculate start: Offset - directorySize
-    let mut dir_start = block_offset - block.directory_size;
+use crate::rdaReader::{
+    types::{
+        FILEREADER,
+        BlockHeader,
+    },
+    constants::{VERSION},
+};
 
-    if (block.flags & 4) == 4 { // Memory Resident
-        dir_start -= (config.ptr_size * 2) as u64;
-    }
-
-    reader.seek(SeekFrom::Start(dir_start)).await.map_err(|e| e.to_string())?;
-    let mut buffer = vec![0u8; block.directory_size as usize];
-    reader.read_exact(&mut buffer).await.map_err(|e| e.to_string())?;
-
-    let is_compressed = (block.flags & 1) == 1;
-    let final_buffer = if is_compressed {
-        let mut decoder = ZlibDecoder::new(&buffer[..]);
-        let mut decompressed = Vec::with_capacity(block.decompressed_size as usize);
-        decoder.read_to_end(&mut decompressed).map_err(|e| e.to_string())?;
-        decompressed
-    } else {
-        buffer
-    };
-
-    let mut cursor = Cursor::new(final_buffer);
-    let mut file_paths = Vec::new();
-
-    for _ in 0..block.num_files {
-        let mut name_buf = vec![0u8; config.file_path_len];
-        StdRead::read_exact(&mut cursor, &mut name_buf).map_err(|e| e.to_string())?;
-
-        let file_name = String::from_utf16_lossy(
-            &name_buf.chunks_exact(2)
-                .map(|chunk| u16::from_le_bytes([chunk[0], chunk[1]]))
-                .take_while(|&u| u != 0)
-                .collect::<Vec<u16>>()
-        ).replace('\\', "/");
-
-        let metadata_to_skip = (config.ptr_size * 5) as u64; 
-        cursor.set_position(cursor.position() + metadata_to_skip);
-        file_paths.push(file_name);
-    }
-    Ok(file_paths)
-}
-
-pub async fn read_structure(file_path: String) -> Result<Vec<String>, String> {
-    let file = File::open(&file_path).await.map_err(|e| e.to_string())?;
-    let file_size = file.metadata().await.map_err(|e| e.to_string())?.len();
-    let mut reader = BufReader::new(file);
-
-    let mut magic = [0u8; 2];
-    reader.read_exact(&mut magic).await.map_err(|e| e.to_string())?;
-    
-    let config = match (magic[0], magic[1]) {
-        (b'R', 0) => V20,
-        (b'R', b'e') => V22,
-        _ => return Err(format!("Invalid RDA: {}", file_path)),
-    };
-
-    let mut all_paths = Vec::new();
-    // 1. We move the "needle" to the hardcoded offset (784 or 1044)
-    reader.seek(SeekFrom::Start(config.first_block_offset)).await?;
-
-    // 2. We prepare a small bucket the size of a pointer (4 or 8 bytes)
-    let mut start_ptr_buf = vec![0u8; config.ptr_size];
-
-    // 3. We read the BYTES of the address from that location
-    reader.read_exact(&mut start_ptr_buf).await?;
-
-    // 4. We convert those bytes into a real number (the actual offset)
-    let mut current_block_offset = if config.ptr_size == 8 {
-        u64::from_le_bytes(start_ptr_buf.try_into().unwrap())
-    } else {
-        u32::from_le_bytes(start_ptr_buf.try_into().unwrap()) as u64
-    };
-
-    while current_block_offset != 0 && current_block_offset < file_size {
-        println!("cblock at: {}", config.ptr_size);
-        let mut header_buf = vec![0u8; config.ptr_size];
-        reader.seek(SeekFrom::Start(current_block_offset)).await.map_err(|e| e.to_string())?;
-        reader.read_exact(&mut header_buf).await.map_err(|e| e.to_string())?;
-        
-        let block_info = BlockHeader::from_cursor(Cursor::new(header_buf), config.ptr_size);
-        println!("cblock at: {:?}", block_info);
-
-        if (block_info.flags & 8) != 8 { // Skip deleted
-            if let Ok(mut paths) = get_file_paths(&mut reader, current_block_offset, &block_info, &config).await {
-                all_paths.append(&mut paths);
-            }
+impl FILEREADER {
+    fn get_bytes(&self, position: usize, length: usize) -> Result<&[u8], String> {
+        if position + length > self.mmap.len() {
+            return Err("Out of Bounds, aborting".to_string());
         }
-        current_block_offset = block_info.next_block_pointer;
+        Ok(&self.mmap[position .. position+length])
     }
-    Ok(all_paths)
+
+    fn get_u64(&self, position: usize, size: usize) -> Result<u64, String> {
+        let bytes = self.get_bytes(position, size)?;
+        match size {
+            4 => Ok(u32::from_le_bytes(bytes.try_into().unwrap()) as u64),
+            8 => Ok(u64::from_le_bytes(bytes.try_into().unwrap())),
+            _ => Err(format!("Unsupported pointer size: {}", size)),
+        }
+    }
+
+    pub fn initialize(file_path: &str) -> Result<Self, String> {
+        let file = std::fs::File::open(file_path).map_err(|e| e.to_string())?;
+        let mmap = unsafe { Mmap::map(&file).map_err(|e| e.to_string())? };
+        let version = match (mmap[0], mmap[1]) {
+            (b'R', 0) => VERSION::V0,
+            (b'R', b'e') => VERSION::V2,
+            _ => return Err(format!("Invalid RDA: {}", file_path)),
+        };
+        let bytes = &mmap[version.header_block() .. version.header_block() + version.ptr_size()];
+        let cur_ptr = match version.ptr_size() {
+            4 => u32::from_le_bytes(bytes.try_into().unwrap()) as usize,
+            8 => u64::from_le_bytes(bytes.try_into().unwrap()) as usize,
+            _ => return Err("Unsupported pointer size".to_string()),
+        };
+        Ok(FILEREADER {
+            mmap,
+            version,
+            cur_ptr
+        })
+    }
+
+    fn read_block(&mut self) -> Result<BlockHeader, String> {
+        let cur_ptr : usize = self.cur_ptr;
+        let flags : u32 = u32::from_le_bytes(self.mmap[self.cur_ptr..self.cur_ptr+4].try_into().unwrap());
+        let num_files : u32 = u32::from_le_bytes(self.mmap[self.cur_ptr+4..self.cur_ptr+8].try_into().unwrap());
+        let dir_size : u64 = self.get_u64(self.cur_ptr+8,self.version.ptr_size())?;
+        let decomp_size : u64 = self.get_u64(self.cur_ptr+8+self.version.ptr_size(),self.version.ptr_size())?;
+        let next_block_pointer : u64 = self.get_u64(self.cur_ptr+8+self.version.ptr_size()*2,self.version.ptr_size())?;
+        self.cur_ptr = next_block_pointer as usize;
+        Ok(BlockHeader{
+            cur_ptr,
+            flags,
+            num_files,
+            directory_size: dir_size,
+            decompressed_size: decomp_size,
+            next_block_pointer
+        })
+    }
+
+    fn read_file_names(&self, block:BlockHeader) -> Result<Vec<String>, String> {
+        let mut files = Vec::new();
+        let mut current = block.cur_ptr - block.num_files as usize * (520+self.version.file_block());
+        for i in 0..block.num_files {
+            let bytes = self.get_bytes(current, 520)?;
+
+            let u16s: Vec<u16> = bytes
+                .chunks_exact(2)
+                .map(|c| u16::from_le_bytes([c[0], c[1]]))
+                .take_while(|&c| c != 0)
+                .collect();
+
+            let name = String::from_utf16_lossy(&u16s);
+            files.push(name);
+            current += 520 + self.version.file_block();
+        }
+        Ok(files)
+    }
+
+
+    pub fn read_files_from_block(&mut self) -> Result<Vec<String>, String> {
+        let mut files = Vec::new();
+
+        while self.cur_ptr < self.mmap.len() {
+            //println!("{:?}", &self);
+            let cur_block : BlockHeader = self.read_block()?;
+            files.extend(self.read_file_names(cur_block)?);
+        }
+        //println!("{:?}",files);
+        Ok(files)
+    }
 }

@@ -1,0 +1,124 @@
+use std::collections::{HashMap, HashSet};
+
+#[derive(Debug, Clone, serde::Serialize)]
+pub struct FileTreeNode {
+    pub id: String,
+    pub name: String,
+    //pub offset: Option<u64>,
+    //pub size: Option<u64>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub children: Vec<FileTreeNode>,
+}
+
+pub fn build_tree_bak(paths: &[String]) -> Vec<FileTreeNode> {
+    let mut node_map: HashMap<String, FileTreeNode> = HashMap::new();
+    let mut root_keys: Vec<String> = Vec::new();
+
+    for path in paths {
+        let parts: Vec<&str> = path.split('/').collect();
+        for i in 0..parts.len() {
+            let id = parts[0..i+1].join("/");
+            let name = parts[i].to_string();
+
+            if !node_map.contains_key(&id) {
+                let node = FileTreeNode {
+                    id: id.clone(),
+                    name,
+                    children: Vec::new(),
+                };
+                
+                if i == 0 {
+                    root_keys.push(id.clone());
+                } else {
+                    let parent_id = parts[0..i].join("/");
+                    // We'll move the child into the parent in the next step
+                }
+                node_map.insert(id, node);
+            }
+        }
+    }
+
+    // Final Assembly Pass: Moving items into their parents
+    // We sort keys by length descending so children are always moved into parents
+    let mut keys: Vec<String> = node_map.keys().cloned().collect();
+    keys.sort_by(|a, b| b.len().cmp(&a.len()));
+
+    for key in keys {
+        if let Some((parent_id, _)) = key.rsplit_once('/') {
+            if let Some(child_node) = node_map.remove(&key) {
+                if let Some(parent_node) = node_map.get_mut(parent_id) {
+                    parent_node.children.push(child_node);
+                }
+            }
+        }
+    }
+
+    // Only the root nodes remain in the map
+    root_keys.into_iter().filter_map(|k| node_map.remove(&k)).collect()
+}
+
+pub fn build_tree(paths: &[String]) -> Vec<FileTreeNode> {
+    let mut node_map: HashMap<String, FileTreeNode> = HashMap::new();
+    let mut root_keys: Vec<String> = Vec::new();
+
+    // --- PASS 1: Flat Map Creation ---
+    for path in paths {
+        let parts: Vec<&str> = path.split('/').collect();
+        let mut current_id = String::new();
+
+        for (i, part) in parts.iter().enumerate() {
+            if i > 0 { current_id.push('/'); }
+            current_id.push_str(part);
+
+            // Use entry API for O(1) existence check
+            node_map.entry(current_id.clone()).or_insert_with(|| {
+                if i == 0 {
+                    root_keys.push(current_id.clone());
+                }
+                FileTreeNode {
+                    id: current_id.clone(),
+                    name: part.to_string(),
+                    children: Vec::new(),
+                }
+            });
+        }
+    }
+
+    // --- PASS 2: Hierarchy Assembly (Leaf-to-Root) ---
+    // Sorting by length descending ensures we move children into parents, 
+    // never parents into children.
+    let mut keys: Vec<String> = node_map.keys().cloned().collect();
+    keys.sort_by(|a, b| b.len().cmp(&a.len()));
+
+    for key in keys {
+        if let Some((parent_id, _)) = key.rsplit_once('/') {
+            // Remove the child from the map (take ownership)
+            if let Some(child_node) = node_map.remove(&key) {
+                // Push it into the parent's children vector
+                if let Some(parent_node) = node_map.get_mut(parent_id) {
+                    parent_node.children.push(child_node);
+                }
+            }
+        }
+    }
+
+    // --- PASS 3: Final Polish ---
+    let mut roots: Vec<FileTreeNode> = root_keys
+        .into_iter()
+        .filter_map(|k| node_map.remove(&k))
+        .collect();
+
+    // Sort alphabetically so folders/files are consistent in the UI
+    sort_tree_recursive(&mut roots);
+
+    roots
+}
+
+fn sort_tree_recursive(nodes: &mut Vec<FileTreeNode>) {
+    nodes.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
+    for node in nodes {
+        if !node.children.is_empty() {
+            sort_tree_recursive(&mut node.children);
+        }
+    }
+}

@@ -12,5 +12,6 @@
     ,"process:allow-exit"
     ,"fs:allow-read-dir"
     ,"fs:allow-app-read-recursive"
+    ,"core:webview:allow-create-webview-window"
   ]
 }

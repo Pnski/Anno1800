@@ -1,0 +1,49 @@
+use std::collections::HashMap;
+use serde::Serialize;
+
+#[derive(Debug, Serialize, Clone)]
+pub struct FileTreeNode {
+    pub id: String,
+    pub name: String,
+    pub children: Vec<FileTreeNode>,
+}
+pub fn build_tree(paths: &[String]) -> Vec<FileTreeNode> {
+    use std::collections::hash_map::Entry;
+    
+    let mut roots: Vec<FileTreeNode> = Vec::new();
+    let mut node_map: HashMap<String, usize> = HashMap::with_capacity(paths.len() * 2);
+    
+    for path in paths {
+        let parts: Vec<&str> = path.split('/').collect();
+        let mut current_children = &mut roots;
+        let mut current_id = String::new();
+        
+        for (i, &part) in parts.iter().enumerate() {
+            if i > 0 {
+                current_id.push('/');
+            }
+            current_id.push_str(part);
+            
+            match node_map.entry(current_id.clone()) {
+                Entry::Occupied(entry) => {
+                    // Node exists
+                    let node_idx = *entry.get();
+                    current_children = &mut current_children[node_idx].children;
+                }
+                Entry::Vacant(entry) => {
+                    // Create new node
+                    let node_idx = current_children.len();
+                    current_children.push(FileTreeNode {
+                        id: current_id.clone(),
+                        name: part.to_string(),
+                        children: Vec::new(),
+                    });
+                    entry.insert(node_idx);
+                    current_children = &mut current_children[node_idx].children;
+                }
+            }
+        }
+    }
+    
+    roots
+}

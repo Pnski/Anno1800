@@ -4,6 +4,7 @@ import { invoke } from "@tauri-apps/api/core";
 
 import { Navbar } from './layout/Navbar';
 import { FileArea } from "./layout/fileView";
+import { RdaTreeViewer, transformPathsToTree } from "./layout/treeView";
 import { RDANode, FileItem } from "./modules/types";
 
 export function App() {
@@ -11,32 +12,46 @@ export function App() {
   const [treeData, setTreeData] = useState<RDANode[]>([]);
 
   const handleAddFiles = async (newFiles: FileItem[]) => {
-    // 1. Update the UI list first
-    setImported(prev => {
-      const existingPaths = new Set(prev.map(f => f.path));
-      const uniqueNewFiles = newFiles.filter(f => !existingPaths.has(f.path));
-      return [...prev, ...uniqueNewFiles];
-    });
-
-    // 2. Extract all paths for the backend
-    const allPaths = newFiles.map(f => f.path);
-
+    // Compute the new state first
+    const newImported = [...imported];
+    const existingPaths = new Set(imported.map(f => f.path));
+    
+    const uniqueNewFiles = newFiles.filter(f => !existingPaths.has(f.path));
+    newImported.push(...uniqueNewFiles);
+    
+    // Now update state AND use the computed value
+    setImported(newImported);
+    
+    // Extract all paths from the computed value
+    const allPaths = newImported.map(f => f.path);
+    
     try {
-      // Invoke the backend once with the full list of paths
-      // The key must match the Rust argument name "paths"
-      const results = await invoke<any[]>("read_rda_files", { paths: allPaths });
+      console.log("ALL paths:", allPaths);
+      console.time();
+      const nestedData = await invoke<RDANode[]>("read_rda_files", { paths: allPaths });
+      /* const results = await invoke<string[]>("read_rda_files", { paths: allPaths });
       
-      console.log("Scan results for all files:", results);
+      const nestedData = transformPathsToTree(results); */
+      console.timeEnd();
+      setTreeData(nestedData);
 
-      // Results is an array of Results: [Ok([paths]), Err("msg"), ...]
-      // You can now transform these into your treeData
     } catch (err) {
       console.error("Failed to communicate with RDA backend:", err);
     }
   };
 
-  const handleRemove = (path: string) => {
+  const handleRemove = async (path: string) => {
     setImported(prev => prev.filter(f => f.path !== path));
+    const allPaths = imported.map(f => f.path);
+
+    try {
+      const results = await invoke<RDANode[]>("read_rda_files", { paths: allPaths });
+      //const results = await invoke<string[]>("read_rda_files", { paths: allPaths });
+      //const nestedData = await invoke<RDANode[]>('get_file_tree', { paths: results });
+      setTreeData(results);
+    } catch (err) {
+      console.error("Failed to communicate with RDA backend:", err);
+    }
   };
 
   return (
@@ -49,14 +64,14 @@ export function App() {
           <div className="card overflow-auto row-span-3">
             <div className="card-body">
               <h2 className="card-title">Main Area</h2>
-              <p className="opacity-70">Drop files and sort them on the left to begin.</p>
+              <RdaTreeViewer data={treeData} />
             </div>
           </div>
           
           {/* A2: Imported Files View */}
           <div className="card overflow-hidden flex flex-col">
             <h2 className="card-title text-sm uppercase p-4 shrink-0">Imported Files</h2>
-            <div className="flex-1 min-h-0 overflow-auto px-4 pb-4">
+            <div className="flex-1 overflow-auto px-4 pb-4">
               <FileArea 
                 containerId="imported" 
                 items={imported} 
