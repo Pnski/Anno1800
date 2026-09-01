@@ -1,0 +1,5 @@
+ctranslate2
+transformers
+huggingface_hub
+sentencepiece
+torch

@@ -86,6 +86,7 @@ def main():
         "po",
         "ru",
         "sp",
+        # this is how u comment a language
     ]:
 
         translator, tokenizer = get_translator(L_CODE)
