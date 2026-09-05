@@ -13,8 +13,14 @@ import torch
 from huggingface_hub import snapshot_download
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
-# html
-# empty text
+# --------------------------------------------------
+# VERSION = 0.1.0
+# --------------------------------------------------
+
+# --------------------------------------------------
+# REMINDERS
+# --------------------------------------------------
+
 # pip install torch --index-url https://download.pytorch.org/whl/cu124
 
 # --------------------------------------------------
@@ -74,7 +80,6 @@ class SignalWriter:
 
     def flush(self):
         pass
-
 
 def get_model(model_type: str):
 
@@ -386,20 +391,13 @@ class MainWindow(QWidget):
 
             <p>Expect slow results with CPU.</p>
 
-            <p>
-            If <b>Device: CUDA</b> is shown but it is still slow,
-            install the CUDA package for Windows/Linux.
-            </p>
+            <p>If <b>Device: CUDA</b> is shown but it is still slow,
+            install the CUDA package for Windows/Linux.</p>
 
-            <p>
-            <a href="https://developer.nvidia.com/cuda/toolkit">
-            NVIDIA HOMEPAGE
-            </a>
-            </p>
+            <p><a href="https://developer.nvidia.com/cuda/toolkit">
+            NVIDIA HOMEPAGE</a></p>
 
-            <p>
-            If that still does not work, run Python through CMD or PowerShell.
-            </p>
+            <p>If that still does not work, run Python through CMD or PowerShell.</p>
             """
         )
 
@@ -462,7 +460,6 @@ class Worker(QThread):
         self._cancel = True
 
     def run(self):
-
         self.message.emit("Loading model (downloading if needed, this can take a while)...")
         self.progress_bar_busy = True
         writer = SignalWriter(lambda line: self.message.emit(line))

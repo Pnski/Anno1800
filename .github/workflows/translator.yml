@@ -37,22 +37,30 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --noconfirm --onefile --windowed --name AnnoTranslator main.py
+          pyinstaller --noconfirm --windowed --name AnnoTranslator ^
+            --collect-all torch ^
+            --collect-all nvidia ^
+            main.py
+
+      - name: Zip output
+        shell: pwsh
+        run: |
+          Compress-Archive -Path py-translate/dist/AnnoTranslator/* -DestinationPath py-translate/dist/AnnoTranslator-windows-x64.zip
 
       - name: Set build date
         id: date
         shell: bash
-        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+        run: echo "date=$(date +'%Y-%m-%d-%H')" >> "$GITHUB_OUTPUT"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: AnnoTranslator-windows-x64-${{ steps.date.outputs.date }}
-          path: py-translate/dist/AnnoTranslator.exe
+          path: py-translate/dist/AnnoTranslator-windows-x64.zip
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ steps.date.outputs.date }}
           name: Build ${{ steps.date.outputs.date }}
-          files: py-translate/dist/AnnoTranslator.exe
+          files: py-translate/dist/AnnoTranslator-windows-x64.zip
