@@ -57,7 +57,7 @@ elif torch.cuda.is_available():
     device = "cuda" #torch.device("cuda")
 else:
     device = "cpu" #torch.device("cpu")
-#device = "cuda" if torch.cuda.is_available() else "cpu"
+
 
 # --------------------------------------------------
 # Model
