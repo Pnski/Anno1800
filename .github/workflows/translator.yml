@@ -31,6 +31,10 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
+      - name: Verify torch install
+        run: |
+          python -c "import torch; print('torch', torch.__version__)"
+
       - name: Build executable
         run: |
           pyinstaller --noconfirm --onefile --windowed --name AnnoTranslator main.py

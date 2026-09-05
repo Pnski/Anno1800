@@ -13,31 +13,13 @@ import torch
 from huggingface_hub import snapshot_download
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
+# html
+# empty text
+# pip install torch --index-url https://download.pytorch.org/whl/cu124
+
 # --------------------------------------------------
 # Configuration
 # --------------------------------------------------
-
-MODEL_ID = "facebook/nllb-200-distilled-600M"
-
-# https://huggingface.co/facebook/m2m100_418M
-# https://huggingface.co/facebook/m2m100_1.2B
-# https://huggingface.co/facebook/mbart-large-50-many-to-many-mmt
-
-# The important distinction is that forced_bos_token_id is a generic generation mechanism, not a guarantee that a model has meaningful language-selection tokens. The model architecture must support generation with it, and the token ID must be valid for that model’s tokenizer.
-
-# NLLB
-# forced_bos_token_id = tokenizer.convert_tokens_to_ids("fra_Latn")
-
-# M2M-100
-# forced_bos_token_id = tokenizer.get_lang_id("fr")
-
-# mBART-50
-# forced_bos_token_id = tokenizer.lang_code_to_id["fr_XX"]
-
-SCRIPT_DIR = Path(__file__).resolve().parent
-
-# config file
-CONFIG_FILE = "config.json"
 
 MODELS = {
     "600M": "facebook/nllb-200-distilled-600M",
@@ -60,6 +42,16 @@ LANGUAGES = {
     "taiwanese": "zho_Hant",  # Traditional Chinese
     #"dutch": "nld_Latn",  # Hiero - Dutch :>
 }
+
+
+#device
+if torch.xpu.is_available(): #intel ARC
+    device = "xpu" #torch.device("xpu")
+elif torch.cuda.is_available():
+    device = "cuda" #torch.device("cuda")
+else:
+    device = "cpu" #torch.device("cpu")
+#device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # --------------------------------------------------
 # Model
@@ -93,7 +85,7 @@ def get_model(model_type: str):
     if not modelDirectory.exists() or not any(modelDirectory.iterdir()):
         print("Downloading model...")
         snapshot_download(
-            repo_id=MODEL_ID,
+            repo_id=model_type,
             local_dir=str(modelDirectory),
             token=None,
         )
@@ -109,10 +101,8 @@ def get_model(model_type: str):
         #dtype=torch.float16 if device == "cuda" else torch.float32,
     )
 
-    model.to("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
     model.eval()  # model switch to drop TRAINING
-
-    # so, model.train() and model.eval() have effect only on Layers, not on gradients, by default grad comp is switch on, but using context manager torch.no_grad() during evaluation allows you easily turn off and then autimatically turn on gradients comp at the end
 
     return model, tokenizer
 
@@ -131,7 +121,7 @@ def generate_tokens(model, tokenizer, texts: list[str], sLang:str, tLang:str) ->
         padding=True,
     )
 
-    inputs = {name: value.to("cuda" if torch.cuda.is_available() else "cpu") for name, value in inputs.items()}
+    inputs = {name: value.to(device) for name, value in inputs.items()}
 
     with torch.no_grad():
         gToken = model.generate(
@@ -161,22 +151,27 @@ def decode_tokens(tokenizer, gToken: torch.Tensor) -> list[str]:
 # html preserving
 # --------------------------------------------------
 
-TAG_RE = re.compile(r"(<[^>]+>)")
+TAG_RE = re.compile(r"<[^>]+>")
+PLACEHOLDER_RE = re.compile(r"\[(?:[^\[\]]|\[[^\[\]]*\])*\]")
 
+SPLIT_RE = re.compile(f"({TAG_RE.pattern}|{PLACEHOLDER_RE.pattern})")
 
 def parse_segments(raw: str):
     """
     Split text into ordered segments:
-      ("tag", content)      -- an HTML/XML-like tag, left untouched
-      ("literal", content)  -- whitespace-only text, left untouched
-      ("text", [sentences]) -- real text, split into sentences for translation
+      ("tag", content)         -- an HTML/XML-like tag, left untouched
+      ("placeholder", content) -- a [AssetData(...) ...] style token, left untouched
+      ("literal", content)     -- whitespace-only text, left untouched
+      ("text", [sentences])    -- real text, split into sentences for translation
     """
     segments = []
-    for part in TAG_RE.split(raw):
+    for part in SPLIT_RE.split(raw):
         if not part:
             continue
         if TAG_RE.fullmatch(part):
             segments.append(("tag", part))
+        elif PLACEHOLDER_RE.fullmatch(part):
+            segments.append(("placeholder", part))
         elif not part.strip():
             segments.append(("literal", part))
         else:
@@ -214,6 +209,7 @@ def translate_element_text(model, tokenizer, raw: str, sLang: str, tLang: str) -
 # --------------------------------------------------
 
 from PyQt6.QtCore import QThread, pyqtSignal
+from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
     QApplication,
     QWidget,
@@ -224,6 +220,7 @@ from PyQt6.QtWidgets import (
     QLabel,
     QFileDialog,
     QGridLayout,
+    QMessageBox,
 )
 
 class MainWindow(QWidget):
@@ -260,17 +257,37 @@ class MainWindow(QWidget):
         # Progress widgets
         self.progress_bar = QProgressBar()
         self.progress_bar.setRange(0, 100)
+        self.progress_bar.hide()
 
         self.progress_label = QLabel("[0/0] done")
+        self.progress_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_label.hide()
 
-        # Buttons
+        self.texts_label = QLabel("")
+        self.texts_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.file_label = QLabel("")
+        self.file_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.folder_label = QLabel("")
+        self.folder_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
         self.open_folder_button = QPushButton("Select Output Folder")
-        self.open_folder_button.setEnabled(False)
+        self.open_folder_button.hide()
         self.open_folder_button.clicked.connect(self.open_folder)
 
-        self.start_button = QPushButton("Start")
-        self.start_button.setEnabled(False)
+        self.start_button = QPushButton("Start Translation")
+        self.start_button.hide()
         self.start_button.clicked.connect(self.start_process)
+
+        self.cancel_button = QPushButton("Cancel Translation")
+        self.cancel_button.hide()
+        self.cancel_button.clicked.connect(self.cancel_process)
+
+        self.help_button = QPushButton("Help")
+        self.help_button.clicked.connect(self.show_help)
+
+        self.gpu_label = QLabel(f"Device: {device}")
+        self.gpu_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
 
         # Main layout
         layout = QGridLayout(self)
@@ -278,28 +295,39 @@ class MainWindow(QWidget):
         # Row 0
         layout.addWidget(self.dropdown, 0, 0)
         layout.addWidget(self.open_file_button, 0, 1)
+        layout.addWidget(self.open_folder_button, 0, 2)
 
         # Row 1
-        layout.addWidget(self.printout_text, 1, 0, 1, 2)
+        layout.addWidget(self.texts_label, 1, 0)
+        layout.addWidget(self.file_label, 1, 1)
+        layout.addWidget(self.folder_label, 1, 2)
 
-        # Row 2, left side: progress bar and [x/y] label
-        progress_layout = QGridLayout()
-        progress_layout.addWidget(self.progress_bar, 0, 0)
-        progress_layout.addWidget(self.progress_label, 0, 1)
+        # Row 2
+        button_layout = QGridLayout()
+        button_layout.addWidget(self.start_button,0,0)
+        button_layout.addWidget(self.cancel_button,0,1)
 
-        layout.addLayout(progress_layout, 2, 0)
+        layout.addLayout(button_layout, 2, 0, 1, 3)
 
-        # Row 2, right side: buttons
-        buttons_layout = QGridLayout()
-        buttons_layout.addWidget(self.open_folder_button, 0, 0)
-        buttons_layout.addWidget(self.start_button, 0, 1)
+        # Row 3
+        layout.addWidget(self.progress_bar, 3, 0, 1, 2)
+        layout.addWidget(self.progress_label, 3, 2)
 
-        layout.addLayout(buttons_layout, 2, 1)
+        # Row 4
+        layout.addWidget(self.printout_text, 4, 0, 1, 3)
 
-        # Resize behavior
-        layout.setRowStretch(1, 1)
+        # Row 5
+        layout.addWidget(self.gpu_label, 5, 1)
+        layout.addWidget(self.help_button, 5, 2)
+
+        # Make the output area take the available vertical space
+        layout.setRowStretch(4, 1)
+
+        # Make all columns resize evenly
         layout.setColumnStretch(0, 1)
         layout.setColumnStretch(1, 1)
+        layout.setColumnStretch(2, 1)
+
 
     def open_source(self):
         fPath, _ = QFileDialog.getOpenFileName(
@@ -317,13 +345,17 @@ class MainWindow(QWidget):
             )
 
             self.iXML = ET.parse(fPath, parser=parser)
-
-            for c, texts in enumerate(self.iXML.getroot().findall(".//Text/Text")):
-                self.printout_text.appendPlainText(texts.text)
+            self.printout_text.appendHtml("<p style='color:red'>FIRST 15 Texts:</p>")
+            texts = self.iXML.getroot().findall(".//Text/Text")
+            
+            for c, text in enumerate(texts):
+                self.printout_text.appendHtml(f"<p style='color:orange'>{''.join(text.itertext())}</p>")
                 if c > 15: #print only the first 15 elements
                     break
 
-            self.open_folder_button.setEnabled(True)
+            self.texts_label.setText(f"{str(len(texts))} Texts found")
+            self.file_label.setText(fPath)
+            self.open_folder_button.show()
 
     def open_folder(self):
         oFolder = QFileDialog.getExistingDirectory(
@@ -336,7 +368,42 @@ class MainWindow(QWidget):
             self.printout_text.appendPlainText(
                 f"Selected output folder: {oFolder}"
             )
-            self.start_button.setEnabled(True)
+            self.folder_label.setText(oFolder)
+            self.start_button.show()
+
+    def show_help(self):
+        message_box = QMessageBox(self)
+        message_box.setWindowTitle("Help")
+        message_box.setIcon(QMessageBox.Icon.Information)
+
+        message_box.setTextFormat(Qt.TextFormat.RichText)
+        message_box.setTextInteractionFlags(
+            Qt.TextInteractionFlag.TextBrowserInteraction
+        )
+        message_box.setText(
+            """
+            <p>Device should be either <b>CUDA</b> or <b>XPU</b>.</p>
+
+            <p>Expect slow results with CPU.</p>
+
+            <p>
+            If <b>Device: CUDA</b> is shown but it is still slow,
+            install the CUDA package for Windows/Linux.
+            </p>
+
+            <p>
+            <a href="https://developer.nvidia.com/cuda/toolkit">
+            NVIDIA HOMEPAGE
+            </a>
+            </p>
+
+            <p>
+            If that still does not work, run Python through CMD or PowerShell.
+            </p>
+            """
+        )
+
+        message_box.exec()
 
     def start_process(self):
         if self.worker and self.worker.isRunning():
@@ -345,12 +412,26 @@ class MainWindow(QWidget):
         self.printout_text.clear()
         self.progress_bar.setValue(0)
         self.start_button.setEnabled(False)
+        self.cancel_button.show()
+        self.cancel_button.setEnabled(True)
+        self.progress_bar.show()
+        self.progress_label.show()
 
         self.worker = Worker(model=self.dropdown.currentText(), iXML=self.iXML,iFile=self.iFile, oFolder=self.oPath)
         self.worker.progress_changed.connect(self.update_progress)
         self.worker.message.connect(self.printout_text.appendHtml)
         self.worker.finished.connect(self.process_finished)
         self.worker.start()
+        
+
+    def cancel_process(self):
+        if self.worker and self.worker.isRunning():
+            self.worker.cancel()
+            self.start_button.setEnabled(True)
+            self.cancel_button.setEnabled(False)
+            self.printout_text.appendHtml("<p style='color:orange'>Cancelling — finishing current step...</p>")
+            self.progress_bar.hide()
+            self.progress_label.hide()
 
     def update_progress(self, current, total):
         percentage = int((current / total) * 100)
@@ -361,6 +442,8 @@ class MainWindow(QWidget):
     def process_finished(self):
         self.printout_text.appendHtml("<p style='color:green'>Finished all translations.</p>")
         self.start_button.setEnabled(True)
+        self.progress_bar.hide()
+        self.progress_label.hide()
 
 class Worker(QThread):
     progress_changed = pyqtSignal(int, int)
@@ -373,6 +456,10 @@ class Worker(QThread):
         self.iXML = iXML
         self.iFile = iFile
         self.oFolder = oFolder
+        self._cancel = False
+
+    def cancel(self):
+        self._cancel = True
 
     def run(self):
 
@@ -382,6 +469,8 @@ class Worker(QThread):
 
         with redirect_stdout(writer), redirect_stderr(writer):
             self.model, self.tokenizer = get_model(self.model_name)
+
+        translation_start = time.perf_counter()
 
         texts = self.iXML.getroot().findall(".//Text/Text")
         texts_len = len(texts)
@@ -397,40 +486,39 @@ class Worker(QThread):
         key_by_code = {code: key for key, code in LANGUAGES.items()}
         difLang = [value for value in LANGUAGES.values() if value != sLang]
 
-        # Pre-split every source text into sentences once, reused for every target language
-        original_sentences = [
-            [s for s in re.split(r"(?<=[.!?])\s+", text.text.strip()) if s]
-            for text in texts
-        ]
-
         total_steps = texts_len * len(difLang)
         step = 0
         self.progress_changed.emit(0, total_steps)
 
         for tLang in difLang:
+            if self._cancel:
+                    break
+
             lang_key = key_by_code[tLang]
-            translation_start = time.perf_counter()
             self.message.emit(f"Translating to {lang_key} ({tLang})...")
 
             tree_copy = copy.deepcopy(self.iXML)
             out_texts = tree_copy.getroot().findall(".//Text/Text")
 
             for text_el, source_text in zip(out_texts, texts):
+                if self._cancel:
+                    break
                 raw = source_text.text or ""
                 translated = translate_element_text(self.model, self.tokenizer, raw, sLang, tLang)
                 text_el.text = translated
 
-                self.message.emit(f"<p style='color:red'>Input: {html.escape(raw)}</p>")
+                self.message.emit(f"<p style='color:blue'>Input: {html.escape(raw)}</p>")
                 self.message.emit(f"Output: {html.escape(translated)}")
                 step += 1
                 self.progress_changed.emit(step, total_steps)
 
-            duration = time.perf_counter() - translation_start
-            self.message.emit(f"Duration for {lang_key}: {duration:.2f}s")
+            if not self._cancel:
+                out_path = Path(self.oFolder) / f"texts_{lang_key}.xml"
+                tree_copy.write(out_path, encoding="utf-8", xml_declaration=False)
+                self.message.emit(f"<p style='color:green'>Wrote {out_path}</p>")
 
-            out_path = Path(self.oFolder) / f"texts_{lang_key}.xml"
-            tree_copy.write(out_path, encoding="utf-8", xml_declaration=False)
-            self.message.emit(f"<p style='color:red'>Wrote {out_path}</p>")
+        duration = time.perf_counter() - translation_start
+        self.message.emit(f"Translation took: {duration:.2f}s")
 
         self.finished.emit()
 
