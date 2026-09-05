@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "py-translations/**"
+      - "py-translate/**"
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: py-translations
+        working-directory: py-translate
 
     steps:
       - name: Checkout repository
@@ -44,11 +44,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: AnnoTranslator-windows-x64-${{ steps.date.outputs.date }}
-          path: py-translations/dist/AnnoTranslator.exe
+          path: py-translate/dist/AnnoTranslator.exe
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ steps.date.outputs.date }}
           name: Build ${{ steps.date.outputs.date }}
-          files: py-translations/dist/AnnoTranslator.exe
+          files: py-translate/dist/AnnoTranslator.exe
