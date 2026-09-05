@@ -37,10 +37,7 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --noconfirm --windowed --name AnnoTranslator ^
-            --collect-all torch ^
-            --collect-all nvidia ^
-            main.py
+          pyinstaller --noconfirm --windowed --name AnnoTranslator --collect-all torch --collect-all nvidia main.py
 
       - name: Zip output
         shell: pwsh
