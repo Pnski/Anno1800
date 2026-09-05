@@ -1,0 +1,54 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "py-translations/**"
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: py-translations
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build executable
+        run: |
+          pyinstaller --noconfirm --onefile --windowed --name AnnoTranslator main.py
+
+      - name: Set build date
+        id: date
+        shell: bash
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AnnoTranslator-windows-x64-${{ steps.date.outputs.date }}
+          path: py-translations/dist/AnnoTranslator.exe
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ steps.date.outputs.date }}
+          name: Build ${{ steps.date.outputs.date }}
+          files: py-translations/dist/AnnoTranslator.exe

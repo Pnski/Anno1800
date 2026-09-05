@@ -1,10 +1,7 @@
 import * as vscode from "vscode";
 
 import aLn from "../config/AnnoLanguages";
-import * as libreTranslate from "./Libre/LibreProvider";
 import * as bingTranslate from "./Bing/bingProvider";
-import * as wiki from "./wiktionary/wiktionaryProvider";
-import * as googleTranslate from './Google/googleProvider'
 
 import * as visual from "../../message/messageHandler";
 
@@ -46,13 +43,11 @@ export async function singleTranslate(
 	TranslateFrom: string = null
 ): Promise<string | undefined> {
 	try {
-		if (config.Provider == "BingTranslate") {
-			var res = bingTranslate.singleTranslate(TranslateText, TranslateTo, TranslateFrom);
-		} else {
-			var res = libreTranslate.singleTranslate(TranslateText, TranslateTo, TranslateFrom);
-		}
+		var res = bingTranslate.singleTranslate(TranslateText, TranslateTo, TranslateFrom);
+		console.log(res);
 		return await res;
 	} catch (err) {
+		console.log("single");
 		visual.visualError(TranslateText);
 		return TranslateText;
 	}
@@ -71,17 +66,16 @@ export async function singleTranslate(
 export async function multiTranslate(
 	TranslateText: string,
 	TranslateTo: string[] = [config.Lang],
-	TranslateFrom: string = "auto"
+	TranslateFrom: string = null
 ): Promise<any | undefined> {
 	try {
 		var res: Response = await bingTranslate.multiTranslate(TranslateText, TranslateTo, TranslateFrom);
-		//var _text: { [key: string]: string } = {};
-		//for (const [Lang, Text] of Object.entries(res.translations)) _text[Text.to as string] = Text.text as string;
-		//console.log("text provider multi", res);
-		//let _res = Array.isArray(res) ? res : [res]
+		console.log(res);
 		return res;
 	} catch (err) {
-		visual.visualError(TranslateText+"test2");
+		console.log("multi");
+		console.log(err);
+		visual.visualError(TranslateText+err);
 	}
 }
 

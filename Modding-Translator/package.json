@@ -74,11 +74,6 @@
 				"title": "Autotranslate: Modinfo"
 			},
 			{
-				"command": "amt.singleFile",
-				"category": "AnnoTranslate",
-				"title": "Autotranslate: Single File"
-			},
-			{
 				"command": "amt.Inplace",
 				"category": "AnnoTranslate",
 				"title": "Inplace"
@@ -96,11 +91,6 @@
 				"mac": "shift+cmd+t"
 			},
 			{
-				"command": "amt.singleFile",
-				"key": "ctrl+alt+z",
-				"mac": "shift+cmd+z"
-			},
-			{
 				"command": "amt.multiFile",
 				"key": "ctrl+alt+y",
 				"mac": "shift+cmd+y"
@@ -115,10 +105,6 @@
 				{
 					"command": "amt.modInfo",
 					"when": "resourceFilename =~ /modinfo.json$/"
-				},
-				{
-					"command": "amt.singleFile",
-					"when": "resourceFilename =~ /texts_.+xml$/"
 				},
 				{
 					"command": "amt.Inplace",
@@ -144,33 +130,22 @@
 					"command": "amt.modInfo",
 					"when": "resourceFilename =~ /modinfo.json$/",
 					"group": "AnnoTranslate"
-				},
-				{
-					"command": "amt.singleFile",
-					"when": "resourceFilename =~ /texts_.+xml$/",
-					"group": "AnnoTranslate"
 				}
 			]
 		}
 	},
 	"scripts": {
-		"download": "bash -c '(cd external; ./download.sh)'",
-		"vscode:prepublish": "webpack --mode production",
-		"compile": "webpack --mode none",
-		"watch": "webpack --mode none --watch",
-		"pretest": "tsc -p ./ && npm run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js",
-		"assets": "tsc -p ./ && node ./out/scripts/compileAssets.js c:/anno/all-rda/data/config/export/main/asset/assets.xml",
-		"height": "tsc -p ./ && node ./out/scripts/heightmap.js ./generated/update.xml",
-		"buildmod:compile": "tsc -p ./",
-		"buildmod:pack": "npm run buildmod:compile && npm pack"
+		"vscode:prepublish": "pnpm run bundle",
+		"bundle": "esbuild ./src/extensions.ts --bundle --outfile=dist/extensions.js --external:vscode --format=cjs --platform=node --minify",
+		"package": "pnpm vsce package --no-dependencies",
+		"publish": "pnpm vsce publish --no-dependencies"
 	},
 	"devDependencies": {
 		"@types/google-translate-api": "^2.3.5",
 		"@types/node": "20.x",
 		"@types/vscode": "^1.90.0",
-		"esbuild": "^0.23.0",
+		"@vscode/vsce": "^3.9.2",
+		"esbuild": "^0.23.1",
 		"ts-loader": "^9.5.1",
 		"typescript": "^5.4.5",
 		"webpack": "^5.92.1",

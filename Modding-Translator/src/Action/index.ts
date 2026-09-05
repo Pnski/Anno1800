@@ -1,6 +1,5 @@
 import * as vscode from "vscode";
 import { ModInfo } from "./modinfo";
-import { _singleFile } from "./singleFile";
 import { _multiFile } from "./multiFile";
 
 async function testingStuff(_uri: vscode.Uri) {
@@ -11,11 +10,6 @@ async function testingStuff(_uri: vscode.Uri) {
 async function modInfo(uri: vscode.Uri) {
 	const jsonPath = (uri ?? vscode.window.activeTextEditor.document.uri).fsPath;
 	await ModInfo(jsonPath);
-}
-
-async function singleFile(uri: vscode.Uri) {
-	const xmlPath = (uri ?? vscode.window.activeTextEditor.document.uri).fsPath;
-	await _singleFile(xmlPath);
 }
 
 async function multiFile(uri: vscode.Uri) {
@@ -32,4 +26,4 @@ async function Inplace() {
 	}
 }
 
-export { testingStuff, singleFile, multiFile, modInfo, Inplace };
+export { testingStuff, multiFile, modInfo, Inplace };

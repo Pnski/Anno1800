@@ -1,55 +1,99 @@
-import * as vscode from "vscode";
-import * as bt from "bing-translate-api";
-
-const options = require("./bingConfig");
-
-import * as visual from "../../../message/messageHandler";
-
-/**
- * To translate single entitity
- *
- * @param {string} TranslateText content to be translated
- * @param {string} TranslateTo target language code. `en` by default.
- * @param {string} TranslateFrom source language code. `auto-detect` by default.
- *
- * @returns {Promise<string | undefined>}
- */
-
-export async function singleTranslate(TranslateText: string, TranslateTo: string, TranslateFrom?: string | null): Promise<string> {
-	try {
-		console.log(TranslateText, TranslateFrom, TranslateTo);
-		var res = bt.translate(TranslateText, TranslateFrom, TranslateTo);
-		return (await res).translation;
-	} catch (err) {
-		console.error("Caught error in machinetranslation of " + TranslateText + " due to unknown reason (testinternet related).");
-		vscode.window.showErrorMessage("Caught error with translation of: " + TranslateText);
-		return TranslateText;
-	}
+interface MyMemoryResponse {
+	responseData: {
+		translatedText: string;
+		match: number;
+	};
+	responseStatus: number;
+	responseDetails: string;
 }
 
 /**
- * To translate single entitity
+ * Translate text using MyMemory.
  *
- * @param {string} TranslateText content to be translated
- * @param {string[]} TranslateTo target language code. `en` by default.
- * @param {string} TranslateFrom source language code. `auto-detect` by default.
+ * @param TranslateText Text to translate
+ * @param TranslateTo Target language code
+ * @param TranslateFrom Source language code. `auto` by default.
  *
- * @returns {Promise<string | undefined>}
+ * @returns Promise<string | undefined>
  */
+export async function singleTranslate(
+	TranslateText: string,
+	TranslateTo: string,
+	TranslateFrom: string = "en"
+): Promise<string | undefined> {
 
+	const params = new URLSearchParams({
+		q: TranslateText,
+		langpair: `${TranslateFrom}|${TranslateTo}`
+	});
+
+	const url = `https://api.mymemory.translated.net/get?${params}`;
+
+	const response = await fetch(url);
+
+	if (!response.ok) {
+		throw new Error(
+			`MyMemory request failed: ${response.status} ${response.statusText}`
+		);
+	}
+
+	const res: any = await response.json();
+
+	if (res.responseStatus !== 200) {
+		throw new Error(
+			`MyMemory translation failed: ${res.responseDetails}`
+		);
+	}
+
+	return res.responseData?.translatedText;
+}
+
+
+/**
+ * Translate text to multiple languages using MyMemory.
+ *
+ * @param TranslateText Text to translate
+ * @param TranslateTo Target language codes
+ * @param TranslateFrom Source language code. `auto` by default.
+ *
+ * @returns Promise containing one translation per target language
+ */
 export async function multiTranslate(
 	TranslateText: string,
 	TranslateTo: string[],
-	TranslateFrom?: string | null
-): Promise<{ [key: string]: string }> {
-	try {
-		const res = await bt.MET.translate(TranslateText, TranslateFrom, TranslateTo, options);
-		var _text: { [key: string]: string } = {};
-		for (const [Lang, Text] of Object.entries(res[0].translations)) {
-			_text[Text.to] = Text.text;
+	TranslateFrom: string = "en"
+): Promise<Record<string, string>> {
+
+	const translations: Record<string, string> = {};
+
+	for (const target of TranslateTo) {
+		const params = new URLSearchParams({
+			q: TranslateText,
+			langpair: `${TranslateFrom}|${target}`
+		});
+
+		const url = `https://api.mymemory.translated.net/get?${params}`;
+
+		const response = await fetch(url);
+
+		if (!response.ok) {
+			throw new Error(
+				`MyMemory request failed for ${target}: ` +
+				`${response.status} ${response.statusText}`
+			);
 		}
-		return _text;
-	} catch (err) {
-		visual.visualError(TranslateText+"test");
+
+		const res:any = await response.json();
+
+		if (res.responseStatus !== 200) {
+			throw new Error(
+				`MyMemory translation failed for ${target}: ` +
+				`${res.responseDetails}`
+			);
+		}
+
+		translations[target] = res.responseData.translatedText;
 	}
+
+	return translations;
 }

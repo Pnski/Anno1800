@@ -1,1 +1,0 @@
-//https://api.mymemory.translated.net/get?q=Deine%20Mutter%20fischt%20frische%20Fische&langpair=de|en

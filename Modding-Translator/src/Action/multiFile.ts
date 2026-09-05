@@ -39,12 +39,14 @@ export async function _multiFile(filePath: string): Promise<void> {
 			if (config.enable) {
 				_get = await TextsTranslation(
 					pXML,
-					diffLang.map(_short => aLn[_short])
+					diffLang.map(_short => aLn[_short]),
+					loca
 				);
 			} else {
 				_get = await TextsTranslation(
 					pXML,
-					diffLang.map(_short => aLn[_short])
+					diffLang.map(_short => aLn[_short]),
+					loca
 				);
 			}
 		}
@@ -52,5 +54,6 @@ export async function _multiFile(filePath: string): Promise<void> {
 	vscode.window.showWarningMessage("Translation complete, attempting to write file.");
 	diffLang.forEach(_lang => {
 		writeXML(filePath.substring(0, filePath.lastIndexOf("\\") + 1) + "texts_" + _lang + ".xml", _get[aLn[_lang]]);
+		console.log("File written to:",filePath.substring(0, filePath.lastIndexOf("\\") + 1) + "texts_" + _lang + ".xml", _get[aLn[_lang]]);
 	});
 }

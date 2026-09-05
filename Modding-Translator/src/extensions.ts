@@ -1,7 +1,5 @@
 import * as vscode from "vscode";
 
-import * as HoverProvider from "../lang/HoverProvider";
-
 interface CommandHandlers {
 	[key: string]: (...args: any[]) => any;
 }

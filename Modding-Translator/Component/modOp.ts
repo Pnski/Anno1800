@@ -45,7 +45,8 @@ interface ModOpsContainer {
 	[key: string]: any;
 }
 
-export async function TextsTranslation(pXML: ModOpsContainer, loca: string[]): Promise<any> {
+export async function TextsTranslation(pXML: ModOpsContainer, loca: string[], fromloca: string): Promise<any> {
+	console.log("Starting TextsTranslation", loca, fromloca);
 	let _pXML: { [key: string]: ModOpsContainer } = {};
 	loca.forEach(el => (_pXML[el] = structuredClone(pXML)));
 	if (Array.isArray(pXML.ModOps)) {
@@ -60,7 +61,7 @@ export async function TextsTranslation(pXML: ModOpsContainer, loca: string[]): P
 						if (value.Text.length == 0) {
 							console.error("Empty Text detected skipping!");
 						} else {
-							let _get = await multiTranslate(value.Text, loca);
+							let _get = await multiTranslate(value.Text, loca, fromloca);
 							for (var [_key, _var] of Object.entries(_get)) {
 								if (_pXML[_key].ModOps.ModOp[parseInt(key)].Text != _var) {
 									_pXML[_key].ModOps.ModOp[parseInt(key)].Text = _var as string;
@@ -78,7 +79,7 @@ export async function TextsTranslation(pXML: ModOpsContainer, loca: string[]): P
 							if (value.Text[_TextIndex].Text.length == 0) {
 								console.error("Empty Text detected skipping!");
 							} else {
-								var _get: any = await multiTranslate(value.Text[_TextIndex].Text, loca);
+								var _get: any = await multiTranslate(value.Text[_TextIndex].Text, loca, fromloca);
 								for (var [_key, _var] of Object.entries(_get)) {
 									if (_pXML[_key].ModOps.ModOp[parseInt(key)].Text[parseInt(_TextIndex)].Text != _var) {
 										_pXML[_key].ModOps.ModOp[parseInt(key)].Text[parseInt(_TextIndex)].Text = _var;
