@@ -11,6 +11,10 @@ on:
 jobs:
   build-windows:
     runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [nvidia, amd, intel, cpu]
 
     defaults:
       run:
@@ -25,10 +29,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Install dependencies (${{ matrix.variant }})
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install --no-deps -r requirements-${{ matrix.variant }}.txt
           pip install pyinstaller
 
       - name: Verify torch install
@@ -37,12 +41,12 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --noconfirm --onefile --windowed --name AnnoTranslator main.py
+          pyinstaller --noconfirm --onefile --windowed --name AnnoTranslator-${{ matrix.variant }} main.py
 
       - name: Zip and split output
         shell: pwsh
         run: |
-          7z a -v1900m dist/AnnoTranslator-windows-x64.7z dist/AnnoTranslator.exe
+          7z a -v1900m dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z dist/AnnoTranslator-${{ matrix.variant }}.exe
 
       - name: Set build date
         id: date
@@ -52,12 +56,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: AnnoTranslator-windows-x64-${{ steps.date.outputs.date }}
-          path: py-translate/dist/AnnoTranslator-windows-x64.7z.*
+          name: AnnoTranslator-windows-x64-${{ matrix.variant }}-${{ steps.date.outputs.date }}
+          path: py-translate/dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z.*
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ steps.date.outputs.date }}
           name: Build ${{ steps.date.outputs.date }}
-          files: py-translate/dist/AnnoTranslator-windows-x64.7z.*
+          files: py-translate/dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z.*

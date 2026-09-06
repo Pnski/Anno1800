@@ -1,0 +1,9 @@
+--index-url https://download.pytorch.org/whl/xpu
+--extra-index-url https://pypi.org/simple
+
+torch>=2.6
+transformers
+huggingface_hub
+sentencepiece
+
+PyQt6
