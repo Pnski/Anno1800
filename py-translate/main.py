@@ -349,18 +349,22 @@ class MainWindow(QWidget):
                 target=ET.TreeBuilder(insert_comments=True)
             )
 
-            self.iXML = ET.parse(fPath, parser=parser)
-            self.printout_text.appendHtml("<p style='color:red'>FIRST 15 Texts:</p>")
-            texts = self.iXML.getroot().findall(".//Text/Text")
-            
-            for c, text in enumerate(texts):
-                self.printout_text.appendHtml(f"<p style='color:orange'>{''.join(text.itertext())}</p>")
-                if c > 15: #print only the first 15 elements
-                    break
+            try:
+                self.printout_text.clear()
+                self.iXML = ET.parse(fPath, parser=parser)
+                self.printout_text.appendHtml("<p style='color:red'>FIRST 15 Texts:</p>")
+                texts = self.iXML.getroot().findall(".//Text/Text")
+                
+                for c, text in enumerate(texts):
+                    self.printout_text.appendHtml(f"<p style='color:orange'>{''.join(text.itertext())}</p>")
+                    if c > 15: #print only the first 15 elements
+                        break
 
-            self.texts_label.setText(f"{str(len(texts))} Texts found")
-            self.file_label.setText(fPath)
-            self.open_folder_button.show()
+                self.texts_label.setText(f"{str(len(texts))} Texts found")
+                self.file_label.setText(fPath)
+                self.open_folder_button.show()
+            except Exception:
+                self.printout_text.appendHtml("<p style='color:red'>YOUR XML IS NOT VALID check for <code>&amp;</code> and like <code>&lt;/WhateverContainer&gt;</code>.</p>")
 
     def open_folder(self):
         oFolder = QFileDialog.getExistingDirectory(
@@ -370,9 +374,6 @@ class MainWindow(QWidget):
 
         if oFolder:
             self.oPath = oFolder
-            self.printout_text.appendPlainText(
-                f"Selected output folder: {oFolder}"
-            )
             self.folder_label.setText(oFolder)
             self.start_button.show()
 
