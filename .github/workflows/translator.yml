@@ -52,14 +52,35 @@ jobs:
         shell: bash
         run: |
           if [ "${{ matrix.variant }}" = "amd" ]; then
-            pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} \
-            --collect-all torch \
-            --collect-all rocm_sdk_core \
-            --collect-all rocm_sdk_devel \
-            --collect-all rocm_sdk_libraries_custom \
-            --collect-all _rocm_sdk_core \
-            --collect-all _rocm_sdk_devel \
-            --collect-all _rocm_sdk_libraries_custom \
+            pyinstaller -y -w -D -n AnnoTranslator-amd \
+              --collect-all torch \
+              --collect-all rocm_sdk_core \
+              --collect-all rocm_sdk_devel \
+              --collect-all rocm_sdk_libraries_custom \
+              --collect-all _rocm_sdk_core \
+              --collect-all _rocm_sdk_libraries_custom \
+              main.py
+          elif [ "${{ matrix.variant }}" = "intel" ]; then
+            pyinstaller -y -w -D -n AnnoTranslator-intel \
+              --collect-all torch \
+              --collect-all dpcpp_cpp_rt \
+              --collect-all intel_sycl_rt \
+              --collect-all intel_opencl_rt \
+              --collect-all intel_cmplr_lib_rt \
+              --collect-all intel_cmplr_lib_ur \
+              --collect-all intel_pti \
+              --collect-all onemkl_sycl_blas \
+              --collect-all onemkl_sycl_dft \
+              --collect-all onemkl_sycl_lapack \
+              --collect-all onemkl_sycl_rng \
+              --collect-all onemkl_sycl_sparse \
+              --collect-all tcmlib \
+              --collect-all umf \
+              main.py
+          elif [ "${{ matrix.variant }}" = "nvidia" ]; then
+            pyinstaller -y -w -D -n AnnoTranslator-nvidia \
+              --collect-all torch \
+              --collect-all nvidia \
               main.py
           else
             pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} main.py
@@ -68,7 +89,7 @@ jobs:
       - name: Zip and split output
         shell: pwsh
         run: |
-          7z a -v1900m dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z dist/AnnoTranslator-${{ matrix.variant }}/*
+          7z a -v1900m -mx=9 -bsp1 dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z dist/AnnoTranslator-${{ matrix.variant }}/*
 
       - name: Set build date
         id: date
