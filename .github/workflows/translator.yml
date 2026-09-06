@@ -30,9 +30,14 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies (${{ matrix.variant }})
+        shell: bash
         run: |
           python -m pip install --upgrade pip
-          pip install --no-deps -r req-${{ matrix.variant }}.txt
+          if [ "${{ matrix.variant }}" = "amd" ]; then
+            pip install --no-deps -r req-${{ matrix.variant }}.txt
+          else
+            pip install -r req-${{ matrix.variant }}.txt
+          fi
           pip install pyinstaller
 
       - name: Verify torch install
