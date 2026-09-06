@@ -40,12 +40,21 @@ jobs:
         run: |
           python -c "import torch; print('torch', torch.__version__)"
 
+      - name: Locate ROCm DLLs
+        shell: pwsh
+        run: |
+          python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])"
+          Get-ChildItem -Path (python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])") -Recurse -Include *.dll -ErrorAction SilentlyContinue |
+            Where-Object { $_.Name -match 'amdhip|hipblas|hipfft|hipsparse|hipsolver|rocblas|rocsolver|miopen' } |
+            Select-Object FullName
+
       - name: Build executable
         shell: bash
         run: |
           if [ "${{ matrix.variant }}" = "amd" ]; then
             pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} \
               --collect-all torch \
+              --collect-all rocm \
               --collect-all rocm_sdk_core \
               --collect-all rocm_sdk_devel \
               --collect-all rocm_sdk_libraries_custom \
