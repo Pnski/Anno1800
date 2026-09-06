@@ -47,7 +47,7 @@ jobs:
       - name: Zip and split output
         shell: pwsh
         run: |
-          7z a -v1900m dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z dist/AnnoTranslator-${{ matrix.variant }}.exe
+          7z a -v1900m dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z dist/AnnoTranslator-${{ matrix.variant }}/*
 
       - name: Set build date
         id: date
