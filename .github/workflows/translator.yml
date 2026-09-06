@@ -33,11 +33,7 @@ jobs:
         shell: bash
         run: |
           python -m pip install --upgrade pip
-          if [ "${{ matrix.variant }}" = "amd" ]; then
-            pip install --no-deps -r req-${{ matrix.variant }}.txt
-          else
-            pip install -r req-${{ matrix.variant }}.txt
-          fi
+          pip install --no-cache-dir -r req-${{ matrix.variant }}.txt
           pip install pyinstaller
 
       - name: Verify torch install
