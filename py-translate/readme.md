@@ -1,10 +1,12 @@
 
+python version should be at least 3.12
+
 -> create a virtual environment (helpfull not needed)
 python -m venv .venv
 -> activate v env
 .venv\scripts\activate
 -> install req
-; pip install torch --index-url https://download.pytorch.org/whl/cu124
+; optional if pip install -r req does not work on the python version pip install torch --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
 -> start script
 python main.py
