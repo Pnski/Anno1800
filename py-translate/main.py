@@ -1,4 +1,5 @@
 import copy
+import gc
 import html
 import re
 import sys
@@ -12,7 +13,7 @@ from huggingface_hub import snapshot_download
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 # --------------------------------------------------
-# VERSION = 0.1.1
+# VERSION = 0.1.2
 # --------------------------------------------------
 
 # --------------------------------------------------
@@ -593,9 +594,11 @@ class MainWindow(QWidget):
         layout.addWidget(self.folder_label, 1, 2)
 
         # Row 2
-        #layout.addWidget(self.lang_list, 2, 0)
-        layout.addWidget(self.start_button, 2, 1)
-        layout.addWidget(self.cancel_button, 2, 2)
+        button_layout = QGridLayout()
+        button_layout.addWidget(self.start_button,0,0)
+        button_layout.addWidget(self.cancel_button,0,1)
+
+        layout.addLayout(button_layout, 2, 0, 1, 3)
 
         # Row 3
         layout.addWidget(self.progress_bar, 3, 0, 1, 2)
@@ -751,8 +754,6 @@ class MainWindow(QWidget):
             self.printout_text.appendHtml(
                 "<p style='color:orange'>Cancelling — finishing current step...</p>"
             )
-            self.progress_bar.hide()
-            self.progress_label.hide()
 
     def update_progress(self, current:int, total:int, cLang:str = ""):
         percentage = int((current / total) * 100)
@@ -760,20 +761,30 @@ class MainWindow(QWidget):
         self.progress_bar.setValue(percentage)
         self.progress_label.setText(f"[{current}/{total}] done. Current Language: {cLang}")
 
-    def process_finished(self):
+    def process_finished(self, model, tokenizer):
         self.printout_text.appendHtml(
             "<p style='color:green'>Finished Process.</p>"
         )
         self.start_button.setEnabled(True)
-        self.progress_bar.hide()
-        self.progress_label.hide()
         self.cancel_button.setEnabled(False)
 
+        model.to("cpu")
+
+        del model
+        del tokenizer
+
+        gc.collect()
+
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
+
+        self.worker = None
 
 class Worker(QThread):
     progress_changed = pyqtSignal(int, int, str)
     message = pyqtSignal(str)
-    finished = pyqtSignal()
+    finished = pyqtSignal(object, object)
 
     def __init__(self, model, iXML, iFile, oFolder, targetLanguages, parent=None):
         super().__init__(parent)
@@ -856,7 +867,7 @@ class Worker(QThread):
         duration = time.perf_counter() - translation_start
         self.message.emit(f"Translation took: {duration:.2f}s")
 
-        self.finished.emit()
+        self.finished.emit(self.model, self.tokenizer)
 
 
 app = QApplication([])
