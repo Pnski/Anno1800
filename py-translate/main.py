@@ -802,8 +802,6 @@ class Worker(QThread):
         texts = self.iXML.getroot().findall(".//Text/Text")
         texts_len = len(texts)
 
-        self.message.emit(f"{texts_len} Text to Translate")
-
         fileLanguage = Path(self.iFile).name.removeprefix("texts_").removesuffix(".xml")
 
         sLang = {name.lower(): code for name, code in {**LANGUAGES, **ADD_LANGUAGES}.items()}[fileLanguage.lower()]

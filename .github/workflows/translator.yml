@@ -41,8 +41,18 @@ jobs:
           python -c "import torch; print('torch', torch.__version__)"
 
       - name: Build executable
+        shell: bash
         run: |
-          pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} main.py
+          if [ "${{ matrix.variant }}" = "amd" ]; then
+            pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} \
+              --collect-all torch \
+              --collect-all rocm_sdk_core \
+              --collect-all rocm_sdk_devel \
+              --collect-all rocm_sdk_libraries_custom \
+              main.py
+          else
+            pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} main.py
+          fi
 
       - name: Zip and split output
         shell: pwsh
