@@ -53,11 +53,13 @@ jobs:
         run: |
           if [ "${{ matrix.variant }}" = "amd" ]; then
             pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} \
-              --collect-all torch \
-              --collect-all rocm \
-              --collect-all rocm_sdk_core \
-              --collect-all rocm_sdk_devel \
-              --collect-all rocm_sdk_libraries_custom \
+            --collect-all torch \
+            --collect-all rocm_sdk_core \
+            --collect-all rocm_sdk_devel \
+            --collect-all rocm_sdk_libraries_custom \
+            --collect-all _rocm_sdk_core \
+            --collect-all _rocm_sdk_devel \
+            --collect-all _rocm_sdk_libraries_custom \
               main.py
           else
             pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} main.py
