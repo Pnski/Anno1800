@@ -46,7 +46,7 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --noconfirm --onefile --windowed --name AnnoTranslator-${{ matrix.variant }} main.py
+          pyinstaller --noconfirm --onedir --windowed --name AnnoTranslator-${{ matrix.variant }} main.py
 
       - name: Zip and split output
         shell: pwsh
