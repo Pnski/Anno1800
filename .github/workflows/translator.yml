@@ -107,8 +107,8 @@ jobs:
       - name: Zip and split output
         shell: pwsh
         run: |
-          $buildName = "${{ env.fName }}-${{ matrix.variant }}"
-          $archive = "dist/${{ env.fName }}-win-x64-${{ matrix.variant }}.7z"
+          $buildName = "${{ env.fName }}-${{ matrix.suffix }}"
+          $archive = "dist/${{ env.fName }}-win-x64-${{ matrix.suffix }}.7z"
 
           Push-Location "dist/$buildName"
 
