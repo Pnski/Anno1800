@@ -16,16 +16,16 @@ jobs:
     runs-on: win-latest
     strategy:
       fail-fast: false
-    matrix:
-      include:
-        - variant: nvidia
-          suffix: NVIDIA
-        - variant: rocm
-          suffix: ROCM
-        - variant: xpu
-          suffix: XPU
-        - variant: cpu
-          suffix: CPU
+      matrix:
+        include:
+          - variant: nvidia
+            suffix: NVIDIA
+          - variant: rocm
+            suffix: ROCM
+          - variant: xpu
+            suffix: XPU
+          - variant: cpu
+            suffix: CPU
 
     defaults:
       run:
