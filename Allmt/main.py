@@ -13,8 +13,10 @@ from huggingface_hub import snapshot_download
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 # --------------------------------------------------
-# VERSION = 0.1.2
+# VERSION
 # --------------------------------------------------
+
+VERSION = "0.1.3"
 
 # --------------------------------------------------
 # REMINDERS
@@ -25,8 +27,10 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 # --------------------------------------------------
 
 MODELS = {
-    "600M": "facebook/nllb-200-distilled-600M",
-    "1.3B": "facebook/nllb-200-distilled-1.3B",
+    "d600M": "facebook/nllb-200-distilled-600M",
+    "d1.3B": "facebook/nllb-200-distilled-1.3B",
+    "1.3B": "facebook/nllb-200-1.3B",
+    "3.3B": "facebook/nllb-200-3.3B",
 }
 
 # NLLB Language Codes
@@ -90,12 +94,12 @@ ADD_LANGUAGES = {
     "Crimean Tatar": "crh_Latn",
     "Welsh": "cym_Latn",
     "Danish": "dan_Latn",
-    #"German": "deu_Latn",
+    # "German": "deu_Latn",
     "Southwestern Dinka": "dik_Latn",
     "Dyula": "dyu_Latn",
     "Dzongkha": "dzo_Tibt",
     "Greek": "ell_Grek",
-    #"English": "eng_Latn",
+    # "English": "eng_Latn",
     "Esperanto": "epo_Latn",
     "Estonian": "est_Latn",
     "Basque": "eus_Latn",
@@ -104,7 +108,7 @@ ADD_LANGUAGES = {
     "Fijian": "fij_Latn",
     "Finnish": "fin_Latn",
     "Fon": "fon_Latn",
-    #"French": "fra_Latn",
+    # "French": "fra_Latn",
     "Friulian": "fur_Latn",
     "Nigerian Fulfulde": "fuv_Latn",
     "Scottish Gaelic": "gla_Latn",
@@ -124,9 +128,9 @@ ADD_LANGUAGES = {
     "Ilocano": "ilo_Latn",
     "Indonesian": "ind_Latn",
     "Icelandic": "isl_Latn",
-    #"Italian": "ita_Latn",
+    # "Italian": "ita_Latn",
     "Javanese": "jav_Latn",
-    #"Japanese": "jpn_Jpan",
+    # "Japanese": "jpn_Jpan",
     "Kabyle": "kab_Latn",
     "Jingpho": "kac_Latn",
     "Kamba": "kam_Latn",
@@ -146,7 +150,7 @@ ADD_LANGUAGES = {
     "Kimbundu": "kmb_Latn",
     "Northern Kurdish": "kmr_Latn",
     "Kikongo": "kon_Latn",
-    #"Korean": "kor_Hang",
+    # "Korean": "kor_Hang",
     "Lao": "lao_Laoo",
     "Ligurian": "lij_Latn",
     "Limburgish": "lim_Latn",
@@ -188,14 +192,14 @@ ADD_LANGUAGES = {
     "Eastern Panjabi": "pan_Guru",
     "Papiamento": "pap_Latn",
     "Western Persian": "pes_Arab",
-    #"Polish": "pol_Latn",
+    # "Polish": "pol_Latn",
     "Portuguese": "por_Latn",
     "Dari": "prs_Arab",
     "Southern Pashto": "pbt_Arab",
     "Ayacucho Quechua": "quy_Latn",
     "Romanian": "ron_Latn",
     "Rundi": "run_Latn",
-    #"Russian": "rus_Cyrl",
+    # "Russian": "rus_Cyrl",
     "Sango": "sag_Latn",
     "Sanskrit": "san_Deva",
     "Santali": "sat_Olck",
@@ -209,7 +213,7 @@ ADD_LANGUAGES = {
     "Sindhi": "snd_Arab",
     "Somali": "som_Latn",
     "Southern Sotho": "sot_Latn",
-    #"Spanish": "spa_Latn",
+    # "Spanish": "spa_Latn",
     "Tosk Albanian": "als_Latn",
     "Sardinian": "srd_Latn",
     "Serbian": "srp_Cyrl",
@@ -248,8 +252,8 @@ ADD_LANGUAGES = {
     "Eastern Yiddish": "ydd_Hebr",
     "Yoruba": "yor_Latn",
     "Yue Chinese": "yue_Hant",
-    #"Chinese (Simplified)": "zho_Hans",
-    #"Chinese (Traditional)": "zho_Hant",
+    # "Chinese (Simplified)": "zho_Hans",
+    # "Chinese (Traditional)": "zho_Hant",
     "Standard Malay": "zsm_Latn",
     "Zulu": "zul_Latn",
 }
@@ -325,6 +329,7 @@ def get_app_dir() -> Path:
         return Path(sys.executable).resolve().parent
     return Path(__file__).resolve().parent
 
+
 def get_model(model_type: str):
 
     cPath = get_app_dir()
@@ -362,36 +367,58 @@ def get_model(model_type: str):
 
 
 def generate_tokens(
-    model, tokenizer, texts: list[str], sLang: str, tLang: str
-) -> torch.Tensor:
-
+    model, tokenizer, texts: list[str], sLang: str, tLangs: list[str]
+) -> dict[str, list[str]]:
     tokenizer.src_lang = sLang
+    n, m = len(texts), len(tLangs)
 
+    # 1. Tokenize with strict max length to prevent VRAM spikes on outlier long texts
     inputs = tokenizer(
-        texts,
-        return_tensors="pt",
-        truncation=True,
-        padding=True,
+        texts, return_tensors="pt", truncation=True, max_length=256, padding=True
     )
-
     inputs = {name: value.to(device) for name, value in inputs.items()}
 
+    # 2. Duplicate tensors for m target languages
+    inputs = {
+        name: value.repeat(m, *([1] * (value.dim() - 1)))
+        for name, value in inputs.items()
+    }
+
+    # 3. Target language routing
+    lang_ids = [tokenizer.convert_tokens_to_ids(t) for t in tLangs]
+    decoder_start_id = model.config.decoder_start_token_id
+
+    decoder_input_ids = torch.tensor(
+        [[decoder_start_id, lid] for lid in lang_ids for _ in range(n)],
+        device=device,
+        dtype=torch.long,
+    )
+
+    # 4. Clean generation call (num_beams=1 prevents EU text hallucinations)
     with torch.no_grad():
         gToken = model.generate(
             **inputs,
-            forced_bos_token_id=tokenizer.convert_tokens_to_ids(tLang),
-            # max_new_tokens=128,
-            no_repeat_ngram_size=3,
+            decoder_input_ids=decoder_input_ids,
+            #no_repeat_ngram_size=3,
             repetition_penalty=1.3,
-            num_beams=4,
+            num_beams=1,
+            do_sample=False,
+            #do_sample=True,
+            #temperature=0.7,
+            #top_p=0.9
         )
 
-    return gToken
+    decoded_flat = decode_tokens(tokenizer, gToken)
 
+    # 5. Free VRAM allocations immediately after each batch run
+    del inputs, decoder_input_ids, gToken
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
-# --------------------------------------------------
-# Decode function
-# --------------------------------------------------
+    return {
+        tLang: decoded_flat[i * n : (i + 1) * n]
+        for i, tLang in enumerate(tLangs)
+    }
 
 
 def decode_tokens(tokenizer, gToken: torch.Tensor) -> list[str]:
@@ -403,23 +430,15 @@ def decode_tokens(tokenizer, gToken: torch.Tensor) -> list[str]:
 
 
 # --------------------------------------------------
-# html preserving
+# html preserving & Batch Translator
 # --------------------------------------------------
-
+# gemini corrections
 TAG_RE = re.compile(r"<[^>]+>")
 PLACEHOLDER_RE = re.compile(r"\[(?:[^\[\]]|\[[^\[\]]*\])*\]")
-
 SPLIT_RE = re.compile(f"({TAG_RE.pattern}|{PLACEHOLDER_RE.pattern})")
 
 
 def parse_segments(raw: str):
-    """
-    Split text into ordered segments:
-      ("tag", content)         -- an HTML/XML-like tag, left untouched
-      ("placeholder", content) -- a [AssetData(...) ...] style token, left untouched
-      ("literal", content)     -- whitespace-only text, left untouched
-      ("text", [sentences])    -- real text, split into sentences for translation
-    """
     segments = []
     for part in SPLIT_RE.split(raw):
         if not part:
@@ -431,34 +450,55 @@ def parse_segments(raw: str):
         elif not part.strip():
             segments.append(("literal", part))
         else:
-            sentences = [s for s in re.split(r"(?<=[.!?])\s+", part.strip()) if s]
-            segments.append(("text", sentences))
+            leading = part[: len(part) - len(part.lstrip())]
+            trailing = part[len(part.rstrip()) :]
+            core = part.strip()
+            sentences = [s for s in re.split(r"(?<=[.!?])\s+", core) if s]
+
+            if leading:
+                segments.append(("literal", leading))
+            if sentences:
+                segments.append(("text", sentences))
+            if trailing:
+                segments.append(("literal", trailing))
     return segments
 
 
-def translate_element_text(model, tokenizer, raw: str, sLang: str, tLang: str) -> str:
-    """
-    Translate only the natural-language parts of `raw`; any HTML/XML-like
-    tags (<p>, </b>, <br/>, ...) and pure whitespace pass through unchanged.
-    """
-    segments = parse_segments(raw)
-    all_sentences = [s for kind, content in segments if kind == "text" for s in content]
+def translate_batch(
+    model, tokenizer, raw_texts: list[str], sLang: str, tLangs: list[str]
+) -> dict[str, list[str]]:
 
-    if not all_sentences:
-        return raw  # nothing translatable (tags/whitespace only)
+    parsed_texts = [parse_segments(raw) for raw in raw_texts]
 
-    gToken = generate_tokens(model, tokenizer, all_sentences, sLang, tLang)
-    translated_flat = decode_tokens(tokenizer, gToken)
-    translated_iter = iter(translated_flat)
+    # Extract all translatable text sentences into a flat list
+    flat_sentences = []
+    for segments in parsed_texts:
+        for kind, content in segments:
+            if kind == "text":
+                flat_sentences.extend(content)
 
-    parts = []
-    for kind, content in segments:
-        if kind == "text":
-            count = len(content)
-            parts.append(" ".join(next(translated_iter) for _ in range(count)))
-        else:
-            parts.append(content)
-    return "".join(parts)
+    # Translate the flat list of sentences
+    translated_flat_by_lang = {tLang: [] for tLang in tLangs}
+    if flat_sentences:
+        translated_flat_by_lang = generate_tokens(
+            model, tokenizer, flat_sentences, sLang, tLangs
+        )
+
+    # Reconstruct the original strings for each target language
+    results = {tLang: [] for tLang in tLangs}
+    for tLang in tLangs:
+        translated_iter = iter(translated_flat_by_lang.get(tLang, []))
+        for segments in parsed_texts:
+            parts = []
+            for kind, content in segments:
+                if kind == "text":
+                    count = len(content)
+                    parts.append(" ".join(next(translated_iter) for _ in range(count)))
+                else:
+                    parts.append(content)
+            results[tLang].append("".join(parts))
+
+    return results
 
 
 # --------------------------------------------------
@@ -477,9 +517,10 @@ from PyQt6.QtWidgets import (
     QListWidget,
     QListWidgetItem,
     QMessageBox,
-    QPlainTextEdit,
     QProgressBar,
     QPushButton,
+    QSpinBox,
+    QTextEdit,
     QWidget,
 )
 
@@ -504,7 +545,7 @@ class MainWindow(QWidget):
         self.open_file_button.clicked.connect(self.open_source)
 
         # Printout area
-        self.printout_text = QPlainTextEdit()
+        self.printout_text = QTextEdit()
         self.printout_text.setReadOnly(True)
         self.printout_text.setPlaceholderText(
             """
@@ -535,7 +576,7 @@ class MainWindow(QWidget):
         self.open_folder_button.hide()
         self.open_folder_button.clicked.connect(self.open_folder)
 
-        #LANGUAGES
+        # LANGUAGES
         self.lang_filter = QLineEdit()
         self.lang_filter.setPlaceholderText("Filter languages...")
         self.lang_filter.textChanged.connect(self.filter_languages)
@@ -547,7 +588,9 @@ class MainWindow(QWidget):
         self.lang_list.setFlow(QListView.Flow.TopToBottom)
         self.lang_list.setWrapping(True)
         self.lang_list.setResizeMode(QListView.ResizeMode.Adjust)
-        self.lang_list.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.lang_list.setHorizontalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAsNeeded
+        )
         self.lang_list.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.lang_list.setFixedHeight(24 * 8 + 10)
@@ -577,6 +620,11 @@ class MainWindow(QWidget):
         self.gpu_label = QLabel(f"CUDA Support: {torch.cuda.is_available()}")
         self.gpu_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
+        self.batch_size = QSpinBox()
+        self.batch_size.setRange(1, 100)
+        self.batch_size.setValue(5)
+        self.batch_size.setPrefix("BATCH Size: ")
+
         self.help_button = QPushButton("Help")
         self.help_button.clicked.connect(self.show_help)
 
@@ -595,8 +643,8 @@ class MainWindow(QWidget):
 
         # Row 2
         button_layout = QGridLayout()
-        button_layout.addWidget(self.start_button,0,0)
-        button_layout.addWidget(self.cancel_button,0,1)
+        button_layout.addWidget(self.start_button, 0, 0)
+        button_layout.addWidget(self.cancel_button, 0, 1)
 
         layout.addLayout(button_layout, 2, 0, 1, 3)
 
@@ -614,7 +662,11 @@ class MainWindow(QWidget):
 
         # Row 8
         layout.addWidget(self.dev_label, 8, 0)
-        layout.addWidget(self.gpu_label, 8, 1)
+        adjust_layout = QGridLayout()
+        adjust_layout.addWidget(self.gpu_label, 0, 0)
+        adjust_layout.addWidget(self.batch_size, 0, 1)
+
+        layout.addLayout(adjust_layout, 8, 1)
         layout.addWidget(self.help_button, 8, 2)
 
         # Make the output area take the available vertical space
@@ -644,14 +696,12 @@ class MainWindow(QWidget):
 
                 texts = self.iXML.getroot().findall(".//Text/Text")
 
-                assert len(texts) > 0, 'No Text Elements found!'
+                assert len(texts) > 0, "No Text Elements found!"
 
-                self.printout_text.appendHtml(
-                    "<p style='color:red'>FIRST 15 Texts:</p>"
-                )
+                self.printout_text.append("<p style='color:red'>FIRST 15 Texts:</p>")
 
                 for c, text in enumerate(texts):
-                    self.printout_text.appendHtml(
+                    self.printout_text.append(
                         f"<p style='color:orange'>{''.join(text.itertext())}</p>"
                     )
                     if c > 15:  # print only the first 15 elements
@@ -661,7 +711,7 @@ class MainWindow(QWidget):
                 self.file_label.setText(fPath)
                 self.open_folder_button.show()
             except Exception as exc:  # noqa: BLE001
-                self.printout_text.appendHtml(
+                self.printout_text.append(
                     f"<p style='color:red'>YOUR XML IS NOT VALID check for <code>&amp;</code> and like <code>&lt;/WhateverContainer&gt;</code>. Error {exc}</p>"
                 )
 
@@ -686,7 +736,7 @@ class MainWindow(QWidget):
             Qt.TextInteractionFlag.TextBrowserInteraction
         )
         message_box.setText(
-            """
+            f"""
             <p>Device should be either <b>CUDA</b> or <b>XPU</b>.</p>
 
             <p>Expect slow results with CPU.</p>
@@ -702,6 +752,7 @@ class MainWindow(QWidget):
             INTEL ARC</a></p>
 
             <p>If that still does not work, run Python through CMD or PowerShell.</p>
+            <p>VERSION: {VERSION}</p>
             """
         )
 
@@ -740,9 +791,10 @@ class MainWindow(QWidget):
             iFile=self.iFile,
             oFolder=self.oPath,
             targetLanguages=self.get_checked_target_languages(),
+            batch_size=self.batch_size.value(),
         )
         self.worker.progress_changed.connect(self.update_progress)
-        self.worker.message.connect(self.printout_text.appendHtml)
+        self.worker.message.connect(self.printout_text.append)
         self.worker.finished.connect(self.process_finished)
         self.worker.start()
 
@@ -751,20 +803,18 @@ class MainWindow(QWidget):
             self.worker.cancel()
             self.start_button.setEnabled(True)
             self.cancel_button.setEnabled(False)
-            self.printout_text.appendHtml(
+            self.printout_text.append(
                 "<p style='color:orange'>Cancelling — finishing current step...</p>"
             )
 
-    def update_progress(self, current:int, total:int, cLang:str = ""):
+    def update_progress(self, current: int, total: int):
         percentage = int((current / total) * 100)
 
         self.progress_bar.setValue(percentage)
-        self.progress_label.setText(f"[{current}/{total}] done. Current Language: {cLang}")
+        self.progress_label.setText(f"[{current}/{total}] done.")
 
     def process_finished(self, model, tokenizer):
-        self.printout_text.appendHtml(
-            "<p style='color:green'>Finished Process.</p>"
-        )
+        self.printout_text.append("<p style='color:green'>Finished Process.</p>")
         self.start_button.setEnabled(True)
         self.cancel_button.setEnabled(False)
 
@@ -781,18 +831,22 @@ class MainWindow(QWidget):
 
         self.worker = None
 
+
 class Worker(QThread):
-    progress_changed = pyqtSignal(int, int, str)
+    progress_changed = pyqtSignal(int, int)
     message = pyqtSignal(str)
     finished = pyqtSignal(object, object)
 
-    def __init__(self, model, iXML, iFile, oFolder, targetLanguages, parent=None):
+    def __init__(
+        self, model, iXML, iFile, oFolder, targetLanguages, batch_size, parent=None
+    ):
         super().__init__(parent)
         self.model_name = model
         self.iXML = iXML
         self.iFile = iFile
         self.oFolder = oFolder
         self.targetLanguages = targetLanguages
+        self.batch_size = batch_size
         self._cancel = False
 
     def cancel(self):
@@ -802,71 +856,113 @@ class Worker(QThread):
         self.message.emit(
             "Loading model (downloading if needed, this can take a while)..."
         )
-        self.progress_bar_busy = True
         writer = SignalWriter(lambda line: self.message.emit(line))
 
         with redirect_stdout(writer), redirect_stderr(writer):
             self.model, self.tokenizer = get_model(self.model_name)
 
         translation_start = time.perf_counter()
-
         texts = self.iXML.getroot().findall(".//Text/Text")
-        texts_len = len(texts)
 
         fileLanguage = Path(self.iFile).name.removeprefix("texts_").removesuffix(".xml")
-
-        sLang = {name.lower(): code for name, code in {**LANGUAGES, **ADD_LANGUAGES}.items()}[fileLanguage.lower()]
+        sLang = {
+            name.lower(): code for name, code in {**LANGUAGES, **ADD_LANGUAGES}.items()
+        }[fileLanguage.lower()]
         self.message.emit(f"Source language (from filename): {sLang}")
 
-        key_by_code = {code: key for key, code in {**LANGUAGES, **ADD_LANGUAGES}.items()}
+        key_by_code = {
+            code: key for key, code in {**LANGUAGES, **ADD_LANGUAGES}.items()
+        }
         difLang = [code for code in self.targetLanguages if code != sLang]
 
         if not difLang:
             self.message.emit("<p style='color:red'>No target languages selected.</p>")
-            self.finished.emit()
+            self.finished.emit(self.model, self.tokenizer)
             return
 
-        total_steps = texts_len * len(difLang)
-        step = 0
-        self.progress_changed.emit(0, total_steps, "")
+        raw_texts = [t.text or "" for t in texts]
+        total_texts = len(raw_texts)
 
-        for tLang in difLang:
+        if total_texts == 0:
+            self.message.emit("<p style='color:red'>Nothing translatable found.</p>")
+            self.finished.emit(self.model, self.tokenizer)
+            return
+
+        tree_copies = {tLang: copy.deepcopy(self.iXML) for tLang in difLang}
+        out_texts_by_lang = {
+            tLang: tree_copies[tLang].getroot().findall(".//Text/Text")
+            for tLang in difLang
+        }
+
+        translated_by_lang = {tLang: [] for tLang in difLang}
+        total_steps = total_texts * len(difLang)
+        self.progress_changed.emit(0, total_steps)
+
+        BATCH_SIZE = self.batch_size
+
+        for i in range(0, total_texts, BATCH_SIZE):
             if self._cancel:
                 break
 
-            lang_key = key_by_code[tLang]
-            self.message.emit(f"Translating to {lang_key} ({tLang})...")
+            chunk = raw_texts[i : i + BATCH_SIZE]
+            self.message.emit(
+                f"Translating entries {i + 1}-{i + len(chunk)} of {total_texts}..."
+            )
 
-            tree_copy = copy.deepcopy(self.iXML)
-            out_texts = tree_copy.getroot().findall(".//Text/Text")
-
-            for text_el, source_text in zip(out_texts, texts):
-                if self._cancel:
-                    break
-                raw = source_text.text or ""
-                translated = translate_element_text(
-                    self.model, self.tokenizer, raw, sLang, tLang
+            try:
+                per_lang_chunk = translate_batch(
+                    self.model, self.tokenizer, chunk, sLang, difLang
                 )
-                text_el.text = translated
-
+            except Exception as exc:
                 self.message.emit(
-                    f"<p style='color:blue'>Input: {html.escape(raw)}</p>"
+                    f"<p style='color:red'>ERROR in TOKENIZER {exc} — no files written.</p>"
                 )
-                self.message.emit(f"Output: {html.escape(translated)}")
-                step += 1
-                self.progress_changed.emit(step, total_steps, next(
-                    (key for key, value in {**LANGUAGES, **ADD_LANGUAGES}.items() if value == tLang),
-                    None
-                ))
+                self.finished.emit(self.model, self.tokenizer)
+                return
 
-            if not self._cancel:
-                out_path = Path(self.oFolder) / f"texts_{lang_key.lower()}.xml"
-                tree_copy.write(out_path, encoding="utf-8", xml_declaration=False)
-                self.message.emit(f"<p style='color:green'>Wrote {out_path}</p>")
+            for tLang in difLang:
+                translated_by_lang[tLang].extend(per_lang_chunk[tLang])
+
+            rows = [
+                "<tr style='color:blue'>"
+                "<th>LANGUAGE</th>"
+                + "".join(f"<th>{html.escape(text)}</th>" for text in chunk)
+                + "</tr>"
+            ]
+
+            for tLang in difLang:
+                rows.append(
+                    "<tr>"
+                    f"<td>{html.escape(tLang)}</td>"
+                    + "".join(
+                        f"<td>{html.escape(t)}</td>" for t in per_lang_chunk[tLang]
+                    )
+                    + "</tr>"
+                )
+            self.message.emit(
+                f"<table cellspacing='0' cellpadding='4'>{''.join(rows)}</table>"
+            )
+            self.progress_changed.emit((i + len(chunk)) * len(difLang), total_steps)
+
+        if self._cancel:
+            self.message.emit("<p style='color:red'>Cancelled — no files written.</p>")
+            self.finished.emit(self.model, self.tokenizer)
+            return
+
+        for tLang in difLang:
+            lang_key = key_by_code[tLang]
+            out_texts = out_texts_by_lang[tLang]
+            translations = translated_by_lang[tLang]
+
+            for text_el, translated_text in zip(out_texts, translations):
+                text_el.text = translated_text
+
+            out_path = Path(self.oFolder) / f"texts_{lang_key.lower()}.xml"
+            tree_copies[tLang].write(out_path, encoding="utf-8", xml_declaration=False)
+            self.message.emit(f"<p style='color:green'>Wrote {out_path}</p>")
 
         duration = time.perf_counter() - translation_start
         self.message.emit(f"Translation took: {duration:.2f}s")
-
         self.finished.emit(self.model, self.tokenizer)
 
 

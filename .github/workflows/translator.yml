@@ -1,24 +1,35 @@
-name: Build Windows Executable
+name: Build Exe for AllmT
+
+env:
+  fName: AllmT
 
 on:
   push:
     branches:
       - main
     paths:
-      - "py-translate/**"
+      - "Allmt/VERSION"
   workflow_dispatch:
 
 jobs:
-  build-windows:
-    runs-on: windows-latest
+  build-exe:
+    runs-on: win-latest
     strategy:
       fail-fast: false
-      matrix:
-        variant: [nvidia, amd, intel, cpu]
+    matrix:
+      include:
+        - variant: nvidia
+          suffix: NVIDIA
+        - variant: rocm
+          suffix: ROCM
+        - variant: xpu
+          suffix: XPU
+        - variant: cpu
+          suffix: CPU
 
     defaults:
       run:
-        working-directory: py-translate
+        working-directory: Allmt
 
     steps:
       - name: Checkout repository
@@ -40,19 +51,19 @@ jobs:
         run: |
           python -c "import torch; print('torch', torch.__version__)"
 
-      - name: Locate ROCm DLLs
+      - name: Check site-packages for GPU runtime DLLs (pre-build)
         shell: pwsh
         run: |
-          python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])"
-          Get-ChildItem -Path (python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])") -Recurse -Include *.dll -ErrorAction SilentlyContinue |
-            Where-Object { $_.Name -match 'amdhip|hipblas|hipfft|hipsparse|hipsolver|rocblas|rocsolver|miopen' } |
+          $purelib = python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])"
+          Get-ChildItem -Path $purelib -Recurse -Include *.dll -ErrorAction SilentlyContinue |
+            Where-Object { $_.Name -match 'amdhip|hipblas|hipfft|hipsparse|hipsolver|rocblas|rocsolver|miopen|sycl|level_zero|ze_loader|pi_level_zero|ur_loader|opencl' } |
             Select-Object FullName
 
       - name: Build executable
         shell: bash
         run: |
-          if [ "${{ matrix.variant }}" = "amd" ]; then
-            pyinstaller -y -w -D -n AnnoTranslator-amd \
+          if [ "${{ matrix.variant }}" = "rocm" ]; then
+            pyinstaller -y -w -D -n ${{ env.fName }}-${{ matrix.suffix }} \
               --collect-all torch \
               --collect-all rocm_sdk_core \
               --collect-all rocm_sdk_devel \
@@ -60,8 +71,8 @@ jobs:
               --collect-all _rocm_sdk_core \
               --collect-all _rocm_sdk_libraries_custom \
               main.py
-          elif [ "${{ matrix.variant }}" = "intel" ]; then
-            pyinstaller -y -w -D -n AnnoTranslator-intel \
+          elif [ "${{ matrix.variant }}" = "xpu" ]; then
+            pyinstaller -y -w -D -n ${{ env.fName }}-${{ matrix.suffix }} \
               --collect-all torch \
               --collect-all dpcpp_cpp_rt \
               --collect-all intel_sycl_rt \
@@ -78,33 +89,49 @@ jobs:
               --collect-all umf \
               main.py
           elif [ "${{ matrix.variant }}" = "nvidia" ]; then
-            pyinstaller -y -w -D -n AnnoTranslator-nvidia \
+            pyinstaller -y -w -D -n ${{ env.fName }}-${{ matrix.suffix }} \
               --collect-all torch \
               --collect-all nvidia \
               main.py
           else
-            pyinstaller -y -w -D -n AnnoTranslator-${{ matrix.variant }} main.py
+            pyinstaller -y -w -D -n ${{ env.fName }}-${{ matrix.suffix }} main.py
           fi
+
+      - name: Verify GPU runtime DLLs bundled (post-build)
+        shell: pwsh
+        run: |
+          Get-ChildItem -Path dist/${{ env.fName }}-${{ matrix.suffix }} -Recurse -Include *.dll -ErrorAction SilentlyContinue |
+            Where-Object { $_.Name -match 'amdhip|hipblas|hipfft|hipsparse|hipsolver|rocblas|rocsolver|miopen|sycl|level_zero|ze_loader|pi_level_zero|ur_loader|opencl' } |
+            Select-Object Name, DirectoryName
 
       - name: Zip and split output
         shell: pwsh
         run: |
-          7z a -v1900m -mx=9 -bsp1 dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z dist/AnnoTranslator-${{ matrix.variant }}/*
+          $buildName = "${{ env.fName }}-${{ matrix.variant }}"
+          $archive = "dist/${{ env.fName }}-win-x64-${{ matrix.variant }}.7z"
 
-      - name: Set build date
-        id: date
+          Push-Location "dist/$buildName"
+
+          7z a -v1900m -mx=9 -bsp1 "../../$archive" *
+
+          Pop-Location
+
+      - name: Set build version
+        id: version
         shell: bash
-        run: echo "date=$(date +'%Y-%m-%d-%H')" >> "$GITHUB_OUTPUT"
+        run: |
+          VERSION=$(cat VERSION | tr -d '[:space:]')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: AnnoTranslator-windows-x64-${{ matrix.variant }}-${{ steps.date.outputs.date }}
-          path: py-translate/dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z.*
+          name: ${{ env.fName }}-win-x64-${{ matrix.suffix }}-${{ steps.version.outputs.version }}
+          path: Allmt/dist/${{ env.fName }}-win-x64-${{ matrix.suffix }}.7z.*
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: build-${{ steps.date.outputs.date }}
-          name: Build ${{ steps.date.outputs.date }}
-          files: py-translate/dist/AnnoTranslator-windows-x64-${{ matrix.variant }}.7z.*
+          tag_name: v${{ steps.version.outputs.version }}
+          name: AllmT v${{ steps.version.outputs.version }}
+          files: Allmt/dist/${{ env.fName }}-win-x64-${{ matrix.variant }}.7z.*
