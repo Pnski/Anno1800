@@ -16,7 +16,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 # VERSION
 # --------------------------------------------------
 
-VERSION = "0.1.3"
+VERSION = "0.1.4"
 
 # --------------------------------------------------
 # REMINDERS
@@ -694,7 +694,7 @@ class MainWindow(QWidget):
                 self.printout_text.clear()
                 self.iXML = ET.parse(fPath, parser=parser)
 
-                texts = self.iXML.getroot().findall(".//Text/Text")
+                texts = [e for e in self.iXML.getroot().findall(".//Text") if e.text and e.text.strip()]
 
                 assert len(texts) > 0, "No Text Elements found!"
 
@@ -702,7 +702,7 @@ class MainWindow(QWidget):
 
                 for c, text in enumerate(texts):
                     self.printout_text.append(
-                        f"<p style='color:orange'>{''.join(text.itertext())}</p>"
+                        f"{''.join(text.itertext())}"
                     )
                     if c > 15:  # print only the first 15 elements
                         break
@@ -862,7 +862,9 @@ class Worker(QThread):
             self.model, self.tokenizer = get_model(self.model_name)
 
         translation_start = time.perf_counter()
-        texts = self.iXML.getroot().findall(".//Text/Text")
+        #texts = self.iXML.getroot().findall(".//Text/Text")
+
+        texts = [e for e in self.iXML.getroot().findall(".//Text") if e.text and e.text.strip()]
 
         fileLanguage = Path(self.iFile).name.removeprefix("texts_").removesuffix(".xml")
         sLang = {
@@ -890,7 +892,7 @@ class Worker(QThread):
 
         tree_copies = {tLang: copy.deepcopy(self.iXML) for tLang in difLang}
         out_texts_by_lang = {
-            tLang: tree_copies[tLang].getroot().findall(".//Text/Text")
+            tLang: [e for e in tree_copies[tLang].getroot().findall(".//Text") if e.text and e.text.strip()]
             for tLang in difLang
         }
 
